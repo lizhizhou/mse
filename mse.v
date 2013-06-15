@@ -1,26 +1,30 @@
 module mse (
-	//from grid	
-	input clk,
-	input [7:0] address,
-	inout [15:0] data,
-	input wr,
-	input rd,
-
+	//MSE interface
+	inout MSE_RESETN,	
+	inout MSE_RSTOUT,	
+	inout MSE_SCLK,	
+	inout [6:0] MSE_SDI,	
+	inout [6:0] MSE_SDO,		
+	inout [6:0] MSE_SLE,		
+	inout [6:0] MSE_SRDY,	
+		
 	// IO 
-	inout [7:0] port0,
-	inout [7:0] port1,
-	inout [7:0] port2,
-	inout [7:0] port3,
-	inout [7:0] port4,
-	inout [7:0] port5,
-	inout [7:0] port6,
-	inout [7:0] port7,
-	inout [7:0] port8,
-	inout [7:0] port9
+	inout  [7:0] port0,
+	inout  [7:0] port1,
+	inout  [7:0] port2,
+	inout  [7:0] port3,
+	inout  [7:0] port4,
+	inout  [7:0] port5,
+	inout  [7:0] port6,
+	inout  [7:0] port7,
+	inout  [7:0] port8,
+	inout  [7:0] port9,
 
+	output [3:0] LED
 
 );
 	wire in_clk;
+	//for test only
 	osc_altufm_osc_518 osc
 	( 
 	.osc(in_clk),
@@ -40,5 +44,15 @@ module mse (
 	assign port6 = temp;
 	assign port7 = temp;
 	assign port8 = temp;
-	assign port9 = temp;	
+	assign port9 = temp;
+
+	
+	//connection
+	wire clk;
+	wire rst;
+	wire [7:0] address;
+	wire [15:0] data;
+	wire wr;
+	wire rd;
+	
 endmodule
