@@ -116,8 +116,135 @@ LED[2] <= <GND>
 LED[3] <= <GND>
 
 
-|mse|osc_altufm_osc_518:osc
-osc <= maxii_ufm_block1.OSC
+|mse|flash_altufm_parallel_71o:flash
+addr[0] => Y_var[0].IN1
+addr[1] => Y_var[1].IN1
+addr[2] => Y_var[2].IN1
+addr[3] => Y_var[3].IN1
+addr[4] => Y_var[4].IN1
+addr[5] => Y_var[5].IN1
+addr[6] => Y_var[6].IN1
+addr[7] => Y_var[7].IN1
+addr[8] => Y_var[8].IN1
+data_valid <= data_valid_out_reg.DB_MAX_OUTPUT_PORT_TYPE
+datain[0] => piso_sipo_d.IN1
+datain[1] => piso_sipo_d.IN1
+datain[2] => piso_sipo_d.IN1
+datain[3] => piso_sipo_d.IN1
+datain[4] => piso_sipo_d.IN1
+datain[5] => piso_sipo_d.IN1
+datain[6] => piso_sipo_d.IN1
+datain[7] => piso_sipo_d.IN1
+datain[8] => piso_sipo_d.IN1
+datain[9] => piso_sipo_d.IN1
+datain[10] => piso_sipo_d.IN1
+datain[11] => piso_sipo_d.IN1
+datain[12] => piso_sipo_d.IN1
+datain[13] => piso_sipo_d.IN1
+datain[14] => piso_sipo_d.IN1
+datain[15] => piso_sipo_d.IN1
+dataout[0] <= tmp_do[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout[1] <= tmp_do[1].DB_MAX_OUTPUT_PORT_TYPE
+dataout[2] <= tmp_do[2].DB_MAX_OUTPUT_PORT_TYPE
+dataout[3] <= tmp_do[3].DB_MAX_OUTPUT_PORT_TYPE
+dataout[4] <= tmp_do[4].DB_MAX_OUTPUT_PORT_TYPE
+dataout[5] <= tmp_do[5].DB_MAX_OUTPUT_PORT_TYPE
+dataout[6] <= tmp_do[6].DB_MAX_OUTPUT_PORT_TYPE
+dataout[7] <= tmp_do[7].DB_MAX_OUTPUT_PORT_TYPE
+dataout[8] <= tmp_do[8].DB_MAX_OUTPUT_PORT_TYPE
+dataout[9] <= tmp_do[9].DB_MAX_OUTPUT_PORT_TYPE
+dataout[10] <= tmp_do[10].DB_MAX_OUTPUT_PORT_TYPE
+dataout[11] <= tmp_do[11].DB_MAX_OUTPUT_PORT_TYPE
+dataout[12] <= tmp_do[12].DB_MAX_OUTPUT_PORT_TYPE
+dataout[13] <= tmp_do[13].DB_MAX_OUTPUT_PORT_TYPE
+dataout[14] <= tmp_do[14].DB_MAX_OUTPUT_PORT_TYPE
+dataout[15] <= tmp_do[15].DB_MAX_OUTPUT_PORT_TYPE
+nbusy <= nbusy.DB_MAX_OUTPUT_PORT_TYPE
+nerase => mux_nerase.IN1
+nread => mux_nread.IN1
+nwrite => mux_nwrite.IN1
+osc <= ufm_osc.DB_MAX_OUTPUT_PORT_TYPE
 oscena => maxii_ufm_block1.OSCENA
+
+
+|mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2
+clock => cntr_dsj:auto_generated.clock
+clk_en => cntr_dsj:auto_generated.clk_en
+cnt_en => cntr_dsj:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_dsj:auto_generated.q[0]
+q[1] <= cntr_dsj:auto_generated.q[1]
+q[2] <= cntr_dsj:auto_generated.q[2]
+q[3] <= cntr_dsj:auto_generated.q[3]
+q[4] <= cntr_dsj:auto_generated.q[4]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated
+clk_en => counter_cella0.ENA
+clk_en => counter_cella1.ENA
+clk_en => counter_cella2.ENA
+clk_en => counter_cella3.ENA
+clk_en => counter_cella4.ENA
+clock => counter_cella0.CLK
+clock => counter_cella1.CLK
+clock => counter_cella2.CLK
+clock => counter_cella3.CLK
+clock => counter_cella4.CLK
+cnt_en => _.IN1
+cnt_en => counter_cella0.DATAB
+cnt_en => counter_cella1.DATAB
+cnt_en => counter_cella2.DATAB
+cnt_en => counter_cella3.DATAB
+cnt_en => counter_cella4.DATAB
+q[0] <= counter_cella0.REGOUT
+q[1] <= counter_cella1.REGOUT
+q[2] <= counter_cella2.REGOUT
+q[3] <= counter_cella3.REGOUT
+q[4] <= counter_cella4.REGOUT
+
+
+|mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+dataa[4] => data_wire[2].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+datab[4] => data_wire[2].IN1
 
 

@@ -25,7 +25,17 @@ module mse (
 );
 	wire in_clk;
 	//for test only
-	osc_altufm_osc_518 osc
+	flash_altufm_parallel_71o flash
+//	input   [8:0]  addr;
+//	output   data_valid;
+//	input   [15:0]  datain;
+//	output   [15:0]  dataout;
+//	output   nbusy;
+//	input   nerase;
+//	input   nread;
+//	input   nwrite;
+//	output   osc;
+//	input   oscena;
 	( 
 	.osc(in_clk),
 	.oscena(1) 
@@ -35,6 +45,16 @@ module mse (
 	begin
 		temp<=temp+1;
 	end
+	
+	reg [7:0] port0_dir;
+	reg [7:0] port1_dir;
+	reg [7:0] port2_dir;
+	reg [7:0] port3_dir;
+	reg [7:0] port4_dir;
+	reg [7:0] port5_dir;
+	reg [7:0] port6_dir;
+	reg [7:0] port7_dir;
+	
 	assign port0 = temp;
 	assign port1 = temp;
 	assign port2 = temp;

@@ -1,6 +1,6 @@
 Flow report for mse
-Sat Jun 15 12:17:14 2013
-Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+Mon Jun 17 17:55:03 2013
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -35,21 +35,21 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------+
-; Flow Summary                                                               ;
-+---------------------------+------------------------------------------------+
-; Flow Status               ; Successful - Sat Jun 15 12:17:14 2013          ;
-; Quartus II 32-bit Version ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
-; Revision Name             ; mse                                            ;
-; Top-level Entity Name     ; mse                                            ;
-; Family                    ; MAX II                                         ;
-; Device                    ; EPM1270T144C5                                  ;
-; Timing Models             ; Final                                          ;
-; Total logic elements      ; 9 / 1,270 ( < 1 % )                            ;
-; Total pins                ; 115 / 116 ( 99 % )                             ;
-; Total virtual pins        ; 0                                              ;
-; UFM blocks                ; 1 / 1 ( 100 % )                                ;
-+---------------------------+------------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++---------------------------+-----------------------------------------------+
+; Flow Status               ; Successful - Mon Jun 17 17:55:02 2013         ;
+; Quartus II 32-bit Version ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
+; Revision Name             ; mse                                           ;
+; Top-level Entity Name     ; mse                                           ;
+; Family                    ; MAX II                                        ;
+; Device                    ; EPM1270T144C5                                 ;
+; Timing Models             ; Final                                         ;
+; Total logic elements      ; 48 / 1,270 ( 4 % )                            ;
+; Total pins                ; 115 / 116 ( 99 % )                            ;
+; Total virtual pins        ; 0                                             ;
+; UFM blocks                ; 1 / 1 ( 100 % )                               ;
++---------------------------+-----------------------------------------------+
 
 
 +-----------------------------------------+
@@ -57,32 +57,32 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/15/2013 12:16:37 ;
+; Start date & time ; 06/17/2013 17:53:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mse                 ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+---------------------------------------+------------------------------+---------------+-------------+----------------+
-; Assignment Name                       ; Value                        ; Default Value ; Entity Name ; Section Id     ;
-+---------------------------------------+------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 136935513187.137126979606712 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT                ; Verilog Hdl                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (Verilog)    ; <None>        ; --          ; --             ;
-; IP_TOOL_NAME                          ; MAX II/MAX V oscillator      ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                       ; 12.1                         ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                           ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                            ; --            ; --          ; --             ;
-; MISC_FILE                             ; osc.bsf                      ; --            ; --          ; --             ;
-; MISC_FILE                             ; osc_inst.v                   ; --            ; --          ; --             ;
-; MISC_FILE                             ; osc_bb.v                     ; --            ; --          ; --             ;
-; MISC_FILE                             ; osc.inc                      ; --            ; --          ; --             ;
-; MISC_FILE                             ; osc.cmp                      ; --            ; --          ; --             ;
-; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                         ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY              ; output_files                 ; --            ; --          ; --             ;
-+---------------------------------------+------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                   ;
++---------------------------------------+-----------------------------+---------------+-------------+----------------+
+; Assignment Name                       ; Value                       ; Default Value ; Entity Name ; Section Id     ;
++---------------------------------------+-----------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                 ; 92393546378.137146280202348 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT                ; Verilog Hdl                 ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (Verilog)   ; <None>        ; --          ; --             ;
+; IP_TOOL_NAME                          ; ALTUFM_PARALLEL             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 12.1                        ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                          ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                           ; --            ; --          ; --             ;
+; MISC_FILE                             ; flash.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                             ; flash_inst.v                ; --            ; --          ; --             ;
+; MISC_FILE                             ; flash_bb.v                  ; --            ; --          ; --             ;
+; MISC_FILE                             ; flash.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                             ; flash.cmp                   ; --            ; --          ; --             ;
+; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                        ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY              ; output_files                ; --            ; --          ; --             ;
++---------------------------------------+-----------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -90,12 +90,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 321 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 382 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 311 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 293 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 286 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis      ; 00:00:34     ; 1.0                     ; 339 MB              ; 00:00:10                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 421 MB              ; 00:00:12                           ;
+; Assembler                 ; 00:00:12     ; 1.0                     ; 330 MB              ; 00:00:10                           ;
+; TimeQuest Timing Analyzer ; 00:00:18     ; 1.0                     ; 325 MB              ; 00:00:16                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 304 MB              ; 00:00:04                           ;
+; Total                     ; 00:01:23     ; --                      ; --                  ; 00:00:52                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -104,11 +104,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; lizhizhou-PC     ; Windows 7 ; 6.1        ; i686           ;
-; Fitter                    ; lizhizhou-PC     ; Windows 7 ; 6.1        ; i686           ;
-; Assembler                 ; lizhizhou-PC     ; Windows 7 ; 6.1        ; i686           ;
-; TimeQuest Timing Analyzer ; lizhizhou-PC     ; Windows 7 ; 6.1        ; i686           ;
-; EDA Netlist Writer        ; lizhizhou-PC     ; Windows 7 ; 6.1        ; i686           ;
+; Analysis & Synthesis      ; zhizholi-WS      ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; zhizholi-WS      ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; zhizholi-WS      ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; zhizholi-WS      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; zhizholi-WS      ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

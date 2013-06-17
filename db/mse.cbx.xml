@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="mse">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2" CBX_FILE_NAME="cntr_dsj.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

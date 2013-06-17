@@ -1,6 +1,6 @@
 Analysis & Synthesis report for mse
-Sat Jun 15 12:16:39 2013
-Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+Mon Jun 17 17:53:47 2013
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -14,9 +14,12 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Versi
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Port Connectivity Checks: "osc_altufm_osc_518:osc"
- 11. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: flash_altufm_parallel_71o:flash|lpm_counter:cntr2
+ 13. Port Connectivity Checks: "flash_altufm_parallel_71o:flash"
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -39,19 +42,19 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Jun 15 12:16:39 2013          ;
-; Quartus II 32-bit Version   ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
-; Revision Name               ; mse                                            ;
-; Top-level Entity Name       ; mse                                            ;
-; Family                      ; MAX II                                         ;
-; Total logic elements        ; 9                                              ;
-; Total pins                  ; 115                                            ;
-; Total virtual pins          ; 0                                              ;
-; UFM blocks                  ; 1 / 1 ( 100 % )                                ;
-+-----------------------------+------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                ;
++-----------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Jun 17 17:53:47 2013         ;
+; Quartus II 32-bit Version   ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
+; Revision Name               ; mse                                           ;
+; Top-level Entity Name       ; mse                                           ;
+; Family                      ; MAX II                                        ;
+; Total logic elements        ; 50                                            ;
+; Total pins                  ; 115                                           ;
+; Total virtual pins          ; 0                                             ;
+; UFM blocks                  ; 1 / 1 ( 100 % )                               ;
++-----------------------------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -132,26 +135,38 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2 processors           ;   0.0%      ;
+;     2-8 processors         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                        ;
-+----------------------------------+-----------------+-----------------------------+----------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path     ; Library ;
-+----------------------------------+-----------------+-----------------------------+----------------------------------+---------+
-; mse.v                            ; yes             ; User Verilog HDL File       ; H:/My Documents/GitHub/mse/mse.v ;         ;
-; osc.v                            ; yes             ; User Wizard-Generated File  ; H:/My Documents/GitHub/mse/osc.v ;         ;
-+----------------------------------+-----------------+-----------------------------+----------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; mse.v                            ; yes             ; User Verilog HDL File        ; C:/Users/zhizholi/Documents/GitHub/mse/mse.v                              ;         ;
+; flash.v                          ; yes             ; User Wizard-Generated File   ; C:/Users/zhizholi/Documents/GitHub/mse/flash.v                            ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; aglobal121.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc          ;         ;
+; db/cntr_dsj.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/zhizholi/Documents/GitHub/mse/db/cntr_dsj.tdf                    ;         ;
+; db/cmpr_2vb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/zhizholi/Documents/GitHub/mse/db/cmpr_2vb.tdf                    ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -159,54 +174,81 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 9     ;
-;     -- Combinational with no register       ; 1     ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 8     ;
+; Total logic elements                        ; 50    ;
+;     -- Combinational with no register       ; 15    ;
+;     -- Register only                        ; 18    ;
+;     -- Combinational with a register        ; 17    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- 2 input functions                    ; 7     ;
-;     -- 1 input functions                    ; 1     ;
+;     -- 4 input functions                    ; 9     ;
+;     -- 3 input functions                    ; 2     ;
+;     -- 2 input functions                    ; 17    ;
+;     -- 1 input functions                    ; 3     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 3     ;
-;     -- arithmetic mode                      ; 6     ;
+;     -- normal mode                          ; 39    ;
+;     -- arithmetic mode                      ; 11    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
+;     -- synchronous clear/load mode          ; 5     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 8     ;
-; Total logic cells in carry chains           ; 7     ;
+; Total registers                             ; 35    ;
+; Total logic cells in carry chains           ; 13    ;
 ; I/O pins                                    ; 115   ;
 ; UFM blocks                                  ; 1     ;
-; Maximum fan-out                             ; 12    ;
-; Total fan-out                               ; 104   ;
-; Average fan-out                             ; 0.83  ;
+; Maximum fan-out                             ; 38    ;
+; Total fan-out                               ; 250   ;
+; Average fan-out                             ; 1.51  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
-+-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
-; Compilation Hierarchy Node  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name         ; Library Name ;
-+-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
-; |mse                        ; 9 (9)       ; 8            ; 1          ; 115  ; 0            ; 1 (1)        ; 0 (0)             ; 8 (8)            ; 7 (7)           ; 0 (0)      ; |mse                        ; work         ;
-;    |osc_altufm_osc_518:osc| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mse|osc_altufm_osc_518:osc ; work         ;
-+-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                           ; Library Name ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
+; |mse                                 ; 50 (9)      ; 35           ; 1          ; 115  ; 0            ; 15 (1)       ; 18 (0)            ; 17 (8)           ; 13 (7)          ; 0 (0)      ; |mse                                                                                          ; work         ;
+;    |flash_altufm_parallel_71o:flash| ; 41 (33)     ; 27           ; 1          ; 0    ; 0            ; 14 (11)      ; 18 (18)           ; 9 (4)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash                                                          ; work         ;
+;       |lpm_counter:cntr2|            ; 8 (0)       ; 5            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2                                        ; work         ;
+;          |cntr_dsj:auto_generated|   ; 8 (6)       ; 5            ; 0          ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated                ; work         ;
+;             |cmpr_2vb:cmpr1|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1 ; work         ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                     ;
-+--------+-------------------------+---------+--------------+--------------+-----------------------------+----------------------------------+
-; Vendor ; IP Core Name            ; Version ; Release Date ; License Type ; Entity Instance             ; IP Include File                  ;
-+--------+-------------------------+---------+--------------+--------------+-----------------------------+----------------------------------+
-; Altera ; MAX II/MAX V oscillator ; 12.1    ; N/A          ; N/A          ; |mse|osc_altufm_osc_518:osc ; H:/My Documents/GitHub/mse/osc.v ;
-+--------+-------------------------+---------+--------------+--------------+-----------------------------+----------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                    ;
++--------+-----------------+---------+--------------+--------------+--------------------------------------+------------------------------------------------+
+; Vendor ; IP Core Name    ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File                                ;
++--------+-----------------+---------+--------------+--------------+--------------------------------------+------------------------------------------------+
+; Altera ; ALTUFM_PARALLEL ; 12.1    ; N/A          ; N/A          ; |mse|flash_altufm_parallel_71o:flash ; C:/Users/zhizholi/Documents/GitHub/mse/flash.v ;
++--------+-----------------+---------+--------------+--------------+--------------------------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++----------------------------------------------+--------------------------------------------------------+
+; Register name                                ; Reason for Removal                                     ;
++----------------------------------------------+--------------------------------------------------------+
+; flash_altufm_parallel_71o:flash|A[0..8]      ; Stuck at GND due to stuck port data_in                 ;
+; flash_altufm_parallel_71o:flash|deco3_dffe   ; Merged with flash_altufm_parallel_71o:flash|deco2_dffe ;
+; flash_altufm_parallel_71o:flash|program_dffe ; Lost fanout                                            ;
+; Total Number of Removed Registers = 11       ;                                                        ;
++----------------------------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++--------------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name                        ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++--------------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; flash_altufm_parallel_71o:flash|A[0] ; Stuck at GND              ; flash_altufm_parallel_71o:flash|A[1], flash_altufm_parallel_71o:flash|A[2], ;
+;                                      ; due to stuck port data_in ; flash_altufm_parallel_71o:flash|A[3], flash_altufm_parallel_71o:flash|A[4], ;
+;                                      ;                           ; flash_altufm_parallel_71o:flash|A[5], flash_altufm_parallel_71o:flash|A[6], ;
+;                                      ;                           ; flash_altufm_parallel_71o:flash|A[7]                                        ;
++--------------------------------------+---------------------------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -214,24 +256,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
+; Total registers                              ; 35    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "osc_altufm_osc_518:osc"                                                                                                                                                                 ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; oscena     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; oscena[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flash_altufm_parallel_71o:flash|lpm_counter:cntr2 ;
++------------------------+-------------+---------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                    ;
++------------------------+-------------+---------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                          ;
+; LPM_WIDTH              ; 5           ; Signed Integer                                          ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                 ;
+; LPM_MODULUS            ; 28          ; Signed Integer                                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                 ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                 ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                 ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                 ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                 ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                      ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                      ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                 ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                 ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                 ;
+; CBXI_PARAMETER         ; cntr_dsj    ; Untyped                                                 ;
++------------------------+-------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flash_altufm_parallel_71o:flash"                                                                                                                                                         ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; oscena     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; oscena[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; addr       ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
+; data_valid ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
+; datain     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
+; dataout    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
+; nbusy      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
+; nerase     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
+; nread      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
+; nwrite     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -239,19 +316,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
-    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Jun 15 12:16:35 2013
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jun 17 17:53:13 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mse -c mse
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file mse.v
     Info (12023): Found entity 1: mse
-Info (12021): Found 2 design units, including 2 entities, in source file osc.v
-    Info (12023): Found entity 1: osc_altufm_osc_518
-    Info (12023): Found entity 2: osc
+Info (12021): Found 2 design units, including 2 entities, in source file flash.v
+    Info (12023): Found entity 1: flash_altufm_parallel_71o
+    Info (12023): Found entity 2: flash
 Info (12127): Elaborating entity "mse" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at mse.v(36): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at mse.v(46): truncated value with size 32 to match size of target (8)
 Warning (10034): Output port "LED" at mse.v(25) has no driver
-Info (12128): Elaborating entity "osc_altufm_osc_518" for hierarchy "osc_altufm_osc_518:osc"
+Info (12128): Elaborating entity "flash_altufm_parallel_71o" for hierarchy "flash_altufm_parallel_71o:flash"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "flash_altufm_parallel_71o:flash|lpm_counter:cntr2"
+Info (12130): Elaborated megafunction instantiation "flash_altufm_parallel_71o:flash|lpm_counter:cntr2"
+Info (12133): Instantiated megafunction "flash_altufm_parallel_71o:flash|lpm_counter:cntr2" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "28"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_width" = "5"
+    Info (12134): Parameter "lpm_type" = "lpm_counter"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_dsj.tdf
+    Info (12023): Found entity 1: cntr_dsj
+Info (12128): Elaborating entity "cntr_dsj" for hierarchy "flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_2vb.tdf
+    Info (12023): Found entity 1: cmpr_2vb
+Info (12128): Elaborating entity "cmpr_2vb" for hierarchy "flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "port0[0]" and its non-tri-state driver.
@@ -452,16 +543,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[1]" is stuck at GND
     Warning (13410): Pin "LED[2]" is stuck at GND
     Warning (13410): Pin "LED[3]" is stuck at GND
-Info (21057): Implemented 125 device resources after synthesis - the final resource count might be different
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 4 output pins
     Info (21060): Implemented 111 bidirectional pins
-    Info (21061): Implemented 9 logic cells
+    Info (21061): Implemented 50 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 202 warnings
-    Info: Peak virtual memory: 322 megabytes
-    Info: Processing ended: Sat Jun 15 12:16:39 2013
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 339 megabytes
+    Info: Processing ended: Mon Jun 17 17:53:48 2013
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:11
 
 

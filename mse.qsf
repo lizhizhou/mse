@@ -135,7 +135,6 @@ set_location_assignment PIN_78 -to port4[4]
 set_location_assignment PIN_75 -to port4[5]
 set_location_assignment PIN_77 -to port4[6]
 set_location_assignment PIN_76 -to port4[7]
-set_global_assignment -name QIP_FILE osc.qip
 set_location_assignment PIN_133 -to LED[3]
 set_location_assignment PIN_134 -to LED[2]
 set_location_assignment PIN_137 -to LED[1]
@@ -171,3 +170,4 @@ set_location_assignment PIN_8 -to MSE_SRDY[3]
 set_location_assignment PIN_14 -to MSE_SRDY[2]
 set_location_assignment PIN_24 -to MSE_SRDY[1]
 set_location_assignment PIN_30 -to MSE_SRDY[0]
+set_global_assignment -name QIP_FILE flash.qip
