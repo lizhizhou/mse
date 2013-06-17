@@ -26,17 +26,15 @@ module mse (
 	wire in_clk;
 	//for test only
 	flash_altufm_parallel_71o flash
-//	input   [8:0]  addr;
-//	output   data_valid;
-//	input   [15:0]  datain;
-//	output   [15:0]  dataout;
-//	output   nbusy;
-//	input   nerase;
-//	input   nread;
-//	input   nwrite;
-//	output   osc;
-//	input   oscena;
 	( 
+//	.addr(),
+//	.data_valid(),
+//	.datain(),
+//	.dataout(),
+//	.nbusy(),
+//	.nerase(),
+//	.nread(),
+//	.nwrite(),
 	.osc(in_clk),
 	.oscena(1) 
 	);
