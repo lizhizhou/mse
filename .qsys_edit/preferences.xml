@@ -14,6 +14,6 @@
    <frequency preferredWidth="250" />
   </columns>
  </clocktable>
- <window width="1100" height="770" x="0" y="0" />
- <library expandedCategories="Library,Project" />
+ <window width="1100" height="770" x="480" y="216" />
+ <library expandedCategories="Library,Project,Project/Lophilo" />
 </preferences>

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM1270T144C5
-set_global_assignment -name TOP_LEVEL_ENTITY mse
+set_global_assignment -name TOP_LEVEL_ENTITY port_io_interface
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.1 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:05:46  JUNE 12, 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "12.1 SP1"
@@ -170,4 +170,7 @@ set_location_assignment PIN_8 -to MSE_SRDY[3]
 set_location_assignment PIN_14 -to MSE_SRDY[2]
 set_location_assignment PIN_24 -to MSE_SRDY[1]
 set_location_assignment PIN_30 -to MSE_SRDY[0]
+set_global_assignment -name VERILOG_FILE inter_connect.v
 set_global_assignment -name QIP_FILE flash.qip
+set_global_assignment -name VERILOG_FILE qsys_root/mse_host.v
+set_global_assignment -name VERILOG_FILE port_io_interface.v

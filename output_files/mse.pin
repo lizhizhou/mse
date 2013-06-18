@@ -59,7 +59,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 CHIP  "mse"  ASSIGNED TO AN: EPM1270T144C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -81,11 +81,11 @@ MSE_SRDY[2]                  : 14        : bidir  : 3.3-V LVTTL       :         
 MSE_SDI[2]                   : 15        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 MSE_SDO[2]                   : 16        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 GNDINT                       : 17        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 18        :        :                   :         : 1         :                
+MSE_SRDY_o[3]                : 18        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 19        : power  :                   : 2.5V/3.3V :           :                
-MSE_RSTOUT                   : 20        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
-MSE_RESETN                   : 21        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
-MSE_SCLK                     : 22        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+MSE_SLE_o[3]                 : 20        : output : 3.3-V LVTTL       :         : 1         : N              
+MSE_SRDY_i[4]                : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
+MSE_SRDY_i[2]                : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
 MSE_SLE[1]                   : 23        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 MSE_SRDY[1]                  : 24        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 25        : power  :                   : 3.3V    : 1         :                
@@ -100,108 +100,108 @@ TMS                          : 33        : input  :                   :         
 TDI                          : 34        : input  :                   :         : 1         :                
 TCK                          : 35        : input  :                   :         : 1         :                
 TDO                          : 36        : output :                   :         : 1         :                
-port0[1]                     : 37        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port0[3]                     : 38        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port0[5]                     : 39        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port0[7]                     : 40        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port0[6]                     : 41        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port0[4]                     : 42        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port0[2]                     : 43        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port0[0]                     : 44        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port1[1]                     : 45        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+MSE_SLE_o[1]                 : 37        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDI_dir[0]               : 38        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDI_dir[2]               : 39        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SLE_i[0]                 : 40        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SLE_dir[0]               : 41        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDO_i[1]                 : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SRDY_o[0]                : 43        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDO_dir[0]               : 44        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SRDY_dir[0]              : 45        : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
 GNDIO                        : 47        : gnd    :                   :         :           :                
-port1[3]                     : 48        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port1[5]                     : 49        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port1[7]                     : 50        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port1[6]                     : 51        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port1[4]                     : 52        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port1[2]                     : 53        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+MSE_SDI_dir[1]               : 48        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDO_i[2]                 : 49        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SLE_i[2]                 : 50        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SRDY_i[0]                : 51        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SLE_dir[3]               : 52        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SLE_i[3]                 : 53        : input  : 3.3-V LVTTL       :         : 4         : N              
 GNDINT                       : 54        : gnd    :                   :         :           :                
-port1[0]                     : 55        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+MSE_SRDY_dir[3]              : 55        : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCINT                       : 56        : power  :                   : 2.5V/3.3V :           :                
-port2[0]                     : 57        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port2[2]                     : 58        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port2[4]                     : 59        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port2[6]                     : 60        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port2[7]                     : 61        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port2[5]                     : 62        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port2[3]                     : 63        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
+MSE_SDI_i[3]                 : 57        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SRDY_o[1]                : 58        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDI_o[0]                 : 59        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDO_o[0]                 : 60        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDO_o[1]                 : 61        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDI_o[1]                 : 62        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDO_i[0]                 : 63        : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 64        : power  :                   : 3.3V    : 4         :                
 GNDIO                        : 65        : gnd    :                   :         :           :                
-port2[1]                     : 66        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port3[1]                     : 67        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port3[3]                     : 68        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port3[5]                     : 69        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port3[7]                     : 70        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port3[6]                     : 71        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port3[4]                     : 72        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-port4[1]                     : 73        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port4[3]                     : 74        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port4[5]                     : 75        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port4[7]                     : 76        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port4[6]                     : 77        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port4[4]                     : 78        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port4[2]                     : 79        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port4[0]                     : 80        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port3[2]                     : 81        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
+MSE_SDO_o[4]                 : 66        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDI_o[4]                 : 67        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SDO_dir[1]               : 68        : input  : 3.3-V LVTTL       :         : 4         : N              
+MSE_SLE_o[0]                 : 69        : output : 3.3-V LVTTL       :         : 4         : N              
+MSE_SRDY_i[3]                : 70        : input  : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : 71        :        :                   :         : 4         :                
+RESERVED_INPUT               : 72        :        :                   :         : 4         :                
+MSE_SLE_dir[1]               : 73        : input  : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : 74        :        :                   :         : 3         :                
+RESERVED_INPUT               : 75        :        :                   :         : 3         :                
+MSE_SRDY_dir[2]              : 76        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDO_dir[3]               : 77        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDO_o[3]                 : 78        : output : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_i[0]                 : 79        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_o[3]                 : 80        : output : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_o[5]                 : 81        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 82        : power  :                   : 3.3V    : 3         :                
 GNDIO                        : 83        : gnd    :                   :         :           :                
-port5[1]                     : 84        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port5[3]                     : 85        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port5[5]                     : 86        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port5[7]                     : 87        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port5[6]                     : 88        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port5[4]                     : 89        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
+MSE_SDO_o[5]                 : 84        : output : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_o[2]                 : 85        : output : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDO_o[2]                 : 86        : output : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_i[1]                 : 87        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SLE_i[1]                 : 88        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SRDY_i[1]                : 89        : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCINT                       : 90        : power  :                   : 2.5V/3.3V :           :                
-port3[0]                     : 91        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
+MSE_SRDY_dir[1]              : 91        : input  : 3.3-V LVTTL       :         : 3         : N              
 GNDINT                       : 92        : gnd    :                   :         :           :                
-port5[2]                     : 93        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port5[0]                     : 94        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port6[1]                     : 95        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port6[3]                     : 96        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port6[5]                     : 97        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port6[7]                     : 98        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
+MSE_SDO_i[3]                 : 93        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SLE_dir[2]               : 94        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SLE_o[2]                 : 95        : output : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDO_dir[2]               : 96        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_i[2]                 : 97        : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SRDY_o[2]                : 98        : output : 3.3-V LVTTL       :         : 3         : N              
 GNDIO                        : 99        : gnd    :                   :         :           :                
 VCCIO3                       : 100       : power  :                   : 3.3V    : 3         :                
-port6[6]                     : 101       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port6[4]                     : 102       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port6[2]                     : 103       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port6[0]                     : 104       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port7[1]                     : 105       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port7[3]                     : 106       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port7[5]                     : 107       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port7[7]                     : 108       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-port7[6]                     : 109       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port7[4]                     : 110       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port7[2]                     : 111       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port7[0]                     : 112       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port8[1]                     : 113       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port8[3]                     : 114       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MSE_SDI_dir[3]               : 101       : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDO_i[4]                 : 102       : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_i[4]                 : 103       : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDO_dir[4]               : 104       : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SRDY_o[4]                : 105       : output : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_dir[4]               : 106       : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SRDY_dir[4]              : 107       : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDI_i[5]                 : 108       : input  : 3.3-V LVTTL       :         : 3         : N              
+MSE_SDO_o[6]                 : 109       : output : 3.3-V LVTTL       :         : 2         : N              
+MSE_SDI_o[6]                 : 110       : output : 3.3-V LVTTL       :         : 2         : N              
+MSE_SDI_dir[5]               : 111       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SLE_i[4]                 : 112       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SRDY_i[6]                : 113       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SDO_dir[5]               : 114       : input  : 3.3-V LVTTL       :         : 2         : N              
 GNDIO                        : 115       : gnd    :                   :         :           :                
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
-port8[5]                     : 117       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port8[7]                     : 118       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port8[6]                     : 119       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port8[4]                     : 120       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port8[2]                     : 121       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port8[0]                     : 122       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port9[0]                     : 123       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port9[2]                     : 124       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port9[1]                     : 125       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MSE_SLE_o[4]                 : 117       : output : 3.3-V LVTTL       :         : 2         : N              
+MSE_SLE_dir[4]               : 118       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SLE_i[6]                 : 119       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SLE_o[6]                 : 120       : output : 3.3-V LVTTL       :         : 2         : N              
+MSE_SDI_i[6]                 : 121       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SLE_dir[6]               : 122       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SDI_dir[6]               : 123       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SRDY_i[5]                : 124       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SRDY_o[6]                : 125       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : 126       : power  :                   : 2.5V/3.3V :           :                
-port9[3]                     : 127       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MSE_SRDY_dir[6]              : 127       : input  : 3.3-V LVTTL       :         : 2         : N              
 GNDINT                       : 128       : gnd    :                   :         :           :                
-port9[5]                     : 129       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port9[7]                     : 130       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port9[6]                     : 131       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-port9[4]                     : 132       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-LED[3]                       : 133       : output : 3.3-V LVTTL       :         : 2         : Y              
-LED[2]                       : 134       : output : 3.3-V LVTTL       :         : 2         : Y              
+MSE_SLE_o[5]                 : 129       : output : 3.3-V LVTTL       :         : 2         : N              
+MSE_SDO_dir[6]               : 130       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SLE_i[5]                 : 131       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SRDY_o[5]                : 132       : output : 3.3-V LVTTL       :         : 2         : N              
+MSE_SLE_dir[5]               : 133       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SRDY_dir[5]              : 134       : input  : 3.3-V LVTTL       :         : 2         : N              
 GNDIO                        : 135       : gnd    :                   :         :           :                
 VCCIO2                       : 136       : power  :                   : 3.3V    : 2         :                
-LED[1]                       : 137       : output : 3.3-V LVTTL       :         : 2         : Y              
-LED[0]                       : 138       : output : 3.3-V LVTTL       :         : 2         : Y              
+MSE_SDO_i[5]                 : 137       : input  : 3.3-V LVTTL       :         : 2         : N              
+MSE_SDO_i[6]                 : 138       : input  : 3.3-V LVTTL       :         : 2         : N              
 MSE_SLE[6]                   : 139       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 MSE_SRDY[6]                  : 140       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 MSE_SDI[6]                   : 141       : bidir  : 3.3-V LVTTL       :         : 2         : Y              

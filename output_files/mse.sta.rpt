@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for mse
-Mon Jun 17 17:54:52 2013
-Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+Tue Jun 18 23:20:42 2013
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -16,17 +16,13 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Editio
   8. Recovery Summary
   9. Removal Summary
  10. Minimum Pulse Width Summary
- 11. Setup: 'flash|maxii_ufm_block1|osc'
- 12. Hold: 'flash|maxii_ufm_block1|osc'
- 13. Minimum Pulse Width: 'flash|maxii_ufm_block1|osc'
- 14. Clock to Output Times
- 15. Minimum Clock to Output Times
- 16. Setup Transfers
- 17. Hold Transfers
- 18. Report TCCS
- 19. Report RSKM
- 20. Unconstrained Paths
- 21. TimeQuest Timing Analyzer Messages
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Clock Transfers
+ 14. Report TCCS
+ 15. Report RSKM
+ 16. Unconstrained Paths
+ 17. TimeQuest Timing Analyzer Messages
 
 
 
@@ -49,17 +45,17 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                                    ;
-+--------------------+-----------------------------------------------------------------+
-; Quartus II Version ; Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition ;
-; Revision Name      ; mse                                                             ;
-; Device Family      ; MAX II                                                          ;
-; Device Name        ; EPM1270T144C5                                                   ;
-; Timing Models      ; Final                                                           ;
-; Delay Model        ; Slow Model                                                      ;
-; Rise/Fall Delays   ; Unavailable                                                     ;
-+--------------------+-----------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                     ;
++--------------------+------------------------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; mse                                                              ;
+; Device Family      ; MAX II                                                           ;
+; Device Name        ; EPM1270T144C5                                                    ;
+; Timing Models      ; Final                                                            ;
+; Delay Model        ; Slow Model                                                       ;
+; Rise/Fall Delays   ; Unavailable                                                      ;
++--------------------+------------------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -67,7 +63,7 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -75,45 +71,32 @@ applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-8 processors         ;   0.0%      ;
+;     2-4 processors         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                  ;
-+----------------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
-; Clock Name                 ; Type ; Period  ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                        ;
-+----------------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
-; flash|maxii_ufm_block1|osc ; Base ; 181.818 ; 5.5 MHz   ; 0.000 ; 90.909 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { flash|maxii_ufm_block1|osc } ;
-+----------------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+----------
+; Clocks ;
+----------
+No clocks to report.
 
 
-+----------------------------------------------------------------+
-; Fmax Summary                                                   ;
-+----------+-----------------+----------------------------+------+
-; Fmax     ; Restricted Fmax ; Clock Name                 ; Note ;
-+----------+-----------------+----------------------------+------+
-; 10.0 MHz ; 10.0 MHz        ; flash|maxii_ufm_block1|osc ;      ;
-+----------+-----------------+----------------------------+------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+----------------
+; Fmax Summary ;
+----------------
+No paths to report.
 
 
-+-----------------------------------------------------+
-; Setup Summary                                       ;
-+----------------------------+--------+---------------+
-; Clock                      ; Slack  ; End Point TNS ;
-+----------------------------+--------+---------------+
-; flash|maxii_ufm_block1|osc ; 81.818 ; 0.000         ;
-+----------------------------+--------+---------------+
+-----------------
+; Setup Summary ;
+-----------------
+No paths to report.
 
 
-+------------------------------------------------------+
-; Hold Summary                                         ;
-+----------------------------+---------+---------------+
-; Clock                      ; Slack   ; End Point TNS ;
-+----------------------------+---------+---------------+
-; flash|maxii_ufm_block1|osc ; -21.948 ; -42.493       ;
-+----------------------------+---------+---------------+
+----------------
+; Hold Summary ;
+----------------
+No paths to report.
 
 
 --------------------
@@ -128,553 +111,200 @@ No paths to report.
 No paths to report.
 
 
-+-----------------------------------------------------+
-; Minimum Pulse Width Summary                         ;
-+----------------------------+--------+---------------+
-; Clock                      ; Slack  ; End Point TNS ;
-+----------------------------+--------+---------------+
-; flash|maxii_ufm_block1|osc ; 60.909 ; 0.000         ;
-+----------------------------+--------+---------------+
+-------------------------------
+; Minimum Pulse Width Summary ;
+-------------------------------
+No paths to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'flash|maxii_ufm_block1|osc'                                                                                                                                                                                                                                         ;
-+---------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
-; Slack   ; From Node                                                                           ; To Node                                                                  ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
-+---------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
-; 81.818  ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 80.000     ;
-; 81.818  ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 80.000     ;
-; 159.588 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 7.055      ;
-; 159.722 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 6.921      ;
-; 159.913 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 6.730      ;
-; 160.260 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 6.383      ;
-; 160.582 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.937      ; 6.173      ;
-; 160.722 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.937      ; 6.033      ;
-; 160.775 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.937      ; 5.980      ;
-; 160.910 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.937      ; 5.845      ;
-; 161.408 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 5.235      ;
-; 161.664 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.937      ; 5.091      ;
-; 162.295 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 4.348      ;
-; 162.363 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.937      ; 4.392      ;
-; 162.995 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 3.648      ;
-; 163.766 ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                                  ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 4.825      ; 2.877      ;
-; 169.313 ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[0]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; -4.825     ; 7.347      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.282 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.203      ;
-; 173.461 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|deco2_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.024      ;
-; 173.461 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|deco1_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 8.024      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.643 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.842      ;
-; 173.815 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|deco2_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.670      ;
-; 173.815 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|deco1_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.670      ;
-; 173.902 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|real_decode_dffe                         ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.583      ;
-; 173.968 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[5]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.517      ;
-; 173.968 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[4]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.517      ;
-; 173.968 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[3]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.517      ;
-; 173.968 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[2]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.517      ;
-; 173.968 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[1]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.517      ;
-; 173.968 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[0]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.517      ;
-; 174.256 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|real_decode_dffe                         ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.229      ;
-; 174.329 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[5]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.156      ;
-; 174.329 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[4]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.156      ;
-; 174.329 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[3]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.156      ;
-; 174.329 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[2]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.156      ;
-; 174.329 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[1]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.156      ;
-; 174.329 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[0]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 7.156      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.493 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.992      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.627 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.858      ;
-; 174.759 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|deco2_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.726      ;
-; 174.759 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|deco1_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.726      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.797 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.688      ;
-; 174.843 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|gated_clk2_dffe                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.642      ;
-; 174.950 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|deco2_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.535      ;
-; 174.950 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|deco1_dffe                               ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.535      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                       ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-; 175.166 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 181.818      ; 0.000      ; 6.319      ;
-+---------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
++-------------------------------------------------------------+
+; Propagation Delay                                           ;
++-----------------+---------------+--------+----+----+--------+
+; Input Port      ; Output Port   ; RR     ; RF ; FR ; FF     ;
++-----------------+---------------+--------+----+----+--------+
+; MSE_SDI[0]      ; MSE_SDI_o[0]  ; 8.296  ;    ;    ; 8.296  ;
+; MSE_SDI[0]      ; MSE_SDO_o[0]  ; 8.296  ;    ;    ; 8.296  ;
+; MSE_SDI[1]      ; MSE_SDI_o[1]  ; 8.939  ;    ;    ; 8.939  ;
+; MSE_SDI[1]      ; MSE_SDO_o[1]  ; 8.939  ;    ;    ; 8.939  ;
+; MSE_SDI[2]      ; MSE_SDI_o[2]  ; 9.593  ;    ;    ; 9.593  ;
+; MSE_SDI[2]      ; MSE_SDO_o[2]  ; 9.593  ;    ;    ; 9.593  ;
+; MSE_SDI[3]      ; MSE_SDI_o[3]  ; 10.260 ;    ;    ; 10.260 ;
+; MSE_SDI[3]      ; MSE_SDO_o[3]  ; 10.260 ;    ;    ; 10.260 ;
+; MSE_SDI[4]      ; MSE_SDI_o[4]  ; 10.239 ;    ;    ; 10.239 ;
+; MSE_SDI[4]      ; MSE_SDO_o[4]  ; 10.239 ;    ;    ; 10.239 ;
+; MSE_SDI[5]      ; MSE_SDI_o[5]  ; 10.316 ;    ;    ; 10.316 ;
+; MSE_SDI[5]      ; MSE_SDO_o[5]  ; 10.316 ;    ;    ; 10.316 ;
+; MSE_SDI[6]      ; MSE_SDI_o[6]  ; 9.603  ;    ;    ; 9.603  ;
+; MSE_SDI[6]      ; MSE_SDO_o[6]  ; 9.603  ;    ;    ; 9.603  ;
+; MSE_SDI_dir[0]  ; MSE_SDI[0]    ; 6.597  ;    ;    ; 6.597  ;
+; MSE_SDI_dir[1]  ; MSE_SDI[1]    ; 7.468  ;    ;    ; 7.468  ;
+; MSE_SDI_dir[2]  ; MSE_SDI[2]    ; 6.849  ;    ;    ; 6.849  ;
+; MSE_SDI_dir[3]  ; MSE_SDI[3]    ; 8.550  ;    ;    ; 8.550  ;
+; MSE_SDI_dir[4]  ; MSE_SDI[4]    ; 8.321  ;    ;    ; 8.321  ;
+; MSE_SDI_dir[5]  ; MSE_SDI[5]    ; 8.481  ;    ;    ; 8.481  ;
+; MSE_SDI_dir[6]  ; MSE_SDI[6]    ; 7.370  ;    ;    ; 7.370  ;
+; MSE_SDI_i[0]    ; MSE_SDI[0]    ; 10.261 ;    ;    ; 10.261 ;
+; MSE_SDI_i[1]    ; MSE_SDI[1]    ; 9.646  ;    ;    ; 9.646  ;
+; MSE_SDI_i[2]    ; MSE_SDI[2]    ; 9.720  ;    ;    ; 9.720  ;
+; MSE_SDI_i[3]    ; MSE_SDI[3]    ; 9.349  ;    ;    ; 9.349  ;
+; MSE_SDI_i[4]    ; MSE_SDI[4]    ; 10.176 ;    ;    ; 10.176 ;
+; MSE_SDI_i[5]    ; MSE_SDI[5]    ; 9.468  ;    ;    ; 9.468  ;
+; MSE_SDI_i[6]    ; MSE_SDI[6]    ; 9.338  ;    ;    ; 9.338  ;
+; MSE_SDO_dir[0]  ; MSE_SDO[0]    ; 6.943  ;    ;    ; 6.943  ;
+; MSE_SDO_dir[1]  ; MSE_SDO[1]    ; 8.786  ;    ;    ; 8.786  ;
+; MSE_SDO_dir[2]  ; MSE_SDO[2]    ; 8.547  ;    ;    ; 8.547  ;
+; MSE_SDO_dir[3]  ; MSE_SDO[3]    ; 9.288  ;    ;    ; 9.288  ;
+; MSE_SDO_dir[4]  ; MSE_SDO[4]    ; 8.424  ;    ;    ; 8.424  ;
+; MSE_SDO_dir[5]  ; MSE_SDO[5]    ; 8.192  ;    ;    ; 8.192  ;
+; MSE_SDO_dir[6]  ; MSE_SDO[6]    ; 7.550  ;    ;    ; 7.550  ;
+; MSE_SDO_i[0]    ; MSE_SDO[0]    ; 9.063  ;    ;    ; 9.063  ;
+; MSE_SDO_i[1]    ; MSE_SDO[1]    ; 8.097  ;    ;    ; 8.097  ;
+; MSE_SDO_i[2]    ; MSE_SDO[2]    ; 8.645  ;    ;    ; 8.645  ;
+; MSE_SDO_i[3]    ; MSE_SDO[3]    ; 10.391 ;    ;    ; 10.391 ;
+; MSE_SDO_i[4]    ; MSE_SDO[4]    ; 10.168 ;    ;    ; 10.168 ;
+; MSE_SDO_i[5]    ; MSE_SDO[5]    ; 8.397  ;    ;    ; 8.397  ;
+; MSE_SDO_i[6]    ; MSE_SDO[6]    ; 8.609  ;    ;    ; 8.609  ;
+; MSE_SLE[0]      ; MSE_SLE_o[0]  ; 10.134 ;    ;    ; 10.134 ;
+; MSE_SLE[1]      ; MSE_SLE_o[1]  ; 7.379  ;    ;    ; 7.379  ;
+; MSE_SLE[2]      ; MSE_SLE_o[2]  ; 9.626  ;    ;    ; 9.626  ;
+; MSE_SLE[3]      ; MSE_SLE_o[3]  ; 7.351  ;    ;    ; 7.351  ;
+; MSE_SLE[4]      ; MSE_SLE_o[4]  ; 8.800  ;    ;    ; 8.800  ;
+; MSE_SLE[5]      ; MSE_SLE_o[5]  ; 8.775  ;    ;    ; 8.775  ;
+; MSE_SLE[6]      ; MSE_SLE_o[6]  ; 8.231  ;    ;    ; 8.231  ;
+; MSE_SLE_dir[0]  ; MSE_SLE[0]    ; 6.874  ;    ;    ; 6.874  ;
+; MSE_SLE_dir[1]  ; MSE_SLE[1]    ; 9.912  ;    ;    ; 9.912  ;
+; MSE_SLE_dir[2]  ; MSE_SLE[2]    ; 8.486  ;    ;    ; 8.486  ;
+; MSE_SLE_dir[3]  ; MSE_SLE[3]    ; 8.018  ;    ;    ; 8.018  ;
+; MSE_SLE_dir[4]  ; MSE_SLE[4]    ; 8.000  ;    ;    ; 8.000  ;
+; MSE_SLE_dir[5]  ; MSE_SLE[5]    ; 7.316  ;    ;    ; 7.316  ;
+; MSE_SLE_dir[6]  ; MSE_SLE[6]    ; 7.717  ;    ;    ; 7.717  ;
+; MSE_SLE_i[0]    ; MSE_SLE[0]    ; 7.986  ;    ;    ; 7.986  ;
+; MSE_SLE_i[1]    ; MSE_SLE[1]    ; 10.176 ;    ;    ; 10.176 ;
+; MSE_SLE_i[2]    ; MSE_SLE[2]    ; 8.598  ;    ;    ; 8.598  ;
+; MSE_SLE_i[3]    ; MSE_SLE[3]    ; 9.360  ;    ;    ; 9.360  ;
+; MSE_SLE_i[4]    ; MSE_SLE[4]    ; 9.653  ;    ;    ; 9.653  ;
+; MSE_SLE_i[5]    ; MSE_SLE[5]    ; 9.015  ;    ;    ; 9.015  ;
+; MSE_SLE_i[6]    ; MSE_SLE[6]    ; 9.154  ;    ;    ; 9.154  ;
+; MSE_SRDY[0]     ; MSE_SRDY_o[0] ; 7.673  ;    ;    ; 7.673  ;
+; MSE_SRDY[1]     ; MSE_SRDY_o[1] ; 8.398  ;    ;    ; 8.398  ;
+; MSE_SRDY[2]     ; MSE_SRDY_o[2] ; 9.994  ;    ;    ; 9.994  ;
+; MSE_SRDY[3]     ; MSE_SRDY_o[3] ; 7.455  ;    ;    ; 7.455  ;
+; MSE_SRDY[4]     ; MSE_SRDY_o[4] ; 9.773  ;    ;    ; 9.773  ;
+; MSE_SRDY[5]     ; MSE_SRDY_o[5] ; 9.248  ;    ;    ; 9.248  ;
+; MSE_SRDY[6]     ; MSE_SRDY_o[6] ; 8.231  ;    ;    ; 8.231  ;
+; MSE_SRDY_dir[0] ; MSE_SRDY[0]   ; 7.368  ;    ;    ; 7.368  ;
+; MSE_SRDY_dir[1] ; MSE_SRDY[1]   ; 8.457  ;    ;    ; 8.457  ;
+; MSE_SRDY_dir[2] ; MSE_SRDY[2]   ; 9.895  ;    ;    ; 9.895  ;
+; MSE_SRDY_dir[3] ; MSE_SRDY[3]   ; 8.153  ;    ;    ; 8.153  ;
+; MSE_SRDY_dir[4] ; MSE_SRDY[4]   ; 8.363  ;    ;    ; 8.363  ;
+; MSE_SRDY_dir[5] ; MSE_SRDY[5]   ; 7.954  ;    ;    ; 7.954  ;
+; MSE_SRDY_dir[6] ; MSE_SRDY[6]   ; 7.601  ;    ;    ; 7.601  ;
+; MSE_SRDY_i[0]   ; MSE_SRDY[0]   ; 8.595  ;    ;    ; 8.595  ;
+; MSE_SRDY_i[1]   ; MSE_SRDY[1]   ; 9.697  ;    ;    ; 9.697  ;
+; MSE_SRDY_i[2]   ; MSE_SRDY[2]   ; 7.486  ;    ;    ; 7.486  ;
+; MSE_SRDY_i[3]   ; MSE_SRDY[3]   ; 10.592 ;    ;    ; 10.592 ;
+; MSE_SRDY_i[4]   ; MSE_SRDY[4]   ; 7.481  ;    ;    ; 7.481  ;
+; MSE_SRDY_i[5]   ; MSE_SRDY[5]   ; 9.016  ;    ;    ; 9.016  ;
+; MSE_SRDY_i[6]   ; MSE_SRDY[6]   ; 9.066  ;    ;    ; 9.066  ;
++-----------------+---------------+--------+----+----+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'flash|maxii_ufm_block1|osc'                                                                                                                                                                                                                                                     ;
-+---------+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
-; Slack   ; From Node                                                                           ; To Node                                                                             ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
-+---------+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
-; -21.948 ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                                  ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 2.877      ;
-; -21.177 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 3.648      ;
-; -20.545 ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.937      ; 4.392      ;
-; -20.477 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 4.348      ;
-; -19.846 ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.937      ; 5.091      ;
-; -19.590 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 5.235      ;
-; -19.092 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.937      ; 5.845      ;
-; -18.957 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.937      ; 5.980      ;
-; -18.904 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.937      ; 6.033      ;
-; -18.764 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.937      ; 6.173      ;
-; -18.442 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 6.383      ;
-; -18.095 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 6.730      ;
-; -17.904 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 6.921      ;
-; -17.770 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 4.825      ; 7.055      ;
-; 1.379   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[4]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[5]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.600      ;
-; 1.385   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.606      ;
-; 1.385   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[3]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[4]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.606      ;
-; 1.385   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[2]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[3]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.606      ;
-; 1.391   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                                  ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.612      ;
-; 1.397   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                                  ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                                  ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.618      ;
-; 1.402   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                                  ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                                  ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.623      ;
-; 1.402   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.623      ;
-; 1.644   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.865      ;
-; 1.644   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[0]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[1]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.865      ;
-; 1.646   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[1]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[2]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.867      ;
-; 1.659   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                                  ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                                  ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.880      ;
-; 1.661   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                                  ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                                  ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.882      ;
-; 1.661   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                                  ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                                  ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.882      ;
-; 1.667   ; temp[0]                                                                             ; temp[0]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 1.888      ;
-; 2.108   ; temp[7]                                                                             ; temp[7]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.329      ;
-; 2.126   ; temp[2]                                                                             ; temp[2]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.347      ;
-; 2.143   ; temp[0]                                                                             ; temp[1]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.364      ;
-; 2.173   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.394      ;
-; 2.178   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.399      ;
-; 2.212   ; temp[3]                                                                             ; temp[3]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.433      ;
-; 2.230   ; temp[5]                                                                             ; temp[5]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.451      ;
-; 2.231   ; temp[4]                                                                             ; temp[4]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231   ; temp[6]                                                                             ; temp[6]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.452      ;
-; 2.263   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.484      ;
-; 2.280   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.501      ;
-; 2.303   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.524      ;
-; 2.389   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[5]                                   ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.610      ;
-; 2.633   ; flash_altufm_parallel_71o:flash|real_decode_dffe                                    ; flash_altufm_parallel_71o:flash|real_decode2_dffe                                   ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.854      ;
-; 2.682   ; flash_altufm_parallel_71o:flash|real_decode2_dffe                                   ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.903      ;
-; 2.682   ; flash_altufm_parallel_71o:flash|real_decode2_dffe                                   ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 2.903      ;
-; 2.890   ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|gated_clk1_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.111      ;
-; 2.958   ; temp[2]                                                                             ; temp[3]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.179      ;
-; 2.975   ; temp[0]                                                                             ; temp[2]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.196      ;
-; 3.005   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.226      ;
-; 3.010   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.231      ;
-; 3.069   ; temp[2]                                                                             ; temp[4]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.290      ;
-; 3.086   ; temp[0]                                                                             ; temp[3]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.307      ;
-; 3.116   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.337      ;
-; 3.121   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.342      ;
-; 3.152   ; temp[3]                                                                             ; temp[4]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.373      ;
-; 3.168   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.389      ;
-; 3.170   ; temp[5]                                                                             ; temp[6]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.391      ;
-; 3.171   ; temp[6]                                                                             ; temp[7]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.392      ;
-; 3.175   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.396      ;
-; 3.197   ; temp[0]                                                                             ; temp[4]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.418      ;
-; 3.203   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.424      ;
-; 3.227   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.448      ;
-; 3.281   ; temp[5]                                                                             ; temp[7]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.502      ;
-; 3.441   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|gated_clk1_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.662      ;
-; 3.492   ; temp[4]                                                                             ; temp[5]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.713      ;
-; 3.492   ; temp[4]                                                                             ; temp[6]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.713      ;
-; 3.492   ; temp[4]                                                                             ; temp[7]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.713      ;
-; 3.505   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.726      ;
-; 3.525   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.746      ;
-; 3.538   ; temp[2]                                                                             ; temp[5]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.759      ;
-; 3.538   ; temp[2]                                                                             ; temp[6]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.759      ;
-; 3.538   ; temp[2]                                                                             ; temp[7]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.759      ;
-; 3.541   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.762      ;
-; 3.589   ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|gated_clk1_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.810      ;
-; 3.590   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.811      ;
-; 3.621   ; temp[3]                                                                             ; temp[5]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.842      ;
-; 3.621   ; temp[3]                                                                             ; temp[6]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.842      ;
-; 3.621   ; temp[3]                                                                             ; temp[7]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.842      ;
-; 3.666   ; temp[0]                                                                             ; temp[5]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.887      ;
-; 3.666   ; temp[0]                                                                             ; temp[6]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.887      ;
-; 3.666   ; temp[0]                                                                             ; temp[7]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.887      ;
-; 3.672   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.893      ;
-; 3.696   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 3.917      ;
-; 3.993   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.214      ;
-; 4.018   ; temp[1]                                                                             ; temp[1]                                                                             ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.239      ;
-; 4.073   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|gated_clk1_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.294      ;
-; 4.084   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.305      ;
-; 4.089   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.310      ;
-; 4.291   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|gated_clk2_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.512      ;
-; 4.443   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash_altufm_parallel_71o:flash|gated_clk2_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.664      ;
-; 4.469   ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.690      ;
-; 4.469   ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.690      ;
-; 4.469   ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.690      ;
-; 4.469   ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.690      ;
-; 4.469   ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.690      ;
-; 4.478   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash_altufm_parallel_71o:flash|gated_clk1_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.699      ;
-; 4.537   ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash_altufm_parallel_71o:flash|gated_clk2_dffe                                     ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 4.758      ;
-; 4.830   ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 5.051      ;
-; 4.830   ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 5.051      ;
-; 4.830   ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 0.000        ; 0.000      ; 5.051      ;
-+---------+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
++-------------------------------------------------------------+
+; Minimum Propagation Delay                                   ;
++-----------------+---------------+--------+----+----+--------+
+; Input Port      ; Output Port   ; RR     ; RF ; FR ; FF     ;
++-----------------+---------------+--------+----+----+--------+
+; MSE_SDI[0]      ; MSE_SDI_o[0]  ; 8.296  ;    ;    ; 8.296  ;
+; MSE_SDI[0]      ; MSE_SDO_o[0]  ; 8.296  ;    ;    ; 8.296  ;
+; MSE_SDI[1]      ; MSE_SDI_o[1]  ; 8.939  ;    ;    ; 8.939  ;
+; MSE_SDI[1]      ; MSE_SDO_o[1]  ; 8.939  ;    ;    ; 8.939  ;
+; MSE_SDI[2]      ; MSE_SDI_o[2]  ; 9.593  ;    ;    ; 9.593  ;
+; MSE_SDI[2]      ; MSE_SDO_o[2]  ; 9.593  ;    ;    ; 9.593  ;
+; MSE_SDI[3]      ; MSE_SDI_o[3]  ; 10.260 ;    ;    ; 10.260 ;
+; MSE_SDI[3]      ; MSE_SDO_o[3]  ; 10.260 ;    ;    ; 10.260 ;
+; MSE_SDI[4]      ; MSE_SDI_o[4]  ; 10.239 ;    ;    ; 10.239 ;
+; MSE_SDI[4]      ; MSE_SDO_o[4]  ; 10.239 ;    ;    ; 10.239 ;
+; MSE_SDI[5]      ; MSE_SDI_o[5]  ; 10.316 ;    ;    ; 10.316 ;
+; MSE_SDI[5]      ; MSE_SDO_o[5]  ; 10.316 ;    ;    ; 10.316 ;
+; MSE_SDI[6]      ; MSE_SDI_o[6]  ; 9.603  ;    ;    ; 9.603  ;
+; MSE_SDI[6]      ; MSE_SDO_o[6]  ; 9.603  ;    ;    ; 9.603  ;
+; MSE_SDI_dir[0]  ; MSE_SDI[0]    ; 6.597  ;    ;    ; 6.597  ;
+; MSE_SDI_dir[1]  ; MSE_SDI[1]    ; 7.468  ;    ;    ; 7.468  ;
+; MSE_SDI_dir[2]  ; MSE_SDI[2]    ; 6.849  ;    ;    ; 6.849  ;
+; MSE_SDI_dir[3]  ; MSE_SDI[3]    ; 8.550  ;    ;    ; 8.550  ;
+; MSE_SDI_dir[4]  ; MSE_SDI[4]    ; 8.321  ;    ;    ; 8.321  ;
+; MSE_SDI_dir[5]  ; MSE_SDI[5]    ; 8.481  ;    ;    ; 8.481  ;
+; MSE_SDI_dir[6]  ; MSE_SDI[6]    ; 7.370  ;    ;    ; 7.370  ;
+; MSE_SDI_i[0]    ; MSE_SDI[0]    ; 10.261 ;    ;    ; 10.261 ;
+; MSE_SDI_i[1]    ; MSE_SDI[1]    ; 9.646  ;    ;    ; 9.646  ;
+; MSE_SDI_i[2]    ; MSE_SDI[2]    ; 9.720  ;    ;    ; 9.720  ;
+; MSE_SDI_i[3]    ; MSE_SDI[3]    ; 9.349  ;    ;    ; 9.349  ;
+; MSE_SDI_i[4]    ; MSE_SDI[4]    ; 10.176 ;    ;    ; 10.176 ;
+; MSE_SDI_i[5]    ; MSE_SDI[5]    ; 9.468  ;    ;    ; 9.468  ;
+; MSE_SDI_i[6]    ; MSE_SDI[6]    ; 9.338  ;    ;    ; 9.338  ;
+; MSE_SDO_dir[0]  ; MSE_SDO[0]    ; 6.943  ;    ;    ; 6.943  ;
+; MSE_SDO_dir[1]  ; MSE_SDO[1]    ; 8.786  ;    ;    ; 8.786  ;
+; MSE_SDO_dir[2]  ; MSE_SDO[2]    ; 8.547  ;    ;    ; 8.547  ;
+; MSE_SDO_dir[3]  ; MSE_SDO[3]    ; 9.288  ;    ;    ; 9.288  ;
+; MSE_SDO_dir[4]  ; MSE_SDO[4]    ; 8.424  ;    ;    ; 8.424  ;
+; MSE_SDO_dir[5]  ; MSE_SDO[5]    ; 8.192  ;    ;    ; 8.192  ;
+; MSE_SDO_dir[6]  ; MSE_SDO[6]    ; 7.550  ;    ;    ; 7.550  ;
+; MSE_SDO_i[0]    ; MSE_SDO[0]    ; 9.063  ;    ;    ; 9.063  ;
+; MSE_SDO_i[1]    ; MSE_SDO[1]    ; 8.097  ;    ;    ; 8.097  ;
+; MSE_SDO_i[2]    ; MSE_SDO[2]    ; 8.645  ;    ;    ; 8.645  ;
+; MSE_SDO_i[3]    ; MSE_SDO[3]    ; 10.391 ;    ;    ; 10.391 ;
+; MSE_SDO_i[4]    ; MSE_SDO[4]    ; 10.168 ;    ;    ; 10.168 ;
+; MSE_SDO_i[5]    ; MSE_SDO[5]    ; 8.397  ;    ;    ; 8.397  ;
+; MSE_SDO_i[6]    ; MSE_SDO[6]    ; 8.609  ;    ;    ; 8.609  ;
+; MSE_SLE[0]      ; MSE_SLE_o[0]  ; 10.134 ;    ;    ; 10.134 ;
+; MSE_SLE[1]      ; MSE_SLE_o[1]  ; 7.379  ;    ;    ; 7.379  ;
+; MSE_SLE[2]      ; MSE_SLE_o[2]  ; 9.626  ;    ;    ; 9.626  ;
+; MSE_SLE[3]      ; MSE_SLE_o[3]  ; 7.351  ;    ;    ; 7.351  ;
+; MSE_SLE[4]      ; MSE_SLE_o[4]  ; 8.800  ;    ;    ; 8.800  ;
+; MSE_SLE[5]      ; MSE_SLE_o[5]  ; 8.775  ;    ;    ; 8.775  ;
+; MSE_SLE[6]      ; MSE_SLE_o[6]  ; 8.231  ;    ;    ; 8.231  ;
+; MSE_SLE_dir[0]  ; MSE_SLE[0]    ; 6.874  ;    ;    ; 6.874  ;
+; MSE_SLE_dir[1]  ; MSE_SLE[1]    ; 9.912  ;    ;    ; 9.912  ;
+; MSE_SLE_dir[2]  ; MSE_SLE[2]    ; 8.486  ;    ;    ; 8.486  ;
+; MSE_SLE_dir[3]  ; MSE_SLE[3]    ; 8.018  ;    ;    ; 8.018  ;
+; MSE_SLE_dir[4]  ; MSE_SLE[4]    ; 8.000  ;    ;    ; 8.000  ;
+; MSE_SLE_dir[5]  ; MSE_SLE[5]    ; 7.316  ;    ;    ; 7.316  ;
+; MSE_SLE_dir[6]  ; MSE_SLE[6]    ; 7.717  ;    ;    ; 7.717  ;
+; MSE_SLE_i[0]    ; MSE_SLE[0]    ; 7.986  ;    ;    ; 7.986  ;
+; MSE_SLE_i[1]    ; MSE_SLE[1]    ; 10.176 ;    ;    ; 10.176 ;
+; MSE_SLE_i[2]    ; MSE_SLE[2]    ; 8.598  ;    ;    ; 8.598  ;
+; MSE_SLE_i[3]    ; MSE_SLE[3]    ; 9.360  ;    ;    ; 9.360  ;
+; MSE_SLE_i[4]    ; MSE_SLE[4]    ; 9.653  ;    ;    ; 9.653  ;
+; MSE_SLE_i[5]    ; MSE_SLE[5]    ; 9.015  ;    ;    ; 9.015  ;
+; MSE_SLE_i[6]    ; MSE_SLE[6]    ; 9.154  ;    ;    ; 9.154  ;
+; MSE_SRDY[0]     ; MSE_SRDY_o[0] ; 7.673  ;    ;    ; 7.673  ;
+; MSE_SRDY[1]     ; MSE_SRDY_o[1] ; 8.398  ;    ;    ; 8.398  ;
+; MSE_SRDY[2]     ; MSE_SRDY_o[2] ; 9.994  ;    ;    ; 9.994  ;
+; MSE_SRDY[3]     ; MSE_SRDY_o[3] ; 7.455  ;    ;    ; 7.455  ;
+; MSE_SRDY[4]     ; MSE_SRDY_o[4] ; 9.773  ;    ;    ; 9.773  ;
+; MSE_SRDY[5]     ; MSE_SRDY_o[5] ; 9.248  ;    ;    ; 9.248  ;
+; MSE_SRDY[6]     ; MSE_SRDY_o[6] ; 8.231  ;    ;    ; 8.231  ;
+; MSE_SRDY_dir[0] ; MSE_SRDY[0]   ; 7.368  ;    ;    ; 7.368  ;
+; MSE_SRDY_dir[1] ; MSE_SRDY[1]   ; 8.457  ;    ;    ; 8.457  ;
+; MSE_SRDY_dir[2] ; MSE_SRDY[2]   ; 9.895  ;    ;    ; 9.895  ;
+; MSE_SRDY_dir[3] ; MSE_SRDY[3]   ; 8.153  ;    ;    ; 8.153  ;
+; MSE_SRDY_dir[4] ; MSE_SRDY[4]   ; 8.363  ;    ;    ; 8.363  ;
+; MSE_SRDY_dir[5] ; MSE_SRDY[5]   ; 7.954  ;    ;    ; 7.954  ;
+; MSE_SRDY_dir[6] ; MSE_SRDY[6]   ; 7.601  ;    ;    ; 7.601  ;
+; MSE_SRDY_i[0]   ; MSE_SRDY[0]   ; 8.595  ;    ;    ; 8.595  ;
+; MSE_SRDY_i[1]   ; MSE_SRDY[1]   ; 9.697  ;    ;    ; 9.697  ;
+; MSE_SRDY_i[2]   ; MSE_SRDY[2]   ; 7.486  ;    ;    ; 7.486  ;
+; MSE_SRDY_i[3]   ; MSE_SRDY[3]   ; 10.592 ;    ;    ; 10.592 ;
+; MSE_SRDY_i[4]   ; MSE_SRDY[4]   ; 7.481  ;    ;    ; 7.481  ;
+; MSE_SRDY_i[5]   ; MSE_SRDY[5]   ; 9.016  ;    ;    ; 9.016  ;
+; MSE_SRDY_i[6]   ; MSE_SRDY[6]   ; 9.066  ;    ;    ; 9.066  ;
++-----------------+---------------+--------+----+----+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Minimum Pulse Width: 'flash|maxii_ufm_block1|osc'                                                                                                                                         ;
-+--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------------------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock                      ; Clock Edge ; Target                                                                              ;
-+--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------------------------------------------------------+
-; 60.909 ; 90.909       ; 30.000         ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ;
-; 60.909 ; 90.909       ; 30.000         ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT            ;
-; 60.909 ; 90.909       ; 30.000         ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ;
-; 60.909 ; 90.909       ; 30.000         ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|wire_maxii_ufm_block1_drdout                        ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|deco1_dffe                                          ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|deco2_dffe                                          ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|gated_clk1_dffe                                     ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|gated_clk1_dffe                                     ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|gated_clk2_dffe                                     ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|gated_clk2_dffe                                     ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0] ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[1] ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2] ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[3] ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[4] ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[0]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[0]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[10]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[11]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[12]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[13]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[14]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[15]                                  ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[1]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[1]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[2]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[2]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[3]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[3]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[4]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[4]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[5]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[5]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[6]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[7]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[8]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|piso_sipo_dffe[9]                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|real_decode2_dffe                                   ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|real_decode2_dffe                                   ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|real_decode_dffe                                    ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash_altufm_parallel_71o:flash|real_decode_dffe                                    ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[0]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[0]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[1]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[1]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[2]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[2]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[3]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[3]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[4]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[4]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[5]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[5]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[6]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[6]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; temp[7]                                                                             ;
-; 90.643 ; 90.909       ; 0.266          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; temp[7]                                                                             ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella0|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella0|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella1|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella1|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella2|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella2|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella3|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella3|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella4|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|cntr2|auto_generated|counter_cella4|clk                                       ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|deco1_dffe|clk                                                                ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|deco1_dffe|clk                                                                ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|deco2_dffe|clk                                                                ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|deco2_dffe|clk                                                                ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk1_dffe|clk                                                           ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk1_dffe|clk                                                           ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk2_dffe|clk                                                           ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk2_dffe|clk                                                           ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk2_dffe|combout                                                       ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk2_dffe|combout                                                       ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk2_dffe|datab                                                         ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|gated_clk2_dffe|datab                                                         ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|maxii_ufm_block1|arclk                                                        ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|maxii_ufm_block1|arclk                                                        ;
-; 90.909 ; 90.909       ; 0.000          ; High Pulse Width ; flash|maxii_ufm_block1|osc ; Rise       ; flash|maxii_ufm_block1|drclk                                                        ;
-; 90.909 ; 90.909       ; 0.000          ; Low Pulse Width  ; flash|maxii_ufm_block1|osc ; Rise       ; flash|maxii_ufm_block1|drclk                                                        ;
-+--------+--------------+----------------+------------------+----------------------------+------------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                              ;
-+-----------+----------------------------+--------+--------+------------+----------------------------+
-; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
-+-----------+----------------------------+--------+--------+------------+----------------------------+
-; port0[*]  ; flash|maxii_ufm_block1|osc ; 12.152 ; 12.152 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[0] ; flash|maxii_ufm_block1|osc ; 10.870 ; 10.870 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[1] ; flash|maxii_ufm_block1|osc ; 12.152 ; 12.152 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[2] ; flash|maxii_ufm_block1|osc ; 11.012 ; 11.012 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[3] ; flash|maxii_ufm_block1|osc ; 11.759 ; 11.759 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[4] ; flash|maxii_ufm_block1|osc ; 11.554 ; 11.554 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[5] ; flash|maxii_ufm_block1|osc ; 11.699 ; 11.699 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[6] ; flash|maxii_ufm_block1|osc ; 11.525 ; 11.525 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[7] ; flash|maxii_ufm_block1|osc ; 12.026 ; 12.026 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port1[*]  ; flash|maxii_ufm_block1|osc ; 11.176 ; 11.176 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[0] ; flash|maxii_ufm_block1|osc ; 10.865 ; 10.865 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[1] ; flash|maxii_ufm_block1|osc ; 10.928 ; 10.928 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[2] ; flash|maxii_ufm_block1|osc ; 11.010 ; 11.010 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[3] ; flash|maxii_ufm_block1|osc ; 11.176 ; 11.176 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[4] ; flash|maxii_ufm_block1|osc ; 11.021 ; 11.021 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[5] ; flash|maxii_ufm_block1|osc ; 11.127 ; 11.127 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[6] ; flash|maxii_ufm_block1|osc ; 10.896 ; 10.896 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[7] ; flash|maxii_ufm_block1|osc ; 11.025 ; 11.025 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port2[*]  ; flash|maxii_ufm_block1|osc ; 11.503 ; 11.503 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[0] ; flash|maxii_ufm_block1|osc ; 10.865 ; 10.865 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[1] ; flash|maxii_ufm_block1|osc ; 11.503 ; 11.503 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[2] ; flash|maxii_ufm_block1|osc ; 10.355 ; 10.355 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[3] ; flash|maxii_ufm_block1|osc ; 10.396 ; 10.396 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[4] ; flash|maxii_ufm_block1|osc ; 11.021 ; 11.021 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[5] ; flash|maxii_ufm_block1|osc ; 10.449 ; 10.449 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[6] ; flash|maxii_ufm_block1|osc ; 10.323 ; 10.323 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[7] ; flash|maxii_ufm_block1|osc ; 10.341 ; 10.341 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port3[*]  ; flash|maxii_ufm_block1|osc ; 12.482 ; 12.482 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[0] ; flash|maxii_ufm_block1|osc ; 11.815 ; 11.815 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[1] ; flash|maxii_ufm_block1|osc ; 11.503 ; 11.503 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[2] ; flash|maxii_ufm_block1|osc ; 11.798 ; 11.798 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[3] ; flash|maxii_ufm_block1|osc ; 11.745 ; 11.745 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[4] ; flash|maxii_ufm_block1|osc ; 12.482 ; 12.482 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[5] ; flash|maxii_ufm_block1|osc ; 11.281 ; 11.281 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[6] ; flash|maxii_ufm_block1|osc ; 12.183 ; 12.183 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[7] ; flash|maxii_ufm_block1|osc ; 11.248 ; 11.248 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port4[*]  ; flash|maxii_ufm_block1|osc ; 12.603 ; 12.603 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[0] ; flash|maxii_ufm_block1|osc ; 11.843 ; 11.843 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[1] ; flash|maxii_ufm_block1|osc ; 12.603 ; 12.603 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[2] ; flash|maxii_ufm_block1|osc ; 11.816 ; 11.816 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[3] ; flash|maxii_ufm_block1|osc ; 11.856 ; 11.856 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[4] ; flash|maxii_ufm_block1|osc ; 12.452 ; 12.452 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[5] ; flash|maxii_ufm_block1|osc ; 11.925 ; 11.925 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[6] ; flash|maxii_ufm_block1|osc ; 11.774 ; 11.774 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[7] ; flash|maxii_ufm_block1|osc ; 11.789 ; 11.789 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port5[*]  ; flash|maxii_ufm_block1|osc ; 13.377 ; 13.377 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[0] ; flash|maxii_ufm_block1|osc ; 11.774 ; 11.774 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[1] ; flash|maxii_ufm_block1|osc ; 13.377 ; 13.377 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[2] ; flash|maxii_ufm_block1|osc ; 11.059 ; 11.059 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[3] ; flash|maxii_ufm_block1|osc ; 11.876 ; 11.876 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[4] ; flash|maxii_ufm_block1|osc ; 12.951 ; 12.951 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[5] ; flash|maxii_ufm_block1|osc ; 11.143 ; 11.143 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[6] ; flash|maxii_ufm_block1|osc ; 11.017 ; 11.017 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[7] ; flash|maxii_ufm_block1|osc ; 11.802 ; 11.802 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port6[*]  ; flash|maxii_ufm_block1|osc ; 14.176 ; 14.176 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[0] ; flash|maxii_ufm_block1|osc ; 11.708 ; 11.708 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[1] ; flash|maxii_ufm_block1|osc ; 14.176 ; 14.176 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[2] ; flash|maxii_ufm_block1|osc ; 11.816 ; 11.816 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[3] ; flash|maxii_ufm_block1|osc ; 11.919 ; 11.919 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[4] ; flash|maxii_ufm_block1|osc ; 13.019 ; 13.019 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[5] ; flash|maxii_ufm_block1|osc ; 11.884 ; 11.884 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[6] ; flash|maxii_ufm_block1|osc ; 11.000 ; 11.000 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[7] ; flash|maxii_ufm_block1|osc ; 11.847 ; 11.847 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port7[*]  ; flash|maxii_ufm_block1|osc ; 14.205 ; 14.205 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[0] ; flash|maxii_ufm_block1|osc ; 11.686 ; 11.686 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[1] ; flash|maxii_ufm_block1|osc ; 14.205 ; 14.205 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[2] ; flash|maxii_ufm_block1|osc ; 10.789 ; 10.789 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[3] ; flash|maxii_ufm_block1|osc ; 12.576 ; 12.576 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[4] ; flash|maxii_ufm_block1|osc ; 13.611 ; 13.611 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[5] ; flash|maxii_ufm_block1|osc ; 11.949 ; 11.949 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[6] ; flash|maxii_ufm_block1|osc ; 11.656 ; 11.656 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[7] ; flash|maxii_ufm_block1|osc ; 12.470 ; 12.470 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port8[*]  ; flash|maxii_ufm_block1|osc ; 12.366 ; 12.366 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[0] ; flash|maxii_ufm_block1|osc ; 12.366 ; 12.366 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[1] ; flash|maxii_ufm_block1|osc ; 10.462 ; 10.462 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[2] ; flash|maxii_ufm_block1|osc ; 9.775  ; 9.775  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[3] ; flash|maxii_ufm_block1|osc ; 10.503 ; 10.503 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[4] ; flash|maxii_ufm_block1|osc ; 9.715  ; 9.715  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[5] ; flash|maxii_ufm_block1|osc ; 9.754  ; 9.754  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[6] ; flash|maxii_ufm_block1|osc ; 11.198 ; 11.198 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[7] ; flash|maxii_ufm_block1|osc ; 10.543 ; 10.543 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port9[*]  ; flash|maxii_ufm_block1|osc ; 12.366 ; 12.366 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[0] ; flash|maxii_ufm_block1|osc ; 12.366 ; 12.366 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[1] ; flash|maxii_ufm_block1|osc ; 9.755  ; 9.755  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[2] ; flash|maxii_ufm_block1|osc ; 10.434 ; 10.434 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[3] ; flash|maxii_ufm_block1|osc ; 9.897  ; 9.897  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[4] ; flash|maxii_ufm_block1|osc ; 10.392 ; 10.392 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[5] ; flash|maxii_ufm_block1|osc ; 10.768 ; 10.768 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[6] ; flash|maxii_ufm_block1|osc ; 10.335 ; 10.335 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[7] ; flash|maxii_ufm_block1|osc ; 11.605 ; 11.605 ; Rise       ; flash|maxii_ufm_block1|osc ;
-+-----------+----------------------------+--------+--------+------------+----------------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                      ;
-+-----------+----------------------------+--------+--------+------------+----------------------------+
-; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
-+-----------+----------------------------+--------+--------+------------+----------------------------+
-; port0[*]  ; flash|maxii_ufm_block1|osc ; 10.870 ; 10.870 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[0] ; flash|maxii_ufm_block1|osc ; 10.870 ; 10.870 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[1] ; flash|maxii_ufm_block1|osc ; 12.152 ; 12.152 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[2] ; flash|maxii_ufm_block1|osc ; 11.012 ; 11.012 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[3] ; flash|maxii_ufm_block1|osc ; 11.759 ; 11.759 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[4] ; flash|maxii_ufm_block1|osc ; 11.554 ; 11.554 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[5] ; flash|maxii_ufm_block1|osc ; 11.699 ; 11.699 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[6] ; flash|maxii_ufm_block1|osc ; 11.525 ; 11.525 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port0[7] ; flash|maxii_ufm_block1|osc ; 12.026 ; 12.026 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port1[*]  ; flash|maxii_ufm_block1|osc ; 10.865 ; 10.865 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[0] ; flash|maxii_ufm_block1|osc ; 10.865 ; 10.865 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[1] ; flash|maxii_ufm_block1|osc ; 10.928 ; 10.928 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[2] ; flash|maxii_ufm_block1|osc ; 11.010 ; 11.010 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[3] ; flash|maxii_ufm_block1|osc ; 11.176 ; 11.176 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[4] ; flash|maxii_ufm_block1|osc ; 11.021 ; 11.021 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[5] ; flash|maxii_ufm_block1|osc ; 11.127 ; 11.127 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[6] ; flash|maxii_ufm_block1|osc ; 10.896 ; 10.896 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port1[7] ; flash|maxii_ufm_block1|osc ; 11.025 ; 11.025 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port2[*]  ; flash|maxii_ufm_block1|osc ; 10.323 ; 10.323 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[0] ; flash|maxii_ufm_block1|osc ; 10.865 ; 10.865 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[1] ; flash|maxii_ufm_block1|osc ; 11.503 ; 11.503 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[2] ; flash|maxii_ufm_block1|osc ; 10.355 ; 10.355 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[3] ; flash|maxii_ufm_block1|osc ; 10.396 ; 10.396 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[4] ; flash|maxii_ufm_block1|osc ; 11.021 ; 11.021 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[5] ; flash|maxii_ufm_block1|osc ; 10.449 ; 10.449 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[6] ; flash|maxii_ufm_block1|osc ; 10.323 ; 10.323 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port2[7] ; flash|maxii_ufm_block1|osc ; 10.341 ; 10.341 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port3[*]  ; flash|maxii_ufm_block1|osc ; 11.248 ; 11.248 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[0] ; flash|maxii_ufm_block1|osc ; 11.815 ; 11.815 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[1] ; flash|maxii_ufm_block1|osc ; 11.503 ; 11.503 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[2] ; flash|maxii_ufm_block1|osc ; 11.798 ; 11.798 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[3] ; flash|maxii_ufm_block1|osc ; 11.745 ; 11.745 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[4] ; flash|maxii_ufm_block1|osc ; 12.482 ; 12.482 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[5] ; flash|maxii_ufm_block1|osc ; 11.281 ; 11.281 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[6] ; flash|maxii_ufm_block1|osc ; 12.183 ; 12.183 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port3[7] ; flash|maxii_ufm_block1|osc ; 11.248 ; 11.248 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port4[*]  ; flash|maxii_ufm_block1|osc ; 11.774 ; 11.774 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[0] ; flash|maxii_ufm_block1|osc ; 11.843 ; 11.843 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[1] ; flash|maxii_ufm_block1|osc ; 12.603 ; 12.603 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[2] ; flash|maxii_ufm_block1|osc ; 11.816 ; 11.816 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[3] ; flash|maxii_ufm_block1|osc ; 11.856 ; 11.856 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[4] ; flash|maxii_ufm_block1|osc ; 12.452 ; 12.452 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[5] ; flash|maxii_ufm_block1|osc ; 11.925 ; 11.925 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[6] ; flash|maxii_ufm_block1|osc ; 11.774 ; 11.774 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port4[7] ; flash|maxii_ufm_block1|osc ; 11.789 ; 11.789 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port5[*]  ; flash|maxii_ufm_block1|osc ; 11.017 ; 11.017 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[0] ; flash|maxii_ufm_block1|osc ; 11.774 ; 11.774 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[1] ; flash|maxii_ufm_block1|osc ; 13.377 ; 13.377 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[2] ; flash|maxii_ufm_block1|osc ; 11.059 ; 11.059 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[3] ; flash|maxii_ufm_block1|osc ; 11.876 ; 11.876 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[4] ; flash|maxii_ufm_block1|osc ; 12.951 ; 12.951 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[5] ; flash|maxii_ufm_block1|osc ; 11.143 ; 11.143 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[6] ; flash|maxii_ufm_block1|osc ; 11.017 ; 11.017 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port5[7] ; flash|maxii_ufm_block1|osc ; 11.802 ; 11.802 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port6[*]  ; flash|maxii_ufm_block1|osc ; 11.000 ; 11.000 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[0] ; flash|maxii_ufm_block1|osc ; 11.708 ; 11.708 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[1] ; flash|maxii_ufm_block1|osc ; 14.176 ; 14.176 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[2] ; flash|maxii_ufm_block1|osc ; 11.816 ; 11.816 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[3] ; flash|maxii_ufm_block1|osc ; 11.919 ; 11.919 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[4] ; flash|maxii_ufm_block1|osc ; 13.019 ; 13.019 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[5] ; flash|maxii_ufm_block1|osc ; 11.884 ; 11.884 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[6] ; flash|maxii_ufm_block1|osc ; 11.000 ; 11.000 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port6[7] ; flash|maxii_ufm_block1|osc ; 11.847 ; 11.847 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port7[*]  ; flash|maxii_ufm_block1|osc ; 10.789 ; 10.789 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[0] ; flash|maxii_ufm_block1|osc ; 11.686 ; 11.686 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[1] ; flash|maxii_ufm_block1|osc ; 14.205 ; 14.205 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[2] ; flash|maxii_ufm_block1|osc ; 10.789 ; 10.789 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[3] ; flash|maxii_ufm_block1|osc ; 12.576 ; 12.576 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[4] ; flash|maxii_ufm_block1|osc ; 13.611 ; 13.611 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[5] ; flash|maxii_ufm_block1|osc ; 11.949 ; 11.949 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[6] ; flash|maxii_ufm_block1|osc ; 11.656 ; 11.656 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port7[7] ; flash|maxii_ufm_block1|osc ; 12.470 ; 12.470 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port8[*]  ; flash|maxii_ufm_block1|osc ; 9.715  ; 9.715  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[0] ; flash|maxii_ufm_block1|osc ; 12.366 ; 12.366 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[1] ; flash|maxii_ufm_block1|osc ; 10.462 ; 10.462 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[2] ; flash|maxii_ufm_block1|osc ; 9.775  ; 9.775  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[3] ; flash|maxii_ufm_block1|osc ; 10.503 ; 10.503 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[4] ; flash|maxii_ufm_block1|osc ; 9.715  ; 9.715  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[5] ; flash|maxii_ufm_block1|osc ; 9.754  ; 9.754  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[6] ; flash|maxii_ufm_block1|osc ; 11.198 ; 11.198 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port8[7] ; flash|maxii_ufm_block1|osc ; 10.543 ; 10.543 ; Rise       ; flash|maxii_ufm_block1|osc ;
-; port9[*]  ; flash|maxii_ufm_block1|osc ; 9.755  ; 9.755  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[0] ; flash|maxii_ufm_block1|osc ; 12.366 ; 12.366 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[1] ; flash|maxii_ufm_block1|osc ; 9.755  ; 9.755  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[2] ; flash|maxii_ufm_block1|osc ; 10.434 ; 10.434 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[3] ; flash|maxii_ufm_block1|osc ; 9.897  ; 9.897  ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[4] ; flash|maxii_ufm_block1|osc ; 10.392 ; 10.392 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[5] ; flash|maxii_ufm_block1|osc ; 10.768 ; 10.768 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[6] ; flash|maxii_ufm_block1|osc ; 10.335 ; 10.335 ; Rise       ; flash|maxii_ufm_block1|osc ;
-;  port9[7] ; flash|maxii_ufm_block1|osc ; 11.605 ; 11.605 ; Rise       ; flash|maxii_ufm_block1|osc ;
-+-----------+----------------------------+--------+--------+------------+----------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                     ;
-+----------------------------+----------------------------+----------+----------+----------+----------+
-; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+----------------------------+----------------------------+----------+----------+----------+----------+
-; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 371      ; 0        ; 0        ; 0        ;
-+----------------------------+----------------------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                      ;
-+----------------------------+----------------------------+----------+----------+----------+----------+
-; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+----------------------------+----------------------------+----------+----------+----------+----------+
-; flash|maxii_ufm_block1|osc ; flash|maxii_ufm_block1|osc ; 371      ; 0        ; 0        ; 0        ;
-+----------------------------+----------------------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
 
 
 ---------------
@@ -696,10 +326,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 80    ; 80   ;
-; Unconstrained Output Port Paths ; 80    ; 80   ;
+; Unconstrained Input Ports       ; 77    ; 77   ;
+; Unconstrained Input Port Paths  ; 84    ; 84   ;
+; Unconstrained Output Ports      ; 56    ; 56   ;
+; Unconstrained Output Port Paths ; 84    ; 84   ;
 +---------------------------------+-------+------+
 
 
@@ -708,44 +338,34 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
-    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jun 17 17:54:33 2013
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue Jun 18 23:20:41 2013
 Info: Command: quartus_sta mse -c mse
 Info: qsta_default_script.tcl version: #1
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'mse.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
-Info (332110): Deriving PLL clocks
-    Info (332110): create_clock -period 181.818 -name {flash|maxii_ufm_block1|osc} {flash|maxii_ufm_block1|osc}
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332146): Worst-case setup slack is 81.818
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    81.818         0.000 flash|maxii_ufm_block1|osc 
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case hold slack is -21.948
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):   -21.948       -42.493 flash|maxii_ufm_block1|osc 
+Info (332159): No clocks to report
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 60.909
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    60.909         0.000 flash|maxii_ufm_block1|osc 
+Info (332140): No Minimum Pulse Width paths to report
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 325 megabytes
-    Info: Processing ended: Mon Jun 17 17:54:52 2013
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 311 megabytes
+    Info: Processing ended: Tue Jun 18 23:20:42 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

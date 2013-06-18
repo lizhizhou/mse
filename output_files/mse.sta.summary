@@ -2,16 +2,4 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'flash|maxii_ufm_block1|osc'
-Slack : 81.818
-TNS   : 0.000
-
-Type  : Hold 'flash|maxii_ufm_block1|osc'
-Slack : -21.948
-TNS   : -42.493
-
-Type  : Minimum Pulse Width 'flash|maxii_ufm_block1|osc'
-Slack : 60.909
-TNS   : 0.000
-
 ------------------------------------------------------------

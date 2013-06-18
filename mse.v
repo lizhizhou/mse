@@ -44,6 +44,26 @@ module mse (
 		temp<=temp+1;
 	end
 	
+//	port_io_interface port_io(
+//		.MSE_SDI(),	
+//		.MSE_SDI_dir(),
+//		.MSE_SDI_o(),
+//		.MSE_SDI_i(),
+//		.MSE_SDO(),
+//		.MSE_SDO_dir(),	
+//		.MSE_SDO_o(),
+//		.MSE_SDO_i(),	
+//		.MSE_SLE(),		
+//		.MSE_SLE_dir(),
+//		.MSE_SLE_o(),	
+//		.MSE_SLE_i(),		
+//		.MSE_SRDY(),
+//		.MSE_SRDY_dir(),
+//		.MSE_SRDY_o(),	
+//		.MSE_SRDY_i()			
+//	);
+
+	
 	reg [7:0] port0_dir;
 	reg [7:0] port1_dir;
 	reg [7:0] port2_dir;
@@ -64,7 +84,6 @@ module mse (
 	assign port8 = temp;
 	assign port9 = temp;
 
-	
 	//connection
 	wire clk;
 	wire rst;
