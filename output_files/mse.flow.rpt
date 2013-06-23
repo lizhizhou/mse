@@ -1,5 +1,5 @@
 Flow report for mse
-Tue Jun 18 23:20:44 2013
+Sun Jun 23 20:04:13 2013
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 
 
@@ -38,15 +38,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Flow Summary                                                               ;
 +---------------------------+------------------------------------------------+
-; Flow Status               ; Successful - Tue Jun 18 23:20:44 2013          ;
+; Flow Status               ; Successful - Sun Jun 23 20:04:13 2013          ;
 ; Quartus II 32-bit Version ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
 ; Revision Name             ; mse                                            ;
 ; Top-level Entity Name     ; port_io_interface                              ;
 ; Family                    ; MAX II                                         ;
 ; Device                    ; EPM1270T144C5                                  ;
 ; Timing Models             ; Final                                          ;
-; Total logic elements      ; 0 / 1,270 ( 0 % )                              ;
-; Total pins                ; 112 / 116 ( 97 % )                             ;
+; Total logic elements      ; 89 / 1,270 ( 7 % )                             ;
+; Total pins                ; 90 / 116 ( 78 % )                              ;
 ; Total virtual pins        ; 0                                              ;
 ; UFM blocks                ; 0 / 1 ( 0 % )                                  ;
 +---------------------------+------------------------------------------------+
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/18/2013 23:20:32 ;
+; Start date & time ; 06/23/2013 20:04:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mse                 ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +---------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 202960193200860.137156883208708 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 202960193200860.137198904104440 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
 ; IP_TOOL_NAME                          ; ALTUFM_PARALLEL                 ; --            ; --          ; --             ;
@@ -91,12 +91,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 337 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 424 MB              ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 337 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:02     ; 3.4                     ; 426 MB              ; 00:00:03                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 327 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 311 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 301 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 321 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 301 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:08                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

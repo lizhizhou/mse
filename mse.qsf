@@ -171,6 +171,6 @@ set_location_assignment PIN_14 -to MSE_SRDY[2]
 set_location_assignment PIN_24 -to MSE_SRDY[1]
 set_location_assignment PIN_30 -to MSE_SRDY[0]
 set_global_assignment -name VERILOG_FILE inter_connect.v
-set_global_assignment -name QIP_FILE flash.qip
 set_global_assignment -name VERILOG_FILE qsys_root/mse_host.v
 set_global_assignment -name VERILOG_FILE port_io_interface.v
+set_global_assignment -name QIP_FILE flash.qip

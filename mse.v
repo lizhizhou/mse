@@ -1,8 +1,8 @@
 module mse (
 	//MSE interface
-	inout MSE_RESETN,	
-	inout MSE_RSTOUT,	
-	inout MSE_SCLK,	
+	input  MSE_RESETN,	
+	output MSE_RSTOUT,	
+	input  MSE_SCLK,	
 	inout [6:0] MSE_SDI,	
 	inout [6:0] MSE_SDO,		
 	inout [6:0] MSE_SLE,		
@@ -38,58 +38,22 @@ module mse (
 	.osc(in_clk),
 	.oscena(1) 
 	);
-	reg [7:0] temp;
-	always @ (posedge in_clk)
-	begin
-		temp<=temp+1;
-	end
 	
-//	port_io_interface port_io(
-//		.MSE_SDI(),	
-//		.MSE_SDI_dir(),
-//		.MSE_SDI_o(),
-//		.MSE_SDI_i(),
-//		.MSE_SDO(),
-//		.MSE_SDO_dir(),	
-//		.MSE_SDO_o(),
-//		.MSE_SDO_i(),	
-//		.MSE_SLE(),		
-//		.MSE_SLE_dir(),
-//		.MSE_SLE_o(),	
-//		.MSE_SLE_i(),		
-//		.MSE_SRDY(),
-//		.MSE_SRDY_dir(),
-//		.MSE_SRDY_o(),	
-//		.MSE_SRDY_i()			
-//	);
+	port_io_interface port_io(
+		 .clk(MSE_SCLK),
+		 .rst(!MSE_RESETN),
+		 .data({MSE_SLE[4],MSE_SLE[5],MSE_SDI[1],MSE_SDO[1],MSE_SDO[2],MSE_SDO[5],MSE_SLE[1],MSE_SDI[5]}),
+	    .port0(port0),
+	    .port1(port1),
+	    .port2(port2),
+	    .port3(port3),
+	    .port4(port4),
+		 .port5(port5),
+	    .port6(port6),
+	    .port7(port7),
+	    .port8(port8),
+	    .port9(port9)
+	);
 
-	
-	reg [7:0] port0_dir;
-	reg [7:0] port1_dir;
-	reg [7:0] port2_dir;
-	reg [7:0] port3_dir;
-	reg [7:0] port4_dir;
-	reg [7:0] port5_dir;
-	reg [7:0] port6_dir;
-	reg [7:0] port7_dir;
-	
-	assign port0 = temp;
-	assign port1 = temp;
-	assign port2 = temp;
-	assign port3 = temp;
-	assign port4 = temp;
-	assign port5 = temp;
-	assign port6 = temp;
-	assign port7 = temp;
-	assign port8 = temp;
-	assign port9 = temp;
-
-	//connection
-	wire clk;
-	wire rst;
-	wire [7:0] address;
-	wire [15:0] data;
-	wire wr;
-	wire rd;
 	
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mse
-Tue Jun 18 23:20:33 2013
+Sun Jun 23 20:04:03 2013
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 
 
@@ -14,7 +14,9 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Versi
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |port_io_interface
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -40,13 +42,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jun 18 23:20:33 2013          ;
+; Analysis & Synthesis Status ; Successful - Sun Jun 23 20:04:03 2013          ;
 ; Quartus II 32-bit Version   ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
 ; Revision Name               ; mse                                            ;
 ; Top-level Entity Name       ; port_io_interface                              ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 0                                              ;
-; Total pins                  ; 112                                            ;
+; Total logic elements        ; 98                                             ;
+; Total pins                  ; 90                                             ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
 +-----------------------------+------------------------------------------------+
@@ -156,31 +158,32 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 0     ;
-;     -- Combinational with no register       ; 0     ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
+; Total logic elements                        ; 98    ;
+;     -- Combinational with no register       ; 33    ;
+;     -- Register only                        ; 48    ;
+;     -- Combinational with a register        ; 17    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- 2 input functions                    ; 0     ;
-;     -- 1 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 31    ;
+;     -- 3 input functions                    ; 7     ;
+;     -- 2 input functions                    ; 11    ;
+;     -- 1 input functions                    ; 1     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 91    ;
+;     -- arithmetic mode                      ; 7     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
+;     -- synchronous clear/load mode          ; 8     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 112   ;
-; Maximum fan-out                             ; 2     ;
-; Total fan-out                               ; 84    ;
-; Average fan-out                             ; 0.75  ;
+; Total registers                             ; 65    ;
+; Total logic cells in carry chains           ; 8     ;
+; I/O pins                                    ; 90    ;
+; Maximum fan-out                             ; 65    ;
+; Total fan-out                               ; 401   ;
+; Average fan-out                             ; 2.13  ;
 +---------------------------------------------+-------+
 
 
@@ -189,7 +192,7 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |port_io_interface         ; 0 (0)       ; 0            ; 0          ; 112  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |port_io_interface  ; work         ;
+; |port_io_interface         ; 98 (98)     ; 65           ; 0          ; 90   ; 0            ; 33 (33)      ; 48 (48)           ; 17 (17)          ; 8 (8)           ; 0 (0)      ; |port_io_interface  ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -199,14 +202,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 65    ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |port_io_interface|state[0]  ;
+; 256:1              ; 8 bits    ; 1360 LEs      ; 16 LEs               ; 1344 LEs               ; Yes        ; |port_io_interface|data_r[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |port_io_interface ;
++----------------+----------------------------------+-------------------------------+
+; Parameter Name ; Value                            ; Type                          ;
++----------------+----------------------------------+-------------------------------+
+; state_reset    ; 00000000                         ; Unsigned Binary               ;
+; port0_dir      ; 00000000000000000000000000000001 ; Unsigned Binary               ;
+; port0_read     ; 00000000000000000000000000000010 ; Unsigned Binary               ;
+; port0_write    ; 00000000000000000000000000000011 ; Unsigned Binary               ;
+; port1_dir      ; 00000000000000000000000000000100 ; Unsigned Binary               ;
+; port1_read     ; 00000000000000000000000000000101 ; Unsigned Binary               ;
+; port1_write    ; 00000000000000000000000000000110 ; Unsigned Binary               ;
+; port2_dir      ; 00000000000000000000000000000111 ; Unsigned Binary               ;
+; port2_read     ; 00000000000000000000000000001000 ; Unsigned Binary               ;
+; port2_write    ; 00000000000000000000000000001001 ; Unsigned Binary               ;
+; last           ; 00000000000000000000000000001010 ; Unsigned Binary               ;
++----------------+----------------------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -215,58 +248,87 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Jun 18 23:20:32 2013
+    Info: Processing started: Sun Jun 23 20:04:01 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mse -c mse
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mse.v
     Info (12023): Found entity 1: mse
 Info (12021): Found 1 design units, including 1 entities, in source file inter_connect.v
     Info (12023): Found entity 1: inter_connect
-Info (12021): Found 2 design units, including 2 entities, in source file flash.v
-    Info (12023): Found entity 1: flash_altufm_parallel_71o
-    Info (12023): Found entity 2: flash
 Info (12021): Found 1 design units, including 1 entities, in source file qsys_root/mse_host.v
     Info (12023): Found entity 1: mse_host
 Info (12021): Found 1 design units, including 1 entities, in source file port_io_interface.v
     Info (12023): Found entity 1: port_io_interface
-Warning (10236): Verilog HDL Implicit Net warning at inter_connect.v(22): created implicit net for "wr_o"
+Info (12021): Found 2 design units, including 2 entities, in source file flash.v
+    Info (12023): Found entity 1: flash_altufm_parallel_71o
+    Info (12023): Found entity 2: flash
 Info (12127): Elaborating entity "port_io_interface" for the top level hierarchy
-Warning (18029): Output pin "MSE_SDI_o[0]" driven by bidirectional pin "MSE_SDI[0]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDO_o[0]" driven by bidirectional pin "MSE_SDI[0]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDI_o[1]" driven by bidirectional pin "MSE_SDI[1]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDO_o[1]" driven by bidirectional pin "MSE_SDI[1]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDI_o[2]" driven by bidirectional pin "MSE_SDI[2]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDO_o[2]" driven by bidirectional pin "MSE_SDI[2]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDI_o[3]" driven by bidirectional pin "MSE_SDI[3]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDO_o[3]" driven by bidirectional pin "MSE_SDI[3]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDI_o[4]" driven by bidirectional pin "MSE_SDI[4]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDO_o[4]" driven by bidirectional pin "MSE_SDI[4]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDI_o[5]" driven by bidirectional pin "MSE_SDI[5]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDO_o[5]" driven by bidirectional pin "MSE_SDI[5]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDI_o[6]" driven by bidirectional pin "MSE_SDI[6]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SDO_o[6]" driven by bidirectional pin "MSE_SDI[6]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SLE_o[0]" driven by bidirectional pin "MSE_SLE[0]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SLE_o[1]" driven by bidirectional pin "MSE_SLE[1]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SLE_o[2]" driven by bidirectional pin "MSE_SLE[2]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SLE_o[3]" driven by bidirectional pin "MSE_SLE[3]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SLE_o[4]" driven by bidirectional pin "MSE_SLE[4]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SLE_o[5]" driven by bidirectional pin "MSE_SLE[5]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SLE_o[6]" driven by bidirectional pin "MSE_SLE[6]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SRDY_o[0]" driven by bidirectional pin "MSE_SRDY[0]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SRDY_o[1]" driven by bidirectional pin "MSE_SRDY[1]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SRDY_o[2]" driven by bidirectional pin "MSE_SRDY[2]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SRDY_o[3]" driven by bidirectional pin "MSE_SRDY[3]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SRDY_o[4]" driven by bidirectional pin "MSE_SRDY[4]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SRDY_o[5]" driven by bidirectional pin "MSE_SRDY[5]" cannot be tri-stated
-Warning (18029): Output pin "MSE_SRDY_o[6]" driven by bidirectional pin "MSE_SRDY[6]" cannot be tri-stated
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 56 input pins
-    Info (21059): Implemented 28 output pins
-    Info (21060): Implemented 28 bidirectional pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 338 megabytes
-    Info: Processing ended: Tue Jun 18 23:20:33 2013
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Warning (13039): The following bidir pins have no drivers
+    Warning (13040): Bidir "port3[0]" has no driver
+    Warning (13040): Bidir "port3[1]" has no driver
+    Warning (13040): Bidir "port3[2]" has no driver
+    Warning (13040): Bidir "port3[3]" has no driver
+    Warning (13040): Bidir "port3[4]" has no driver
+    Warning (13040): Bidir "port3[5]" has no driver
+    Warning (13040): Bidir "port3[6]" has no driver
+    Warning (13040): Bidir "port3[7]" has no driver
+    Warning (13040): Bidir "port4[0]" has no driver
+    Warning (13040): Bidir "port4[1]" has no driver
+    Warning (13040): Bidir "port4[2]" has no driver
+    Warning (13040): Bidir "port4[3]" has no driver
+    Warning (13040): Bidir "port4[4]" has no driver
+    Warning (13040): Bidir "port4[5]" has no driver
+    Warning (13040): Bidir "port4[6]" has no driver
+    Warning (13040): Bidir "port4[7]" has no driver
+    Warning (13040): Bidir "port5[0]" has no driver
+    Warning (13040): Bidir "port5[1]" has no driver
+    Warning (13040): Bidir "port5[2]" has no driver
+    Warning (13040): Bidir "port5[3]" has no driver
+    Warning (13040): Bidir "port5[4]" has no driver
+    Warning (13040): Bidir "port5[5]" has no driver
+    Warning (13040): Bidir "port5[6]" has no driver
+    Warning (13040): Bidir "port5[7]" has no driver
+    Warning (13040): Bidir "port6[0]" has no driver
+    Warning (13040): Bidir "port6[1]" has no driver
+    Warning (13040): Bidir "port6[2]" has no driver
+    Warning (13040): Bidir "port6[3]" has no driver
+    Warning (13040): Bidir "port6[4]" has no driver
+    Warning (13040): Bidir "port6[5]" has no driver
+    Warning (13040): Bidir "port6[6]" has no driver
+    Warning (13040): Bidir "port6[7]" has no driver
+    Warning (13040): Bidir "port7[0]" has no driver
+    Warning (13040): Bidir "port7[1]" has no driver
+    Warning (13040): Bidir "port7[2]" has no driver
+    Warning (13040): Bidir "port7[3]" has no driver
+    Warning (13040): Bidir "port7[4]" has no driver
+    Warning (13040): Bidir "port7[5]" has no driver
+    Warning (13040): Bidir "port7[6]" has no driver
+    Warning (13040): Bidir "port7[7]" has no driver
+    Warning (13040): Bidir "port8[0]" has no driver
+    Warning (13040): Bidir "port8[1]" has no driver
+    Warning (13040): Bidir "port8[2]" has no driver
+    Warning (13040): Bidir "port8[3]" has no driver
+    Warning (13040): Bidir "port8[4]" has no driver
+    Warning (13040): Bidir "port8[5]" has no driver
+    Warning (13040): Bidir "port8[6]" has no driver
+    Warning (13040): Bidir "port8[7]" has no driver
+    Warning (13040): Bidir "port9[0]" has no driver
+    Warning (13040): Bidir "port9[1]" has no driver
+    Warning (13040): Bidir "port9[2]" has no driver
+    Warning (13040): Bidir "port9[3]" has no driver
+    Warning (13040): Bidir "port9[4]" has no driver
+    Warning (13040): Bidir "port9[5]" has no driver
+    Warning (13040): Bidir "port9[6]" has no driver
+    Warning (13040): Bidir "port9[7]" has no driver
+Info (21057): Implemented 188 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+    Info (21060): Implemented 88 bidirectional pins
+    Info (21061): Implemented 98 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 337 megabytes
+    Info: Processing ended: Sun Jun 23 20:04:03 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

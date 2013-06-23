@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Jun 18 23:20:37 2013
+Fitter Status : Successful - Sun Jun 23 20:04:06 2013
 Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
 Revision Name : mse
 Top-level Entity Name : port_io_interface
 Family : MAX II
 Device : EPM1270T144C5
 Timing Models : Final
-Total logic elements : 0 / 1,270 ( 0 % )
-Total pins : 112 / 116 ( 97 % )
+Total logic elements : 89 / 1,270 ( 7 % )
+Total pins : 90 / 116 ( 78 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
