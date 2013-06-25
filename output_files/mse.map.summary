@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Sun Jun 23 20:04:03 2013
+Analysis & Synthesis Status : Successful - Sun Jun 23 22:17:56 2013
 Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
 Revision Name : mse
-Top-level Entity Name : port_io_interface
+Top-level Entity Name : mse
 Family : MAX II
-Total logic elements : 98
-Total pins : 90
+Total logic elements : 140
+Total pins : 115
 Total virtual pins : 0
-UFM blocks : 0 / 1 ( 0 % )
+UFM blocks : 1 / 1 ( 100 % )

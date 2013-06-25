@@ -3,7 +3,7 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="47" />
+   <connections preferredWidth="79" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
@@ -15,5 +15,7 @@
   </columns>
  </clocktable>
  <window width="1100" height="770" x="480" y="216" />
- <library expandedCategories="Library,Project,Project/Lophilo" />
+ <library
+   expandedCategories="Library,Project/Lophilo/Grid,Project/Lophilo,Project/Lophilo/HPS,Project/Lophilo/Verification,Project" />
+ <hdlexample language="VERILOG" />
 </preferences>

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM1270T144C5
-set_global_assignment -name TOP_LEVEL_ENTITY port_io_interface
+set_global_assignment -name TOP_LEVEL_ENTITY mse
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.1 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:05:46  JUNE 12, 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "12.1 SP1"

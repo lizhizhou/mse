@@ -1,4 +1,4 @@
-module port_io_interface(
+module interface_port_io(
 	input clk,
 	input rst,
 	inout [7:0] data,
