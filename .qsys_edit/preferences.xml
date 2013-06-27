@@ -3,19 +3,18 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="79" />
+   <connections preferredWidth="30" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="269" />
-   <clocksource preferredWidth="269" />
-   <frequency preferredWidth="250" />
+   <clockname preferredWidth="266" />
+   <clocksource preferredWidth="266" />
+   <frequency preferredWidth="248" />
   </columns>
  </clocktable>
  <window width="1100" height="770" x="480" y="216" />
- <library
-   expandedCategories="Library,Project/Lophilo/Grid,Project/Lophilo,Project/Lophilo/HPS,Project/Lophilo/Verification,Project" />
+ <library expandedCategories="Project,Library" />
  <hdlexample language="VERILOG" />
 </preferences>

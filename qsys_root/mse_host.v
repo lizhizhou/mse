@@ -21,12 +21,12 @@ module mse_host(
 	input					avm_M1_waitrequest
 );
 	assign avm_M1_address = coe_M1_ADDR;
-	assign avm_M1_write   = coe_M1_RD
+	assign avm_M1_write   = coe_M1_RD;
 	assign coe_M1_WAIT    = avm_M1_waitrequest;
 	
 	assign coe_M1_DATA    = avm_M1_read ? avm_M1_readdata : 8'hzz;
 	assign avm_M1_writedata = avm_M1_write ? coe_M1_DATA : 8'hzz;
 	
-	//assign avm_M1_byteenable
+	assign avm_M1_byteenable = 4'b0001;
 
 endmodule
