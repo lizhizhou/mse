@@ -38,22 +38,81 @@ module mse (
 	.osc(in_clk),
 	.oscena(1) 
 	);
-	
-	port_io_interface port_io(
-		 .clk(MSE_SCLK),
-		 .rst(!MSE_RESETN),
-		 .data({MSE_SLE[4],MSE_SLE[5],MSE_SDI[1],MSE_SDO[1],MSE_SDO[2],MSE_SDO[5],MSE_SLE[1],MSE_SDI[5]}),
-	    .port0(port0),
-	    .port1(port1),
-	    .port2(port2),
-	    .port3(port3),
-	    .port4(port4),
-		 .port5(port5),
-	    .port6(port6),
-	    .port7(port7),
-	    .port8(port8),
-	    .port9(port9)
-	);
 
+	assign step_motor_driver_0_AX = MSE_SDI[0];
+	assign step_motor_driver_0_AY = MSE_SDI[1];
+	assign step_motor_driver_0_BX = MSE_SDI[2];
+	assign step_motor_driver_0_BY = MSE_SDI[3];
+	
+	assign step_motor_driver_1_AX = MSE_SLE[0];
+	assign step_motor_driver_1_AY = MSE_SLE[1];
+	assign step_motor_driver_1_BX = MSE_SLE[2];
+	assign step_motor_driver_1_BY = MSE_SLE[3];
+	
+	assign step_motor_driver_2_AX = MSE_SRDY[0];
+	assign step_motor_driver_2_AY = MSE_SRDY[1];
+	assign step_motor_driver_2_BX = MSE_SRDY[2];
+	assign step_motor_driver_2_BY = MSE_SRDY[3];
+	
+	assign step_motor_driver_3_AX = MSE_SDO[0];
+	assign step_motor_driver_3_AY = MSE_SDO[1];
+	assign step_motor_driver_3_BX = MSE_SDO[2];
+	assign step_motor_driver_3_BY = MSE_SDO[3];	
+	
+	wire step_motor_driver_0_AX;
+	wire step_motor_driver_0_AY;
+	wire step_motor_driver_0_BX;
+	wire step_motor_driver_0_BY;
+	
+	assign port0[7] = 1'bz;                    //FAULT
+	assign port0[6] = 1'bz;                    //OTW
+	assign port0[5] = step_motor_driver_0_AX;  //XA
+	assign port0[4] = 1'b1;					       //XAB	
+	assign port0[3] = step_motor_driver_0_AY;  //XB
+	assign port0[2] = step_motor_driver_0_BY;  //XC
+	assign port0[1] = 1'b1;                    //XCD
+	assign port0[0] = step_motor_driver_0_BX;  //XD
+	
+	wire step_motor_driver_1_AX;
+	wire step_motor_driver_1_AY;
+	wire step_motor_driver_1_BX;
+	wire step_motor_driver_1_BY;
+
+	assign port1[7] = 1'bz;                    //FAULT
+	assign port1[6] = 1'bz;                    //OTW
+	assign port1[5] = step_motor_driver_0_AX;  //XA
+	assign port1[4] = 1'b1;					       //XAB	
+	assign port1[3] = step_motor_driver_0_AY;  //XB
+	assign port1[2] = step_motor_driver_0_BY;  //XC
+	assign port1[1] = 1'b1;                    //XCD
+	assign port1[0] = step_motor_driver_0_BX;  //XD
+	
+	wire step_motor_driver_2_AX;
+	wire step_motor_driver_2_AY;
+	wire step_motor_driver_2_BX;
+	wire step_motor_driver_2_BY;
+
+	assign port2[7] = 1'bz;                    //FAULT
+	assign port2[6] = 1'bz;                    //OTW
+	assign port2[5] = step_motor_driver_0_AX;  //XA
+	assign port2[4] = 1'b1;					       //XAB	
+	assign port2[3] = step_motor_driver_0_AY;  //XB
+	assign port2[2] = step_motor_driver_0_BY;  //XC
+	assign port2[1] = 1'b1;                    //XCD
+	assign port2[0] = step_motor_driver_0_BX;  //XD
+	
+	wire step_motor_driver_3_AX;
+	wire step_motor_driver_3_AY;
+	wire step_motor_driver_3_BX;
+	wire step_motor_driver_3_BY;
+	
+	assign port3[7] = 1'bz;                    //FAULT
+	assign port3[6] = 1'bz;                    //OTW
+	assign port3[5] = step_motor_driver_0_AX;  //XA
+	assign port3[4] = 1'b1;					       //XAB	
+	assign port3[3] = step_motor_driver_0_AY;  //XB
+	assign port3[2] = step_motor_driver_0_BY;  //XC
+	assign port3[1] = 1'b1;                    //XCD
+	assign port3[0] = step_motor_driver_0_BX;  //XD
 	
 endmodule

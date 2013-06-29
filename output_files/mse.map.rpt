@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mse
-Sun Jun 23 22:17:56 2013
+Sat Jun 29 11:26:21 2013
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 
 
@@ -17,11 +17,9 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Versi
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: flash_altufm_parallel_71o:flash|lpm_counter:cntr2
- 14. Parameter Settings for User Entity Instance: port_io_interface:port_io
- 15. Port Connectivity Checks: "flash_altufm_parallel_71o:flash"
- 16. Analysis & Synthesis Messages
+ 12. Parameter Settings for User Entity Instance: flash_altufm_parallel_71o:flash|lpm_counter:cntr2
+ 13. Port Connectivity Checks: "flash_altufm_parallel_71o:flash"
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,12 +45,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Jun 23 22:17:56 2013          ;
+; Analysis & Synthesis Status ; Successful - Sat Jun 29 11:26:21 2013          ;
 ; Quartus II 32-bit Version   ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
 ; Revision Name               ; mse                                            ;
 ; Top-level Entity Name       ; mse                                            ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 140                                            ;
+; Total logic elements        ; 42                                             ;
 ; Total pins                  ; 115                                            ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 1 / 1 ( 100 % )                                ;
@@ -155,7 +153,6 @@ applicable agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 ; mse.v                            ; yes             ; User Verilog HDL File        ; C:/Users/li/Documents/GitHub/mse/mse.v                                    ;         ;
-; port_io_interface.v              ; yes             ; User Verilog HDL File        ; C:/Users/li/Documents/GitHub/mse/port_io_interface.v                      ;         ;
 ; flash.v                          ; yes             ; User Wizard-Generated File   ; C:/Users/li/Documents/GitHub/mse/flash.v                                  ;         ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
@@ -177,33 +174,33 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 140   ;
-;     -- Combinational with no register       ; 48    ;
-;     -- Register only                        ; 66    ;
-;     -- Combinational with a register        ; 26    ;
+; Total logic elements                        ; 42    ;
+;     -- Combinational with no register       ; 15    ;
+;     -- Register only                        ; 18    ;
+;     -- Combinational with a register        ; 9     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 40    ;
-;     -- 3 input functions                    ; 9     ;
-;     -- 2 input functions                    ; 21    ;
-;     -- 1 input functions                    ; 3     ;
+;     -- 4 input functions                    ; 9     ;
+;     -- 3 input functions                    ; 2     ;
+;     -- 2 input functions                    ; 10    ;
+;     -- 1 input functions                    ; 2     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 128   ;
-;     -- arithmetic mode                      ; 12    ;
+;     -- normal mode                          ; 37    ;
+;     -- arithmetic mode                      ; 5     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 13    ;
+;     -- synchronous clear/load mode          ; 5     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 92    ;
-; Total logic cells in carry chains           ; 14    ;
+; Total registers                             ; 27    ;
+; Total logic cells in carry chains           ; 6     ;
 ; I/O pins                                    ; 115   ;
 ; UFM blocks                                  ; 1     ;
-; Maximum fan-out                             ; 65    ;
-; Total fan-out                               ; 548   ;
-; Average fan-out                             ; 2.14  ;
+; Maximum fan-out                             ; 30    ;
+; Total fan-out                               ; 163   ;
+; Average fan-out                             ; 1.03  ;
 +---------------------------------------------+-------+
 
 
@@ -212,12 +209,11 @@ applicable agreement for further details.
 +--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                           ; Library Name ;
 +--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
-; |mse                                 ; 140 (1)     ; 92           ; 1          ; 115  ; 0            ; 48 (1)       ; 66 (0)            ; 26 (0)           ; 14 (0)          ; 0 (0)      ; |mse                                                                                          ; work         ;
+; |mse                                 ; 42 (1)      ; 27           ; 1          ; 115  ; 0            ; 15 (1)       ; 18 (0)            ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |mse                                                                                          ; work         ;
 ;    |flash_altufm_parallel_71o:flash| ; 41 (33)     ; 27           ; 1          ; 0    ; 0            ; 14 (11)      ; 18 (18)           ; 9 (4)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash                                                          ; work         ;
 ;       |lpm_counter:cntr2|            ; 8 (0)       ; 5            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2                                        ; work         ;
 ;          |cntr_dsj:auto_generated|   ; 8 (6)       ; 5            ; 0          ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated                ; work         ;
 ;             |cmpr_2vb:cmpr1|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1 ; work         ;
-;    |port_io_interface:port_io|       ; 98 (98)     ; 65           ; 0          ; 0    ; 0            ; 33 (33)      ; 48 (48)           ; 17 (17)          ; 8 (8)           ; 0 (0)      ; |mse|port_io_interface:port_io                                                                ; work         ;
 +--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -260,24 +256,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 92    ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 27    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 71    ;
+; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |mse|port_io_interface:port_io|state[0]  ;
-; 256:1              ; 8 bits    ; 1360 LEs      ; 16 LEs               ; 1344 LEs               ; Yes        ; |mse|port_io_interface:port_io|data_r[5] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -307,26 +293,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: port_io_interface:port_io ;
-+----------------+----------------------------------+--------------------+
-; Parameter Name ; Value                            ; Type               ;
-+----------------+----------------------------------+--------------------+
-; state_reset    ; 00000000                         ; Unsigned Binary    ;
-; port0_dir      ; 00000000000000000000000000000001 ; Unsigned Binary    ;
-; port0_read     ; 00000000000000000000000000000010 ; Unsigned Binary    ;
-; port0_write    ; 00000000000000000000000000000011 ; Unsigned Binary    ;
-; port1_dir      ; 00000000000000000000000000000100 ; Unsigned Binary    ;
-; port1_read     ; 00000000000000000000000000000101 ; Unsigned Binary    ;
-; port1_write    ; 00000000000000000000000000000110 ; Unsigned Binary    ;
-; port2_dir      ; 00000000000000000000000000000111 ; Unsigned Binary    ;
-; port2_read     ; 00000000000000000000000000001000 ; Unsigned Binary    ;
-; port2_write    ; 00000000000000000000000000001001 ; Unsigned Binary    ;
-; last           ; 00000000000000000000000000001010 ; Unsigned Binary    ;
-+----------------+----------------------------------+--------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "flash_altufm_parallel_71o:flash"                                                                                                                                                         ;
 +------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -352,7 +318,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Jun 23 22:17:54 2013
+    Info: Processing started: Sat Jun 29 11:26:19 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mse -c mse
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mse.v
@@ -361,14 +327,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file inter_c
     Info (12023): Found entity 1: inter_connect
 Info (12021): Found 1 design units, including 1 entities, in source file qsys_root/mse_host.v
     Info (12023): Found entity 1: mse_host
-Info (12021): Found 1 design units, including 1 entities, in source file port_io_interface.v
-    Info (12023): Found entity 1: port_io_interface
+Warning (12019): Can't analyze file -- file port_io_interface.v is missing
 Info (12021): Found 2 design units, including 2 entities, in source file flash.v
     Info (12023): Found entity 1: flash_altufm_parallel_71o
     Info (12023): Found entity 2: flash
 Info (12127): Elaborating entity "mse" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at mse.v(76): object "step_motor_driver_1_AX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(77): object "step_motor_driver_1_AY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(78): object "step_motor_driver_1_BX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(79): object "step_motor_driver_1_BY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(90): object "step_motor_driver_2_AX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(91): object "step_motor_driver_2_AY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(92): object "step_motor_driver_2_BX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(93): object "step_motor_driver_2_BY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(104): object "step_motor_driver_3_AX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(105): object "step_motor_driver_3_AY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(106): object "step_motor_driver_3_BX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mse.v(107): object "step_motor_driver_3_BY" assigned a value but never read
 Warning (10034): Output port "LED" at mse.v(25) has no driver
 Warning (10034): Output port "MSE_RSTOUT" at mse.v(4) has no driver
+Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port0[2]"
+Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port1[2]"
+Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port2[2]"
+Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port3[2]"
+Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port0[0]"
+Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port1[0]"
+Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port2[0]"
+Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port3[0]"
+Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port0[3]"
+Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port1[3]"
+Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port2[3]"
+Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port3[3]"
+Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port0[5]"
+Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port1[5]"
+Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port2[5]"
+Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port3[5]"
 Info (12128): Elaborating entity "flash_altufm_parallel_71o" for hierarchy "flash_altufm_parallel_71o:flash"
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "flash_altufm_parallel_71o:flash|lpm_counter:cntr2"
 Info (12130): Elaborated megafunction instantiation "flash_altufm_parallel_71o:flash|lpm_counter:cntr2"
@@ -384,21 +377,24 @@ Info (12128): Elaborating entity "cntr_dsj" for hierarchy "flash_altufm_parallel
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_2vb.tdf
     Info (12023): Found entity 1: cmpr_2vb
 Info (12128): Elaborating entity "cmpr_2vb" for hierarchy "flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1"
-Info (12128): Elaborating entity "port_io_interface" for hierarchy "port_io_interface:port_io"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "MSE_SDI[0]" has no driver
-    Warning (13040): Bidir "MSE_SDI[2]" has no driver
-    Warning (13040): Bidir "MSE_SDI[3]" has no driver
     Warning (13040): Bidir "MSE_SDI[4]" has no driver
+    Warning (13040): Bidir "MSE_SDI[5]" has no driver
     Warning (13040): Bidir "MSE_SDI[6]" has no driver
     Warning (13040): Bidir "MSE_SDO[0]" has no driver
+    Warning (13040): Bidir "MSE_SDO[1]" has no driver
+    Warning (13040): Bidir "MSE_SDO[2]" has no driver
     Warning (13040): Bidir "MSE_SDO[3]" has no driver
     Warning (13040): Bidir "MSE_SDO[4]" has no driver
+    Warning (13040): Bidir "MSE_SDO[5]" has no driver
     Warning (13040): Bidir "MSE_SDO[6]" has no driver
     Warning (13040): Bidir "MSE_SLE[0]" has no driver
+    Warning (13040): Bidir "MSE_SLE[1]" has no driver
     Warning (13040): Bidir "MSE_SLE[2]" has no driver
     Warning (13040): Bidir "MSE_SLE[3]" has no driver
+    Warning (13040): Bidir "MSE_SLE[4]" has no driver
+    Warning (13040): Bidir "MSE_SLE[5]" has no driver
     Warning (13040): Bidir "MSE_SLE[6]" has no driver
     Warning (13040): Bidir "MSE_SRDY[0]" has no driver
     Warning (13040): Bidir "MSE_SRDY[1]" has no driver
@@ -407,14 +403,6 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "MSE_SRDY[4]" has no driver
     Warning (13040): Bidir "MSE_SRDY[5]" has no driver
     Warning (13040): Bidir "MSE_SRDY[6]" has no driver
-    Warning (13040): Bidir "port3[0]" has no driver
-    Warning (13040): Bidir "port3[1]" has no driver
-    Warning (13040): Bidir "port3[2]" has no driver
-    Warning (13040): Bidir "port3[3]" has no driver
-    Warning (13040): Bidir "port3[4]" has no driver
-    Warning (13040): Bidir "port3[5]" has no driver
-    Warning (13040): Bidir "port3[6]" has no driver
-    Warning (13040): Bidir "port3[7]" has no driver
     Warning (13040): Bidir "port4[0]" has no driver
     Warning (13040): Bidir "port4[1]" has no driver
     Warning (13040): Bidir "port4[2]" has no driver
@@ -463,6 +451,44 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "port9[5]" has no driver
     Warning (13040): Bidir "port9[6]" has no driver
     Warning (13040): Bidir "port9[7]" has no driver
+    Warning (13040): Bidir "MSE_SDI[0]" has no driver
+    Warning (13040): Bidir "MSE_SDI[1]" has no driver
+    Warning (13040): Bidir "MSE_SDI[2]" has no driver
+    Warning (13040): Bidir "MSE_SDI[3]" has no driver
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "port0[1]" is fed by VCC
+    Warning (13033): The pin "port0[4]" is fed by VCC
+    Warning (13033): The pin "port1[1]" is fed by VCC
+    Warning (13033): The pin "port1[4]" is fed by VCC
+    Warning (13033): The pin "port2[1]" is fed by VCC
+    Warning (13033): The pin "port2[4]" is fed by VCC
+    Warning (13033): The pin "port3[1]" is fed by VCC
+    Warning (13033): The pin "port3[4]" is fed by VCC
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "step_motor_driver_0_BX~synth"
+    Warning (13010): Node "port0[1]~synth"
+    Warning (13010): Node "step_motor_driver_0_BY~synth"
+    Warning (13010): Node "step_motor_driver_0_AY~synth"
+    Warning (13010): Node "port0[4]~synth"
+    Warning (13010): Node "step_motor_driver_0_AX~synth"
+    Warning (13010): Node "step_motor_driver_0_BX~synth"
+    Warning (13010): Node "port1[1]~synth"
+    Warning (13010): Node "step_motor_driver_0_BY~synth"
+    Warning (13010): Node "step_motor_driver_0_AY~synth"
+    Warning (13010): Node "port1[4]~synth"
+    Warning (13010): Node "step_motor_driver_0_AX~synth"
+    Warning (13010): Node "step_motor_driver_0_BX~synth"
+    Warning (13010): Node "port2[1]~synth"
+    Warning (13010): Node "step_motor_driver_0_BY~synth"
+    Warning (13010): Node "step_motor_driver_0_AY~synth"
+    Warning (13010): Node "port2[4]~synth"
+    Warning (13010): Node "step_motor_driver_0_AX~synth"
+    Warning (13010): Node "step_motor_driver_0_BX~synth"
+    Warning (13010): Node "port3[1]~synth"
+    Warning (13010): Node "step_motor_driver_0_BY~synth"
+    Warning (13010): Node "step_motor_driver_0_AY~synth"
+    Warning (13010): Node "port3[4]~synth"
+    Warning (13010): Node "step_motor_driver_0_AX~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "MSE_RSTOUT" is stuck at GND
     Warning (13410): Pin "LED[0]" is stuck at GND
@@ -470,15 +496,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[2]" is stuck at GND
     Warning (13410): Pin "LED[3]" is stuck at GND
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "MSE_RESETN"
+    Warning (15610): No output dependent on input pin "MSE_SCLK"
+Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 108 bidirectional pins
-    Info (21061): Implemented 140 logic cells
+    Info (21061): Implemented 42 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 86 warnings
-    Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Sun Jun 23 22:17:56 2013
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 152 warnings
+    Info: Peak virtual memory: 339 megabytes
+    Info: Processing ended: Sat Jun 29 11:26:21 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

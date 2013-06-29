@@ -2,25 +2,13 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'MSE_SCLK'
-Slack : -7.254
-TNS   : -415.938
-
 Type  : Setup 'flash|maxii_ufm_block1|osc'
 Slack : 81.818
 TNS   : 0.000
 
 Type  : Hold 'flash|maxii_ufm_block1|osc'
-Slack : -20.046
-TNS   : -38.271
-
-Type  : Hold 'MSE_SCLK'
-Slack : 1.898
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'MSE_SCLK'
-Slack : -2.289
-TNS   : -2.289
+Slack : -21.597
+TNS   : -41.388
 
 Type  : Minimum Pulse Width 'flash|maxii_ufm_block1|osc'
 Slack : 60.909
