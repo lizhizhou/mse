@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mse
-Sat Jun 29 11:26:21 2013
+Sun Jun 30 17:32:19 2013
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 
 
@@ -45,7 +45,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Jun 29 11:26:21 2013          ;
+; Analysis & Synthesis Status ; Successful - Sun Jun 30 17:32:19 2013          ;
 ; Quartus II 32-bit Version   ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
 ; Revision Name               ; mse                                            ;
 ; Top-level Entity Name       ; mse                                            ;
@@ -135,7 +135,7 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -143,30 +143,30 @@ applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;   0.0%      ;
+;     2-8 processors         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; mse.v                            ; yes             ; User Verilog HDL File        ; C:/Users/li/Documents/GitHub/mse/mse.v                                    ;         ;
-; flash.v                          ; yes             ; User Wizard-Generated File   ; C:/Users/li/Documents/GitHub/mse/flash.v                                  ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
-; aglobal121.inc                   ; yes             ; Megafunction                 ; d:/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc          ;         ;
-; db/cntr_dsj.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/li/Documents/GitHub/mse/db/cntr_dsj.tdf                          ;         ;
-; db/cmpr_2vb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/li/Documents/GitHub/mse/db/cmpr_2vb.tdf                          ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; mse.v                            ; yes             ; User Verilog HDL File        ; /home/cowin/meteroi/mse/mse.v                                               ;         ;
+; flash.v                          ; yes             ; User Wizard-Generated File   ; /home/cowin/meteroi/mse/flash.v                                             ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; aglobal121.inc                   ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc          ;         ;
+; db/cntr_dsj.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/cowin/meteroi/mse/db/cntr_dsj.tdf                                     ;         ;
+; db/cmpr_2vb.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/cowin/meteroi/mse/db/cmpr_2vb.tdf                                     ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -218,13 +218,13 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                              ;
-+--------+-----------------+---------+--------------+--------------+--------------------------------------+------------------------------------------+
-; Vendor ; IP Core Name    ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File                          ;
-+--------+-----------------+---------+--------------+--------------+--------------------------------------+------------------------------------------+
-; Altera ; ALTUFM_PARALLEL ; 12.1    ; N/A          ; N/A          ; |mse|flash_altufm_parallel_71o:flash ; C:/Users/li/Documents/GitHub/mse/flash.v ;
-+--------+-----------------+---------+--------------+--------------+--------------------------------------+------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                     ;
++--------+-----------------+---------+--------------+--------------+--------------------------------------+---------------------------------+
+; Vendor ; IP Core Name    ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File                 ;
++--------+-----------------+---------+--------------+--------------+--------------------------------------+---------------------------------+
+; Altera ; ALTUFM_PARALLEL ; 12.1    ; N/A          ; N/A          ; |mse|flash_altufm_parallel_71o:flash ; /home/cowin/meteroi/mse/flash.v ;
++--------+-----------------+---------+--------------+--------------+--------------------------------------+---------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -318,9 +318,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Jun 29 11:26:19 2013
+    Info: Processing started: Sun Jun 30 17:32:16 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mse -c mse
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file mse.v
     Info (12023): Found entity 1: mse
 Info (12021): Found 1 design units, including 1 entities, in source file inter_connect.v
@@ -332,36 +332,12 @@ Info (12021): Found 2 design units, including 2 entities, in source file flash.v
     Info (12023): Found entity 1: flash_altufm_parallel_71o
     Info (12023): Found entity 2: flash
 Info (12127): Elaborating entity "mse" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at mse.v(76): object "step_motor_driver_1_AX" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(77): object "step_motor_driver_1_AY" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(78): object "step_motor_driver_1_BX" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(79): object "step_motor_driver_1_BY" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(90): object "step_motor_driver_2_AX" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(91): object "step_motor_driver_2_AY" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(92): object "step_motor_driver_2_BX" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(93): object "step_motor_driver_2_BY" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(104): object "step_motor_driver_3_AX" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(105): object "step_motor_driver_3_AY" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(106): object "step_motor_driver_3_BX" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mse.v(107): object "step_motor_driver_3_BY" assigned a value but never read
 Warning (10034): Output port "LED" at mse.v(25) has no driver
 Warning (10034): Output port "MSE_RSTOUT" at mse.v(4) has no driver
-Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port0[2]"
-Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port1[2]"
-Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port2[2]"
-Warning (10665): Bidirectional port "MSE_SDI[3]" at mse.v(6) has a one-way connection to bidirectional port "port3[2]"
-Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port0[0]"
-Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port1[0]"
-Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port2[0]"
-Warning (10665): Bidirectional port "MSE_SDI[2]" at mse.v(6) has a one-way connection to bidirectional port "port3[0]"
-Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port0[3]"
-Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port1[3]"
-Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port2[3]"
-Warning (10665): Bidirectional port "MSE_SDI[1]" at mse.v(6) has a one-way connection to bidirectional port "port3[3]"
-Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port0[5]"
-Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port1[5]"
-Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port2[5]"
-Warning (10665): Bidirectional port "MSE_SDI[0]" at mse.v(6) has a one-way connection to bidirectional port "port3[5]"
+Warning (10665): Bidirectional port "MSE_SDO[3]" at mse.v(7) has a one-way connection to bidirectional port "port3[5]"
+Warning (10665): Bidirectional port "MSE_SDO[2]" at mse.v(7) has a one-way connection to bidirectional port "port3[1]"
+Warning (10665): Bidirectional port "MSE_SDO[1]" at mse.v(7) has a one-way connection to bidirectional port "port3[4]"
+Warning (10665): Bidirectional port "MSE_SDO[0]" at mse.v(7) has a one-way connection to bidirectional port "port3[0]"
 Info (12128): Elaborating entity "flash_altufm_parallel_71o" for hierarchy "flash_altufm_parallel_71o:flash"
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "flash_altufm_parallel_71o:flash|lpm_counter:cntr2"
 Info (12130): Elaborated megafunction instantiation "flash_altufm_parallel_71o:flash|lpm_counter:cntr2"
@@ -382,27 +358,17 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "MSE_SDI[4]" has no driver
     Warning (13040): Bidir "MSE_SDI[5]" has no driver
     Warning (13040): Bidir "MSE_SDI[6]" has no driver
-    Warning (13040): Bidir "MSE_SDO[0]" has no driver
-    Warning (13040): Bidir "MSE_SDO[1]" has no driver
-    Warning (13040): Bidir "MSE_SDO[2]" has no driver
-    Warning (13040): Bidir "MSE_SDO[3]" has no driver
     Warning (13040): Bidir "MSE_SDO[4]" has no driver
     Warning (13040): Bidir "MSE_SDO[5]" has no driver
     Warning (13040): Bidir "MSE_SDO[6]" has no driver
-    Warning (13040): Bidir "MSE_SLE[0]" has no driver
-    Warning (13040): Bidir "MSE_SLE[1]" has no driver
-    Warning (13040): Bidir "MSE_SLE[2]" has no driver
-    Warning (13040): Bidir "MSE_SLE[3]" has no driver
     Warning (13040): Bidir "MSE_SLE[4]" has no driver
     Warning (13040): Bidir "MSE_SLE[5]" has no driver
     Warning (13040): Bidir "MSE_SLE[6]" has no driver
-    Warning (13040): Bidir "MSE_SRDY[0]" has no driver
-    Warning (13040): Bidir "MSE_SRDY[1]" has no driver
-    Warning (13040): Bidir "MSE_SRDY[2]" has no driver
-    Warning (13040): Bidir "MSE_SRDY[3]" has no driver
     Warning (13040): Bidir "MSE_SRDY[4]" has no driver
     Warning (13040): Bidir "MSE_SRDY[5]" has no driver
     Warning (13040): Bidir "MSE_SRDY[6]" has no driver
+    Warning (13040): Bidir "port3[6]" has no driver
+    Warning (13040): Bidir "port3[7]" has no driver
     Warning (13040): Bidir "port4[0]" has no driver
     Warning (13040): Bidir "port4[1]" has no driver
     Warning (13040): Bidir "port4[2]" has no driver
@@ -451,10 +417,6 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "port9[5]" has no driver
     Warning (13040): Bidir "port9[6]" has no driver
     Warning (13040): Bidir "port9[7]" has no driver
-    Warning (13040): Bidir "MSE_SDI[0]" has no driver
-    Warning (13040): Bidir "MSE_SDI[1]" has no driver
-    Warning (13040): Bidir "MSE_SDI[2]" has no driver
-    Warning (13040): Bidir "MSE_SDI[3]" has no driver
 Warning (13032): The following tri-state nodes are fed by constants
     Warning (13033): The pin "port0[1]" is fed by VCC
     Warning (13033): The pin "port0[4]" is fed by VCC
@@ -462,8 +424,8 @@ Warning (13032): The following tri-state nodes are fed by constants
     Warning (13033): The pin "port1[4]" is fed by VCC
     Warning (13033): The pin "port2[1]" is fed by VCC
     Warning (13033): The pin "port2[4]" is fed by VCC
-    Warning (13033): The pin "port3[1]" is fed by VCC
-    Warning (13033): The pin "port3[4]" is fed by VCC
+    Warning (13033): The pin "port3[2]" is fed by GND
+    Warning (13033): The pin "port3[3]" is fed by GND
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "step_motor_driver_0_BX~synth"
     Warning (13010): Node "port0[1]~synth"
@@ -471,24 +433,22 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "step_motor_driver_0_AY~synth"
     Warning (13010): Node "port0[4]~synth"
     Warning (13010): Node "step_motor_driver_0_AX~synth"
-    Warning (13010): Node "step_motor_driver_0_BX~synth"
+    Warning (13010): Node "step_motor_driver_1_BX~synth"
     Warning (13010): Node "port1[1]~synth"
-    Warning (13010): Node "step_motor_driver_0_BY~synth"
-    Warning (13010): Node "step_motor_driver_0_AY~synth"
+    Warning (13010): Node "step_motor_driver_1_BY~synth"
+    Warning (13010): Node "step_motor_driver_1_AY~synth"
     Warning (13010): Node "port1[4]~synth"
-    Warning (13010): Node "step_motor_driver_0_AX~synth"
-    Warning (13010): Node "step_motor_driver_0_BX~synth"
+    Warning (13010): Node "step_motor_driver_1_AX~synth"
+    Warning (13010): Node "step_motor_driver_2_BX~synth"
     Warning (13010): Node "port2[1]~synth"
-    Warning (13010): Node "step_motor_driver_0_BY~synth"
-    Warning (13010): Node "step_motor_driver_0_AY~synth"
+    Warning (13010): Node "step_motor_driver_2_BY~synth"
+    Warning (13010): Node "step_motor_driver_2_AY~synth"
     Warning (13010): Node "port2[4]~synth"
-    Warning (13010): Node "step_motor_driver_0_AX~synth"
-    Warning (13010): Node "step_motor_driver_0_BX~synth"
-    Warning (13010): Node "port3[1]~synth"
-    Warning (13010): Node "step_motor_driver_0_BY~synth"
-    Warning (13010): Node "step_motor_driver_0_AY~synth"
-    Warning (13010): Node "port3[4]~synth"
-    Warning (13010): Node "step_motor_driver_0_AX~synth"
+    Warning (13010): Node "step_motor_driver_2_AX~synth"
+    Warning (13010): Node "step_motor_driver_3_AX~synth"
+    Warning (13010): Node "step_motor_driver_3_BX~synth"
+    Warning (13010): Node "step_motor_driver_3_AY~synth"
+    Warning (13010): Node "step_motor_driver_3_BY~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "MSE_RSTOUT" is stuck at GND
     Warning (13410): Pin "LED[0]" is stuck at GND
@@ -505,10 +465,10 @@ Info (21057): Implemented 158 device resources after synthesis - the final resou
     Info (21060): Implemented 108 bidirectional pins
     Info (21061): Implemented 42 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 152 warnings
-    Info: Peak virtual memory: 339 megabytes
-    Info: Processing ended: Sat Jun 29 11:26:21 2013
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 112 warnings
+    Info: Peak virtual memory: 315 megabytes
+    Info: Processing ended: Sun Jun 30 17:32:19 2013
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

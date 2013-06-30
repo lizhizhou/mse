@@ -1,5 +1,5 @@
 Fitter report for mse
-Sat Jun 29 11:26:24 2013
+Sun Jun 30 17:32:24 2013
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Fitter Summary                                                             ;
 +---------------------------+------------------------------------------------+
-; Fitter Status             ; Successful - Sat Jun 29 11:26:24 2013          ;
+; Fitter Status             ; Successful - Sun Jun 30 17:32:24 2013          ;
 ; Quartus II 32-bit Version ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
 ; Revision Name             ; mse                                            ;
 ; Top-level Entity Name     ; mse                                            ;
@@ -125,7 +125,7 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -134,13 +134,14 @@ applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
 ;     2-4 processors         ; < 0.1%      ;
+;     5-8 processors         ;   0.0%      ;
 +----------------------------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/li/Documents/GitHub/mse/output_files/mse.pin.
+The pin-out file can be found in /home/cowin/meteroi/mse/output_files/mse.pin.
 
 
 +------------------------------------------------------------------+
@@ -179,8 +180,8 @@ The pin-out file can be found in C:/Users/li/Documents/GitHub/mse/output_files/m
 ; UFM blocks                                  ; 1 / 1 ( 100 % )    ;
 ; Global clocks                               ; 1 / 4 ( 25 % )     ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 1% / 1% / 1%       ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%       ;
+; Average interconnect usage (total/H/V)      ; 1% / 2% / 1%       ;
+; Peak interconnect usage (total/H/V)         ; 2% / 3% / 1%       ;
 ; Maximum fan-out                             ; 31                 ;
 ; Highest non-global fan-out                  ; 17                 ;
 ; Total fan-out                               ; 161                ;
@@ -216,31 +217,31 @@ The pin-out file can be found in C:/Users/li/Documents/GitHub/mse/output_files/m
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; MSE_SDI[0]  ; 31    ; 1        ; 0            ; 4            ; 2           ; 4                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SDI[1]  ; 27    ; 1        ; 0            ; 6            ; 5           ; 4                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SDI[2]  ; 15    ; 1        ; 0            ; 7            ; 3           ; 4                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SDI[3]  ; 11    ; 1        ; 0            ; 8            ; 6           ; 4                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDI[0]  ; 31    ; 1        ; 0            ; 4            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDI[1]  ; 27    ; 1        ; 0            ; 6            ; 5           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDI[2]  ; 15    ; 1        ; 0            ; 7            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDI[3]  ; 11    ; 1        ; 0            ; 8            ; 6           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SDI[4]  ; 5     ; 1        ; 0            ; 9            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SDI[5]  ; 1     ; 1        ; 0            ; 10           ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SDI[6]  ; 141   ; 2        ; 4            ; 11           ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SDO[0]  ; 32    ; 1        ; 0            ; 4            ; 5           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SDO[1]  ; 28    ; 1        ; 0            ; 5            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SDO[2]  ; 16    ; 1        ; 0            ; 7            ; 4           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SDO[3]  ; 12    ; 1        ; 0            ; 7            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDO[0]  ; 32    ; 1        ; 0            ; 4            ; 5           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDO[1]  ; 28    ; 1        ; 0            ; 5            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDO[2]  ; 16    ; 1        ; 0            ; 7            ; 4           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SDO[3]  ; 12    ; 1        ; 0            ; 7            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SDO[4]  ; 6     ; 1        ; 0            ; 9            ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SDO[5]  ; 2     ; 1        ; 0            ; 10           ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SDO[6]  ; 142   ; 2        ; 3            ; 11           ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SLE[0]  ; 29    ; 1        ; 0            ; 5            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SLE[1]  ; 23    ; 1        ; 0            ; 6            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SLE[2]  ; 13    ; 1        ; 0            ; 7            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SLE[3]  ; 7     ; 1        ; 0            ; 8            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SLE[0]  ; 29    ; 1        ; 0            ; 5            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SLE[1]  ; 23    ; 1        ; 0            ; 6            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SLE[2]  ; 13    ; 1        ; 0            ; 7            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SLE[3]  ; 7     ; 1        ; 0            ; 8            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SLE[4]  ; 3     ; 1        ; 0            ; 10           ; 5           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SLE[5]  ; 143   ; 2        ; 2            ; 11           ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SLE[6]  ; 139   ; 2        ; 5            ; 11           ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SRDY[0] ; 30    ; 1        ; 0            ; 5            ; 6           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SRDY[1] ; 24    ; 1        ; 0            ; 6            ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SRDY[2] ; 14    ; 1        ; 0            ; 7            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; MSE_SRDY[3] ; 8     ; 1        ; 0            ; 8            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SRDY[0] ; 30    ; 1        ; 0            ; 5            ; 6           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SRDY[1] ; 24    ; 1        ; 0            ; 6            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SRDY[2] ; 14    ; 1        ; 0            ; 7            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MSE_SRDY[3] ; 8     ; 1        ; 0            ; 8            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SRDY[4] ; 4     ; 1        ; 0            ; 9            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SRDY[5] ; 144   ; 2        ; 1            ; 11           ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MSE_SRDY[6] ; 140   ; 2        ; 4            ; 11           ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -270,8 +271,8 @@ The pin-out file can be found in C:/Users/li/Documents/GitHub/mse/output_files/m
 ; port2[7]    ; 61    ; 4        ; 10           ; 3            ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; port3[0]    ; 91    ; 3        ; 17           ; 5            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; port3[1]    ; 67    ; 4        ; 12           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; port3[2]    ; 81    ; 3        ; 17           ; 4            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; port3[3]    ; 68    ; 4        ; 13           ; 0            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; port3[2]    ; 81    ; 3        ; 17           ; 4            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; port3[3]    ; 68    ; 4        ; 13           ; 0            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; port3[4]    ; 72    ; 4        ; 16           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; port3[5]    ; 69    ; 4        ; 14           ; 0            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; port3[6]    ; 71    ; 4        ; 16           ; 0            ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -538,27 +539,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MSE_SDI[4]  ; Bidir    ; (0)           ;
 ; MSE_SDI[5]  ; Bidir    ; (0)           ;
 ; MSE_SDI[6]  ; Bidir    ; (0)           ;
-; MSE_SDO[0]  ; Bidir    ; (0)           ;
-; MSE_SDO[1]  ; Bidir    ; (0)           ;
-; MSE_SDO[2]  ; Bidir    ; (0)           ;
-; MSE_SDO[3]  ; Bidir    ; (0)           ;
 ; MSE_SDO[4]  ; Bidir    ; (0)           ;
 ; MSE_SDO[5]  ; Bidir    ; (0)           ;
 ; MSE_SDO[6]  ; Bidir    ; (0)           ;
-; MSE_SLE[0]  ; Bidir    ; (0)           ;
-; MSE_SLE[1]  ; Bidir    ; (0)           ;
-; MSE_SLE[2]  ; Bidir    ; (0)           ;
-; MSE_SLE[3]  ; Bidir    ; (0)           ;
 ; MSE_SLE[4]  ; Bidir    ; (0)           ;
 ; MSE_SLE[5]  ; Bidir    ; (0)           ;
 ; MSE_SLE[6]  ; Bidir    ; (0)           ;
-; MSE_SRDY[0] ; Bidir    ; (0)           ;
-; MSE_SRDY[1] ; Bidir    ; (0)           ;
-; MSE_SRDY[2] ; Bidir    ; (0)           ;
-; MSE_SRDY[3] ; Bidir    ; (0)           ;
 ; MSE_SRDY[4] ; Bidir    ; (0)           ;
 ; MSE_SRDY[5] ; Bidir    ; (0)           ;
 ; MSE_SRDY[6] ; Bidir    ; (0)           ;
+; port3[6]    ; Bidir    ; (0)           ;
+; port3[7]    ; Bidir    ; (0)           ;
 ; port4[0]    ; Bidir    ; (0)           ;
 ; port4[1]    ; Bidir    ; (0)           ;
 ; port4[2]    ; Bidir    ; (0)           ;
@@ -611,6 +602,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MSE_SDI[1]  ; Bidir    ; (1)           ;
 ; MSE_SDI[2]  ; Bidir    ; (1)           ;
 ; MSE_SDI[3]  ; Bidir    ; (1)           ;
+; MSE_SDO[0]  ; Bidir    ; (1)           ;
+; MSE_SDO[1]  ; Bidir    ; (1)           ;
+; MSE_SDO[2]  ; Bidir    ; (1)           ;
+; MSE_SDO[3]  ; Bidir    ; (1)           ;
+; MSE_SLE[0]  ; Bidir    ; (1)           ;
+; MSE_SLE[1]  ; Bidir    ; (1)           ;
+; MSE_SLE[2]  ; Bidir    ; (1)           ;
+; MSE_SLE[3]  ; Bidir    ; (1)           ;
+; MSE_SRDY[0] ; Bidir    ; (1)           ;
+; MSE_SRDY[1] ; Bidir    ; (1)           ;
+; MSE_SRDY[2] ; Bidir    ; (1)           ;
+; MSE_SRDY[3] ; Bidir    ; (1)           ;
 ; port0[0]    ; Bidir    ; (0)           ;
 ; port0[1]    ; Bidir    ; (0)           ;
 ; port0[2]    ; Bidir    ; (0)           ;
@@ -641,8 +644,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; port3[3]    ; Bidir    ; (0)           ;
 ; port3[4]    ; Bidir    ; (0)           ;
 ; port3[5]    ; Bidir    ; (0)           ;
-; port3[6]    ; Bidir    ; (0)           ;
-; port3[7]    ; Bidir    ; (0)           ;
 +-------------+----------+---------------+
 
 
@@ -653,7 +654,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------+--------------+---------+--------------+--------+----------------------+------------------+
 ; flash_altufm_parallel_71o:flash|data_en~1                                                 ; LC_X9_Y6_N0  ; 17      ; Clock enable ; no     ; --                   ; --               ;
 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|modulus_trigger ; LC_X9_Y6_N6  ; 5       ; Sync. load   ; no     ; --                   ; --               ;
-; flash_altufm_parallel_71o:flash|start_op                                                  ; LC_X10_Y6_N8 ; 2       ; Clock enable ; no     ; --                   ; --               ;
+; flash_altufm_parallel_71o:flash|start_op                                                  ; LC_X10_Y6_N3 ; 2       ; Clock enable ; no     ; --                   ; --               ;
 ; flash_altufm_parallel_71o:flash|tmp_decode~0                                              ; LC_X10_Y6_N1 ; 6       ; Clock enable ; no     ; --                   ; --               ;
 ; flash_altufm_parallel_71o:flash|ufm_osc                                                   ; UFM_X1_Y1_N4 ; 28      ; Clock        ; yes    ; Global Clock         ; GCLK3            ;
 +-------------------------------------------------------------------------------------------+--------------+---------+--------------+--------+----------------------+------------------+
@@ -681,10 +682,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[2]                            ; 6       ;
 ; flash_altufm_parallel_71o:flash|tmp_decode~0                                                                   ; 6       ;
 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|modulus_trigger                      ; 5       ;
-; MSE_SDI[3]~6                                                                                                   ; 4       ;
-; MSE_SDI[2]~5                                                                                                   ; 4       ;
-; MSE_SDI[1]~4                                                                                                   ; 4       ;
-; MSE_SDI[0]~3                                                                                                   ; 4       ;
 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|safe_q[0]                            ; 4       ;
 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1|aneb_result_wire[0]~0 ; 3       ;
 ; flash_altufm_parallel_71o:flash|deco1_dffe                                                                     ; 3       ;
@@ -694,6 +691,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; flash_altufm_parallel_71o:flash|in_read_drclk~0                                                                ; 2       ;
 ; flash_altufm_parallel_71o:flash|ufm_arshft~4                                                                   ; 2       ;
 ; flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|counter_cella3~COUT                  ; 2       ;
+; MSE_SRDY[3]~10                                                                                                 ; 1       ;
+; MSE_SRDY[2]~9                                                                                                  ; 1       ;
+; MSE_SRDY[1]~8                                                                                                  ; 1       ;
+; MSE_SRDY[0]~7                                                                                                  ; 1       ;
+; MSE_SLE[3]~10                                                                                                  ; 1       ;
+; MSE_SLE[2]~9                                                                                                   ; 1       ;
+; MSE_SLE[1]~8                                                                                                   ; 1       ;
+; MSE_SLE[0]~7                                                                                                   ; 1       ;
+; MSE_SDO[3]~10                                                                                                  ; 1       ;
+; MSE_SDO[2]~9                                                                                                   ; 1       ;
+; MSE_SDO[1]~8                                                                                                   ; 1       ;
+; MSE_SDO[0]~7                                                                                                   ; 1       ;
+; MSE_SDI[3]~10                                                                                                  ; 1       ;
+; MSE_SDI[2]~9                                                                                                   ; 1       ;
+; MSE_SDI[1]~8                                                                                                   ; 1       ;
+; MSE_SDI[0]~7                                                                                                   ; 1       ;
 ; flash_altufm_parallel_71o:flash|data_en~0                                                                      ; 1       ;
 ; flash_altufm_parallel_71o:flash|ufm_arshft                                                                     ; 1       ;
 ; flash_altufm_parallel_71o:flash|ufm_drshft~2                                                                   ; 1       ;
@@ -736,13 +749,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+---------------------+
 ; Other Routing Resource Type ; Usage               ;
 +-----------------------------+---------------------+
-; C4s                         ; 32 / 2,870 ( 1 % )  ;
-; Direct links                ; 7 / 3,938 ( < 1 % ) ;
+; C4s                         ; 37 / 2,870 ( 1 % )  ;
+; Direct links                ; 8 / 3,938 ( < 1 % ) ;
 ; Global clocks               ; 1 / 4 ( 25 % )      ;
 ; LAB clocks                  ; 3 / 72 ( 4 % )      ;
-; LUT chains                  ; 1 / 1,143 ( < 1 % ) ;
+; LUT chains                  ; 2 / 1,143 ( < 1 % ) ;
 ; Local interconnects         ; 42 / 3,938 ( 1 % )  ;
-; R4s                         ; 38 / 2,832 ( 1 % )  ;
+; R4s                         ; 60 / 2,832 ( 2 % )  ;
 +-----------------------------+---------------------+
 
 
@@ -848,9 +861,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Jun 29 11:26:22 2013
+    Info: Processing started: Sun Jun 30 17:32:21 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off mse -c mse
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (119006): Selected device EPM1270T144C5 for design "mse"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -889,7 +902,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X9_Y0 to location X17_Y11
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X0_Y0 to location X8_Y11
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -899,27 +912,17 @@ Warning (169064): Following 108 pins have no output enable or a GND or VCC outpu
     Info (169065): Pin MSE_SDI[4] has a permanently disabled output enable
     Info (169065): Pin MSE_SDI[5] has a permanently disabled output enable
     Info (169065): Pin MSE_SDI[6] has a permanently disabled output enable
-    Info (169065): Pin MSE_SDO[0] has a permanently disabled output enable
-    Info (169065): Pin MSE_SDO[1] has a permanently disabled output enable
-    Info (169065): Pin MSE_SDO[2] has a permanently disabled output enable
-    Info (169065): Pin MSE_SDO[3] has a permanently disabled output enable
     Info (169065): Pin MSE_SDO[4] has a permanently disabled output enable
     Info (169065): Pin MSE_SDO[5] has a permanently disabled output enable
     Info (169065): Pin MSE_SDO[6] has a permanently disabled output enable
-    Info (169065): Pin MSE_SLE[0] has a permanently disabled output enable
-    Info (169065): Pin MSE_SLE[1] has a permanently disabled output enable
-    Info (169065): Pin MSE_SLE[2] has a permanently disabled output enable
-    Info (169065): Pin MSE_SLE[3] has a permanently disabled output enable
     Info (169065): Pin MSE_SLE[4] has a permanently disabled output enable
     Info (169065): Pin MSE_SLE[5] has a permanently disabled output enable
     Info (169065): Pin MSE_SLE[6] has a permanently disabled output enable
-    Info (169065): Pin MSE_SRDY[0] has a permanently disabled output enable
-    Info (169065): Pin MSE_SRDY[1] has a permanently disabled output enable
-    Info (169065): Pin MSE_SRDY[2] has a permanently disabled output enable
-    Info (169065): Pin MSE_SRDY[3] has a permanently disabled output enable
     Info (169065): Pin MSE_SRDY[4] has a permanently disabled output enable
     Info (169065): Pin MSE_SRDY[5] has a permanently disabled output enable
     Info (169065): Pin MSE_SRDY[6] has a permanently disabled output enable
+    Info (169065): Pin port3[6] has a permanently disabled output enable
+    Info (169065): Pin port3[7] has a permanently disabled output enable
     Info (169065): Pin port4[0] has a permanently disabled output enable
     Info (169065): Pin port4[1] has a permanently disabled output enable
     Info (169065): Pin port4[2] has a permanently disabled output enable
@@ -972,6 +975,18 @@ Warning (169064): Following 108 pins have no output enable or a GND or VCC outpu
     Info (169065): Pin MSE_SDI[1] has a permanently disabled output enable
     Info (169065): Pin MSE_SDI[2] has a permanently disabled output enable
     Info (169065): Pin MSE_SDI[3] has a permanently disabled output enable
+    Info (169065): Pin MSE_SDO[0] has a permanently disabled output enable
+    Info (169065): Pin MSE_SDO[1] has a permanently disabled output enable
+    Info (169065): Pin MSE_SDO[2] has a permanently disabled output enable
+    Info (169065): Pin MSE_SDO[3] has a permanently disabled output enable
+    Info (169065): Pin MSE_SLE[0] has a permanently disabled output enable
+    Info (169065): Pin MSE_SLE[1] has a permanently disabled output enable
+    Info (169065): Pin MSE_SLE[2] has a permanently disabled output enable
+    Info (169065): Pin MSE_SLE[3] has a permanently disabled output enable
+    Info (169065): Pin MSE_SRDY[0] has a permanently disabled output enable
+    Info (169065): Pin MSE_SRDY[1] has a permanently disabled output enable
+    Info (169065): Pin MSE_SRDY[2] has a permanently disabled output enable
+    Info (169065): Pin MSE_SRDY[3] has a permanently disabled output enable
     Info (169065): Pin port0[0] has a permanently enabled output enable
     Info (169065): Pin port0[1] has a permanently enabled output enable
     Info (169065): Pin port0[2] has a permanently enabled output enable
@@ -1002,19 +1017,17 @@ Warning (169064): Following 108 pins have no output enable or a GND or VCC outpu
     Info (169065): Pin port3[3] has a permanently enabled output enable
     Info (169065): Pin port3[4] has a permanently enabled output enable
     Info (169065): Pin port3[5] has a permanently enabled output enable
-    Info (169065): Pin port3[6] has a permanently disabled output enable
-    Info (169065): Pin port3[7] has a permanently disabled output enable
-Info (144001): Generated suppressed messages file C:/Users/li/Documents/GitHub/mse/output_files/mse.fit.smsg
+Info (144001): Generated suppressed messages file /home/cowin/meteroi/mse/output_files/mse.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 426 megabytes
-    Info: Processing ended: Sat Jun 29 11:26:24 2013
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 394 megabytes
+    Info: Processing ended: Sun Jun 30 17:32:24 2013
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/li/Documents/GitHub/mse/output_files/mse.fit.smsg.
+The suppressed messages can be found in /home/cowin/meteroi/mse/output_files/mse.fit.smsg.
 
 
