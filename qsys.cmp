@@ -1,0 +1,11 @@
+	component qsys is
+		port (
+			qsys_serial_host_sdo   : out std_logic;        -- sdo
+			qsys_serial_host_sdi   : in  std_logic := 'X'; -- sdi
+			qsys_serial_host_clk   : in  std_logic := 'X'; -- clk
+			qsys_serial_host_sle   : in  std_logic := 'X'; -- sle
+			qsys_serial_host_srdy  : out std_logic;        -- srdy
+			qsys_serial_host_reset : in  std_logic := 'X'  -- reset
+		);
+	end component qsys;
+

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable>
+ <systemtable filter="Default">
   <columns>
-   <connections preferredWidth="30" />
+   <connections preferredWidth="63" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
@@ -15,6 +15,7 @@
   </columns>
  </clocktable>
  <window width="1100" height="770" x="480" y="216" />
- <library expandedCategories="Project,Library" />
+ <library
+   expandedCategories="Library,Project,Project/Lophilo/Basic,Project/Lophilo" />
  <hdlexample language="VERILOG" />
 </preferences>

@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Sun Jun 30 17:32:19 2013
+Analysis & Synthesis Status : Successful - Sun Jul  7 10:56:42 2013
 Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Full Version
 Revision Name : mse
 Top-level Entity Name : mse
 Family : MAX II
-Total logic elements : 42
+Total logic elements : 118
 Total pins : 115
 Total virtual pins : 0
 UFM blocks : 1 / 1 ( 100 % )

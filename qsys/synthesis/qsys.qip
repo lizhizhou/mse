@@ -1,0 +1,21 @@
+set_global_assignment -entity "qsys" -library "qsys" -name IP_TOOL_NAME "qsys"
+set_global_assignment -entity "qsys" -library "qsys" -name IP_TOOL_VERSION "12.1sp1"
+set_global_assignment -entity "qsys" -library "qsys" -name IP_TOOL_ENV "qsys"
+set_global_assignment -library "qsys" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../qsys.sopcinfo"]
+set_instance_assignment -entity "qsys" -library "qsys" -name SLD_INFO "QSYS_NAME qsys HAS_SOPCINFO 1 GENERATION_ID 1373165610"
+set_global_assignment -library "qsys" -name MISC_FILE [file join $::quartus(qip_path) "../../qsys.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "qsys" -name MISC_FILE [file join $::quartus(qip_path) "../../qsys.qsys"]
+
+set_global_assignment -library "qsys" -name VERILOG_FILE [file join $::quartus(qip_path) "qsys.v"]
+set_global_assignment -library "qsys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
+set_global_assignment -library "qsys" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "qsys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/basic_SysID.v"]
+set_global_assignment -library "qsys" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/qsys_serial_host.v"]
+
+set_global_assignment -entity "altera_merlin_slave_translator" -library "qsys" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "qsys" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "qsys" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "qsys" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "qsys" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_merlin_master_translator" -library "qsys" -name IP_TOOL_ENV "qsys"

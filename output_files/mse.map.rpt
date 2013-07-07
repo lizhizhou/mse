@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mse
-Sun Jun 30 17:32:19 2013
+Sun Jul  7 10:56:42 2013
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
 
 
@@ -17,9 +17,15 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Versi
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: flash_altufm_parallel_71o:flash|lpm_counter:cntr2
- 13. Port Connectivity Checks: "flash_altufm_parallel_71o:flash"
- 14. Analysis & Synthesis Messages
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: flash_altufm_parallel_71o:flash|lpm_counter:cntr2
+ 14. Parameter Settings for User Entity Instance: qsys:u0|qsys_serial_host:qsys_serial_host_0
+ 15. Parameter Settings for User Entity Instance: qsys:u0|altera_merlin_master_translator:qsys_serial_host_0_m1_translator
+ 16. Parameter Settings for User Entity Instance: qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator
+ 17. Port Connectivity Checks: "qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator"
+ 18. Port Connectivity Checks: "qsys:u0|altera_merlin_master_translator:qsys_serial_host_0_m1_translator"
+ 19. Port Connectivity Checks: "flash_altufm_parallel_71o:flash"
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -45,12 +51,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Jun 30 17:32:19 2013          ;
+; Analysis & Synthesis Status ; Successful - Sun Jul  7 10:56:42 2013          ;
 ; Quartus II 32-bit Version   ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
 ; Revision Name               ; mse                                            ;
 ; Top-level Entity Name       ; mse                                            ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 42                                             ;
+; Total logic elements        ; 118                                            ;
 ; Total pins                  ; 115                                            ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 1 / 1 ( 100 % )                                ;
@@ -147,26 +153,31 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; mse.v                            ; yes             ; User Verilog HDL File        ; /home/cowin/meteroi/mse/mse.v                                               ;         ;
-; flash.v                          ; yes             ; User Wizard-Generated File   ; /home/cowin/meteroi/mse/flash.v                                             ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
-; aglobal121.inc                   ; yes             ; Megafunction                 ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc          ;         ;
-; db/cntr_dsj.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/cowin/meteroi/mse/db/cntr_dsj.tdf                                     ;         ;
-; db/cmpr_2vb.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/cowin/meteroi/mse/db/cmpr_2vb.tdf                                     ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                 ;
++----------------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------------------------+
+; File Name with User-Entered Path                                                 ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                     ; Library                   ;
++----------------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------------------------+
+; mse.v                                                                            ; yes             ; User Verilog HDL File              ; /home/cowin/meteroi/mse/mse.v                                                    ;                           ;
+; flash.v                                                                          ; yes             ; User Wizard-Generated File         ; /home/cowin/meteroi/mse/flash.v                                                  ;                           ;
+; /home/cowin/meteroi/mse/db/ip/qsys/qsys.v                                        ; yes             ; Auto-Found Verilog HDL File        ; /home/cowin/meteroi/mse/db/ip/qsys/qsys.v                                        ; altera_reserved_qsys_qsys ;
+; /home/cowin/meteroi/mse/db/ip/qsys/submodules/altera_merlin_master_translator.sv ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/cowin/meteroi/mse/db/ip/qsys/submodules/altera_merlin_master_translator.sv ; altera_reserved_qsys_qsys ;
+; /home/cowin/meteroi/mse/db/ip/qsys/submodules/altera_merlin_slave_translator.sv  ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/cowin/meteroi/mse/db/ip/qsys/submodules/altera_merlin_slave_translator.sv  ; altera_reserved_qsys_qsys ;
+; /home/cowin/meteroi/mse/db/ip/qsys/submodules/basic_SysID.v                      ; yes             ; Auto-Found Verilog HDL File        ; /home/cowin/meteroi/mse/db/ip/qsys/submodules/basic_SysID.v                      ; altera_reserved_qsys_qsys ;
+; /home/cowin/meteroi/mse/db/ip/qsys/submodules/qsys_serial_host.v                 ; yes             ; Auto-Found Verilog HDL File        ; /home/cowin/meteroi/mse/db/ip/qsys/submodules/qsys_serial_host.v                 ; altera_reserved_qsys_qsys ;
+; lpm_counter.tdf                                                                  ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.tdf              ;                           ;
+; lpm_constant.inc                                                                 ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_constant.inc             ;                           ;
+; lpm_decode.inc                                                                   ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_decode.inc               ;                           ;
+; lpm_add_sub.inc                                                                  ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;                           ;
+; cmpconst.inc                                                                     ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/cmpconst.inc                 ;                           ;
+; lpm_compare.inc                                                                  ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_compare.inc              ;                           ;
+; lpm_counter.inc                                                                  ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/lpm_counter.inc              ;                           ;
+; dffeea.inc                                                                       ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/dffeea.inc                   ;                           ;
+; alt_counter_stratix.inc                                                          ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;                           ;
+; aglobal121.inc                                                                   ; yes             ; Megafunction                       ; /opt/altera/12.1sp1/quartus/libraries/megafunctions/aglobal121.inc               ;                           ;
+; db/cntr_dsj.tdf                                                                  ; yes             ; Auto-Generated Megafunction        ; /home/cowin/meteroi/mse/db/cntr_dsj.tdf                                          ;                           ;
+; db/cmpr_2vb.tdf                                                                  ; yes             ; Auto-Generated Megafunction        ; /home/cowin/meteroi/mse/db/cmpr_2vb.tdf                                          ;                           ;
++----------------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------------------------+
 
 
 +-----------------------------------------------------+
@@ -174,47 +185,50 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 42    ;
-;     -- Combinational with no register       ; 15    ;
-;     -- Register only                        ; 18    ;
-;     -- Combinational with a register        ; 9     ;
+; Total logic elements                        ; 118   ;
+;     -- Combinational with no register       ; 41    ;
+;     -- Register only                        ; 22    ;
+;     -- Combinational with a register        ; 55    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 9     ;
-;     -- 3 input functions                    ; 2     ;
-;     -- 2 input functions                    ; 10    ;
-;     -- 1 input functions                    ; 2     ;
+;     -- 4 input functions                    ; 57    ;
+;     -- 3 input functions                    ; 12    ;
+;     -- 2 input functions                    ; 22    ;
+;     -- 1 input functions                    ; 4     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 37    ;
-;     -- arithmetic mode                      ; 5     ;
+;     -- normal mode                          ; 107   ;
+;     -- arithmetic mode                      ; 11    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 5     ;
-;     -- asynchronous clear/load mode         ; 0     ;
+;     -- asynchronous clear/load mode         ; 12    ;
 ;                                             ;       ;
-; Total registers                             ; 27    ;
-; Total logic cells in carry chains           ; 6     ;
+; Total registers                             ; 77    ;
+; Total logic cells in carry chains           ; 13    ;
 ; I/O pins                                    ; 115   ;
 ; UFM blocks                                  ; 1     ;
-; Maximum fan-out                             ; 30    ;
-; Total fan-out                               ; 163   ;
-; Average fan-out                             ; 1.03  ;
+; Maximum fan-out                             ; 50    ;
+; Total fan-out                               ; 514   ;
+; Average fan-out                             ; 2.20  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
-+--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                           ; Library Name ;
-+--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
-; |mse                                 ; 42 (1)      ; 27           ; 1          ; 115  ; 0            ; 15 (1)       ; 18 (0)            ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |mse                                                                                          ; work         ;
-;    |flash_altufm_parallel_71o:flash| ; 41 (33)     ; 27           ; 1          ; 0    ; 0            ; 14 (11)      ; 18 (18)           ; 9 (4)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash                                                          ; work         ;
-;       |lpm_counter:cntr2|            ; 8 (0)       ; 5            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2                                        ; work         ;
-;          |cntr_dsj:auto_generated|   ; 8 (6)       ; 5            ; 0          ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated                ; work         ;
-;             |cmpr_2vb:cmpr1|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1 ; work         ;
-+--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                    ;
++-----------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------------------+
+; Compilation Hierarchy Node                                            ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                           ; Library Name              ;
++-----------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------------------+
+; |mse                                                                  ; 118 (1)     ; 77           ; 1          ; 115  ; 0            ; 41 (1)       ; 22 (0)            ; 55 (0)           ; 13 (0)          ; 0 (0)      ; |mse                                                                                          ; work                      ;
+;    |flash_altufm_parallel_71o:flash|                                  ; 41 (33)     ; 27           ; 1          ; 0    ; 0            ; 14 (11)      ; 18 (18)           ; 9 (4)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash                                                          ; work                      ;
+;       |lpm_counter:cntr2|                                             ; 8 (0)       ; 5            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2                                        ; work                      ;
+;          |cntr_dsj:auto_generated|                                    ; 8 (6)       ; 5            ; 0          ; 0    ; 0            ; 3 (1)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated                ; work                      ;
+;             |cmpr_2vb:cmpr1|                                          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mse|flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1 ; work                      ;
+;    |qsys:u0|                                                          ; 76 (0)      ; 50           ; 0          ; 0    ; 0            ; 26 (0)       ; 4 (0)             ; 46 (0)           ; 7 (0)           ; 0 (0)      ; |mse|qsys:u0                                                                                  ; altera_reserved_qsys_qsys ;
+;       |altera_merlin_slave_translator:basic_sysid_0_sysid_translator| ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |mse|qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator                    ; altera_reserved_qsys_qsys ;
+;       |qsys_serial_host:qsys_serial_host_0|                           ; 72 (72)     ; 46           ; 0          ; 0    ; 0            ; 26 (26)      ; 4 (4)             ; 42 (42)          ; 7 (7)           ; 0 (0)      ; |mse|qsys:u0|qsys_serial_host:qsys_serial_host_0                                              ; altera_reserved_qsys_qsys ;
++-----------------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -227,16 +241,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+-----------------+---------+--------------+--------------+--------------------------------------+---------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                    ;
-+----------------------------------------------+--------------------------------------------------------+
-; Register name                                ; Reason for Removal                                     ;
-+----------------------------------------------+--------------------------------------------------------+
-; flash_altufm_parallel_71o:flash|A[0..8]      ; Stuck at GND due to stuck port data_in                 ;
-; flash_altufm_parallel_71o:flash|deco3_dffe   ; Merged with flash_altufm_parallel_71o:flash|deco2_dffe ;
-; flash_altufm_parallel_71o:flash|program_dffe ; Lost fanout                                            ;
-; Total Number of Removed Registers = 11       ;                                                        ;
-+----------------------------------------------+--------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                          ;
++---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                       ; Reason for Removal                                                                                    ;
++---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+; flash_altufm_parallel_71o:flash|A[0..8]                                                                             ; Stuck at GND due to stuck port data_in                                                                ;
+; qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[0,21,29]                      ; Merged with qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[31] ;
+; qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[19,22,25,27]                  ; Merged with qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[30] ;
+; qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[1,3,4,6,9,11,12,14,17,20]     ; Merged with qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[28] ;
+; qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[2,5,7,8,10,13,15,16,18,23,24] ; Merged with qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator|av_readdata_pre[26] ;
+; flash_altufm_parallel_71o:flash|deco3_dffe                                                                          ; Merged with flash_altufm_parallel_71o:flash|deco2_dffe                                                ;
+; flash_altufm_parallel_71o:flash|program_dffe                                                                        ; Lost fanout                                                                                           ;
+; Total Number of Removed Registers = 39                                                                              ;                                                                                                       ;
++---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -256,14 +274,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 77    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 12    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 23    ;
+; Number of registers using Clock Enable       ; 58    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |mse|qsys:u0|qsys_serial_host:qsys_serial_host_0|data_buffer[33] ;
+; 256:1              ; 2 bits    ; 340 LEs       ; 10 LEs               ; 330 LEs                ; Yes        ; |mse|qsys:u0|qsys_serial_host:qsys_serial_host_0|state[3]        ;
+; 130:1              ; 31 bits   ; 2666 LEs      ; 31 LEs               ; 2635 LEs               ; Yes        ; |mse|qsys:u0|qsys_serial_host:qsys_serial_host_0|data_buffer[3]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -293,23 +322,140 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "flash_altufm_parallel_71o:flash"                                                                                                                                                         ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; osc        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; oscena     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; oscena[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; addr       ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
-; data_valid ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-; datain     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
-; dataout    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-; nbusy      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-; nerase     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
-; nread      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
-; nwrite     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
-+------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: qsys:u0|qsys_serial_host:qsys_serial_host_0 ;
++---------------------+-----------+--------------------------------------------------------+
+; Parameter Name      ; Value     ; Type                                                   ;
++---------------------+-----------+--------------------------------------------------------+
+; initial_state       ; 000000000 ; Unsigned Binary                                        ;
+; bus_ready           ; 000000001 ; Unsigned Binary                                        ;
+; bus_transmit_start  ; 000000010 ; Unsigned Binary                                        ;
+; bus_transmit_ready  ; 000000011 ; Unsigned Binary                                        ;
+; bus_address_ready   ; 000000100 ; Unsigned Binary                                        ;
+; bus_data_wait       ; 000000101 ; Unsigned Binary                                        ;
+; bus_data_ready      ; 000000110 ; Unsigned Binary                                        ;
+; bus_transmit_back   ; 000000111 ; Unsigned Binary                                        ;
+; bus_transmit_finish ; 000100111 ; Unsigned Binary                                        ;
++---------------------+-----------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: qsys:u0|altera_merlin_master_translator:qsys_serial_host_0_m1_translator ;
++-----------------------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name              ; Value ; Type                                                                            ;
++-----------------------------+-------+---------------------------------------------------------------------------------+
+; AV_ADDRESS_W                ; 8     ; Signed Integer                                                                  ;
+; AV_DATA_W                   ; 32    ; Signed Integer                                                                  ;
+; AV_BURSTCOUNT_W             ; 1     ; Signed Integer                                                                  ;
+; AV_BYTEENABLE_W             ; 4     ; Signed Integer                                                                  ;
+; USE_BURSTCOUNT              ; 0     ; Signed Integer                                                                  ;
+; USE_BEGINBURSTTRANSFER      ; 0     ; Signed Integer                                                                  ;
+; USE_BEGINTRANSFER           ; 1     ; Signed Integer                                                                  ;
+; USE_CHIPSELECT              ; 0     ; Signed Integer                                                                  ;
+; USE_READ                    ; 1     ; Signed Integer                                                                  ;
+; USE_READDATAVALID           ; 1     ; Signed Integer                                                                  ;
+; USE_WRITE                   ; 1     ; Signed Integer                                                                  ;
+; USE_WAITREQUEST             ; 1     ; Signed Integer                                                                  ;
+; AV_REGISTERINCOMINGSIGNALS  ; 0     ; Signed Integer                                                                  ;
+; AV_SYMBOLS_PER_WORD         ; 4     ; Signed Integer                                                                  ;
+; AV_ADDRESS_SYMBOLS          ; 0     ; Signed Integer                                                                  ;
+; AV_CONSTANT_BURST_BEHAVIOR  ; 0     ; Signed Integer                                                                  ;
+; AV_BURSTCOUNT_SYMBOLS       ; 0     ; Signed Integer                                                                  ;
+; AV_LINEWRAPBURSTS           ; 0     ; Signed Integer                                                                  ;
+; UAV_ADDRESS_W               ; 10    ; Signed Integer                                                                  ;
+; UAV_BURSTCOUNT_W            ; 3     ; Signed Integer                                                                  ;
+; UAV_CONSTANT_BURST_BEHAVIOR ; 0     ; Signed Integer                                                                  ;
++-----------------------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator ;
++--------------------------------+-------+---------------------------------------------------------------------------+
+; Parameter Name                 ; Value ; Type                                                                      ;
++--------------------------------+-------+---------------------------------------------------------------------------+
+; AV_ADDRESS_W                   ; 2     ; Signed Integer                                                            ;
+; AV_DATA_W                      ; 32    ; Signed Integer                                                            ;
+; AV_BURSTCOUNT_W                ; 1     ; Signed Integer                                                            ;
+; AV_BYTEENABLE_W                ; 4     ; Signed Integer                                                            ;
+; UAV_BYTEENABLE_W               ; 4     ; Signed Integer                                                            ;
+; AV_READLATENCY                 ; 0     ; Signed Integer                                                            ;
+; AV_READ_WAIT_CYCLES            ; 1     ; Signed Integer                                                            ;
+; AV_WRITE_WAIT_CYCLES           ; 0     ; Signed Integer                                                            ;
+; AV_SETUP_WAIT_CYCLES           ; 0     ; Signed Integer                                                            ;
+; AV_DATA_HOLD_CYCLES            ; 0     ; Signed Integer                                                            ;
+; USE_READDATAVALID              ; 0     ; Signed Integer                                                            ;
+; USE_WAITREQUEST                ; 1     ; Signed Integer                                                            ;
+; AV_SYMBOLS_PER_WORD            ; 4     ; Signed Integer                                                            ;
+; AV_ADDRESS_SYMBOLS             ; 0     ; Signed Integer                                                            ;
+; AV_BURSTCOUNT_SYMBOLS          ; 0     ; Signed Integer                                                            ;
+; BITS_PER_WORD                  ; 2     ; Signed Integer                                                            ;
+; UAV_ADDRESS_W                  ; 10    ; Signed Integer                                                            ;
+; UAV_BURSTCOUNT_W               ; 3     ; Signed Integer                                                            ;
+; UAV_DATA_W                     ; 32    ; Signed Integer                                                            ;
+; AV_CONSTANT_BURST_BEHAVIOR     ; 0     ; Signed Integer                                                            ;
+; UAV_CONSTANT_BURST_BEHAVIOR    ; 0     ; Signed Integer                                                            ;
+; CHIPSELECT_THROUGH_READLATENCY ; 0     ; Signed Integer                                                            ;
+; USE_UAV_CLKEN                  ; 0     ; Signed Integer                                                            ;
+; AV_REQUIRE_UNALIGNED_ADDRESSES ; 0     ; Signed Integer                                                            ;
++--------------------------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator" ;
++-----------------------+--------+----------+-------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                               ;
++-----------------------+--------+----------+-------------------------------------------------------+
+; av_write              ; Output ; Info     ; Explicitly unconnected                                ;
+; av_writedata          ; Output ; Info     ; Explicitly unconnected                                ;
+; av_begintransfer      ; Output ; Info     ; Explicitly unconnected                                ;
+; av_beginbursttransfer ; Output ; Info     ; Explicitly unconnected                                ;
+; av_burstcount         ; Output ; Info     ; Explicitly unconnected                                ;
+; av_byteenable         ; Output ; Info     ; Explicitly unconnected                                ;
+; av_readdatavalid      ; Input  ; Info     ; Stuck at GND                                          ;
+; av_writebyteenable    ; Output ; Info     ; Explicitly unconnected                                ;
+; av_lock               ; Output ; Info     ; Explicitly unconnected                                ;
+; av_chipselect         ; Output ; Info     ; Explicitly unconnected                                ;
+; av_clken              ; Output ; Info     ; Explicitly unconnected                                ;
+; uav_clken             ; Input  ; Info     ; Stuck at GND                                          ;
+; av_debugaccess        ; Output ; Info     ; Explicitly unconnected                                ;
+; av_outputenable       ; Output ; Info     ; Explicitly unconnected                                ;
++-----------------------+--------+----------+-------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "qsys:u0|altera_merlin_master_translator:qsys_serial_host_0_m1_translator" ;
++-----------------------+--------+----------+----------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                  ;
++-----------------------+--------+----------+----------------------------------------------------------+
+; av_burstcount         ; Input  ; Info     ; Stuck at VCC                                             ;
+; av_beginbursttransfer ; Input  ; Info     ; Stuck at GND                                             ;
+; av_chipselect         ; Input  ; Info     ; Stuck at GND                                             ;
+; av_lock               ; Input  ; Info     ; Stuck at GND                                             ;
+; av_debugaccess        ; Input  ; Info     ; Stuck at GND                                             ;
+; uav_clken             ; Output ; Info     ; Explicitly unconnected                                   ;
+; av_clken              ; Input  ; Info     ; Stuck at VCC                                             ;
++-----------------------+--------+----------+----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flash_altufm_parallel_71o:flash"                                                                                                                   ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; osc        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; oscena     ; Input  ; Info     ; Explicitly unconnected                                                                                                                       ;
+; addr       ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; data_valid ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; datain     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; dataout    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; nbusy      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; nerase     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; nread      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; nwrite     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -318,9 +464,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Jun 30 17:32:16 2013
+    Info: Processing started: Sun Jul  7 10:56:34 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mse -c mse
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12248): Elaborating Qsys system entity "qsys.qsys"
+Info (12250): 2013.07.07.10:56:36 Progress: Loading mse/qsys.qsys
+Info (12250): 2013.07.07.10:56:37 Progress: Reading input file
+Info (12250): 2013.07.07.10:56:37 Progress: Adding qsys_serial_host_0 [qsys_serial_host 1.0]
+Info (12250): 2013.07.07.10:56:37 Progress: Parameterizing module qsys_serial_host_0
+Info (12250): 2013.07.07.10:56:37 Progress: Adding basic_SysID_0 [basic_SysID 1.0]
+Info (12250): 2013.07.07.10:56:39 Progress: Parameterizing module basic_SysID_0
+Info (12250): 2013.07.07.10:56:39 Progress: Building connections
+Info (12250): 2013.07.07.10:56:40 Progress: Parameterizing connections
+Info (12250): 2013.07.07.10:56:40 Progress: Validating
+Info (12250): 2013.07.07.10:56:40 Progress: Done reading input file
+Info (12250): Qsys: Generating qsys "qsys" for QUARTUS_SYNTH
+Info (12250): Pipeline_bridge_swap_transform: After transform: 2 modules, 3 connections
+Info (12250): No custom instruction connections, skipping transform 
+Info (12250): Merlin_translator_transform: After transform: 4 modules, 9 connections
+Info (12250): Qsys_serial_host_0: "qsys" instantiated qsys_serial_host "qsys_serial_host_0"
+Info (12250): Basic_SysID_0: "qsys" instantiated basic_SysID "basic_SysID_0"
+Info (12250): Qsys_serial_host_0_m1_translator: "qsys" instantiated altera_merlin_master_translator "qsys_serial_host_0_m1_translator"
+Info (12250): Basic_SysID_0_SysID_translator: "qsys" instantiated altera_merlin_slave_translator "basic_SysID_0_SysID_translator"
+Info (12250): Qsys: Done qsys" with 5 modules, 5 files, 53071 bytes
+Info (12249): Finished elaborating Qsys system entity "qsys.qsys"
 Info (12021): Found 1 design units, including 1 entities, in source file mse.v
     Info (12023): Found entity 1: mse
 Info (12021): Found 1 design units, including 1 entities, in source file inter_connect.v
@@ -331,6 +498,16 @@ Warning (12019): Can't analyze file -- file port_io_interface.v is missing
 Info (12021): Found 2 design units, including 2 entities, in source file flash.v
     Info (12023): Found entity 1: flash_altufm_parallel_71o
     Info (12023): Found entity 2: flash
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/qsys/qsys.v
+    Info (12023): Found entity 1: qsys
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/qsys/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/qsys/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/qsys/submodules/basic_SysID.v
+    Info (12023): Found entity 1: basic_SysID
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/qsys/submodules/qsys_serial_host.v
+    Info (12023): Found entity 1: qsys_serial_host
 Info (12127): Elaborating entity "mse" for the top level hierarchy
 Warning (10034): Output port "LED" at mse.v(25) has no driver
 Warning (10034): Output port "MSE_RSTOUT" at mse.v(4) has no driver
@@ -353,20 +530,40 @@ Info (12128): Elaborating entity "cntr_dsj" for hierarchy "flash_altufm_parallel
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_2vb.tdf
     Info (12023): Found entity 1: cmpr_2vb
 Info (12128): Elaborating entity "cmpr_2vb" for hierarchy "flash_altufm_parallel_71o:flash|lpm_counter:cntr2|cntr_dsj:auto_generated|cmpr_2vb:cmpr1"
+Info (12128): Elaborating entity "qsys" for hierarchy "qsys:u0"
+Info (12128): Elaborating entity "qsys_serial_host" for hierarchy "qsys:u0|qsys_serial_host:qsys_serial_host_0"
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(46): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(53): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(55): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(56): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(59): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(60): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(62): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(63): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(65): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(66): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(68): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(69): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(70): truncated value with size 9 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(72): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at qsys_serial_host.v(95): truncated value with size 32 to match size of target (8)
+Warning (10034): Output port "avm_M1_begintransfer" at qsys_serial_host.v(21) has no driver
+Info (12128): Elaborating entity "basic_SysID" for hierarchy "qsys:u0|basic_SysID:basic_sysid_0"
+Info (12128): Elaborating entity "altera_merlin_master_translator" for hierarchy "qsys:u0|altera_merlin_master_translator:qsys_serial_host_0_m1_translator"
+Info (12128): Elaborating entity "altera_merlin_slave_translator" for hierarchy "qsys:u0|altera_merlin_slave_translator:basic_sysid_0_sysid_translator"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "MSE_SDO[6]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "MSE_SRDY[6]" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "MSE_SDI[4]" has no driver
     Warning (13040): Bidir "MSE_SDI[5]" has no driver
-    Warning (13040): Bidir "MSE_SDI[6]" has no driver
     Warning (13040): Bidir "MSE_SDO[4]" has no driver
     Warning (13040): Bidir "MSE_SDO[5]" has no driver
-    Warning (13040): Bidir "MSE_SDO[6]" has no driver
     Warning (13040): Bidir "MSE_SLE[4]" has no driver
     Warning (13040): Bidir "MSE_SLE[5]" has no driver
-    Warning (13040): Bidir "MSE_SLE[6]" has no driver
     Warning (13040): Bidir "MSE_SRDY[4]" has no driver
     Warning (13040): Bidir "MSE_SRDY[5]" has no driver
-    Warning (13040): Bidir "MSE_SRDY[6]" has no driver
     Warning (13040): Bidir "port3[6]" has no driver
     Warning (13040): Bidir "port3[7]" has no driver
     Warning (13040): Bidir "port4[0]" has no driver
@@ -417,6 +614,8 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "port9[5]" has no driver
     Warning (13040): Bidir "port9[6]" has no driver
     Warning (13040): Bidir "port9[7]" has no driver
+    Warning (13040): Bidir "MSE_SDI[6]" has no driver
+    Warning (13040): Bidir "MSE_SLE[6]" has no driver
 Warning (13032): The following tri-state nodes are fed by constants
     Warning (13033): The pin "port0[1]" is fed by VCC
     Warning (13033): The pin "port0[4]" is fed by VCC
@@ -427,6 +626,8 @@ Warning (13032): The following tri-state nodes are fed by constants
     Warning (13033): The pin "port3[2]" is fed by GND
     Warning (13033): The pin "port3[3]" is fed by GND
 Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "MSE_SDO[6]~synth"
+    Warning (13010): Node "MSE_SRDY[6]~synth"
     Warning (13010): Node "step_motor_driver_0_BX~synth"
     Warning (13010): Node "port0[1]~synth"
     Warning (13010): Node "step_motor_driver_0_BY~synth"
@@ -456,19 +657,16 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[2]" is stuck at GND
     Warning (13410): Pin "LED[3]" is stuck at GND
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "MSE_RESETN"
-    Warning (15610): No output dependent on input pin "MSE_SCLK"
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 234 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 108 bidirectional pins
-    Info (21061): Implemented 42 logic cells
+    Info (21061): Implemented 118 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 112 warnings
-    Info: Peak virtual memory: 315 megabytes
-    Info: Processing ended: Sun Jun 30 17:32:19 2013
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 128 warnings
+    Info: Peak virtual memory: 330 megabytes
+    Info: Processing ended: Sun Jul  7 10:56:42 2013
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:13
 
 

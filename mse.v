@@ -118,5 +118,16 @@ module mse (
 	assign port3[4] = step_motor_driver_3_AY;  //AY
 	assign port3[5] = step_motor_driver_3_BY;  //BY
 
+	qsys u0 (
+        .qsys_serial_host_sdo   (MSE_SDO[6]),   // qsys_serial_host.sdo
+        .qsys_serial_host_sdi   (MSE_SDI[6]),   //                 .sdi
+        .qsys_serial_host_clk   (MSE_SCLK),   //                 .clk
+        .qsys_serial_host_sle   (MSE_SLE[6]),   //                 .sle
+        .qsys_serial_host_srdy  (MSE_SRDY[6]),  //                 .srdy
+        .qsys_serial_host_reset (!MSE_RESETN)  //                 .reset
+   );
+
+
+	
 	
 endmodule
