@@ -68,7 +68,7 @@ module mse (
 	wire step_motor_driver_0_AY;
 	wire step_motor_driver_0_BX;
 	wire step_motor_driver_0_BY;
-	
+	// step motor
 	assign port0[7] = 1'bz;                    //FAULT
 	assign port0[6] = 1'bz;                    //OTW
 	assign port0[5] = !step_motor_driver_0_AX;  //XA
@@ -117,7 +117,24 @@ module mse (
 	assign port3[3] = 1'b0;                    //BE
 	assign port3[4] = step_motor_driver_3_AY;  //AY
 	assign port3[5] = step_motor_driver_3_BY;  //BY
-
+	// sht1x 
+	assign port4[6] = MSE_SDI[4];
+	assign port4[7] = MSE_SDO[4] ? MSE_SLE[4] : 1'bz;
+	assign MSE_SLE[4] = MSE_SDO[4] ? 1'bz : port4[7];
+	
+	assign port4[4] = MSE_SDI[5];
+	assign port4[5] = MSE_SDO[5] ? MSE_SLE[5] : 1'bz;
+	assign MSE_SLE[5] = MSE_SDO[5] ? 1'bz : port4[5];
+	
+//	.sht1x_sensor_0_sck(MSE_SDI[4]),
+//   .sht1x_sensor_0_sda(MSE_SLE[4]), 
+//	.sht1x_sensor_0_dir(MSE_SDO[4]),      
+//   .sht1x_sensor_1_sck(MSE_SDI[5]),
+//   .sht1x_sensor_1_sda(MSE_SLE[5]), 
+//   .sht1x_sensor_1_dir(MSE_SDO[5]),  
+	
+	assign MSE_SDI [6] = 1'bz;	
+	assign MSE_SLE [6] = 1'bz;
 	qsys u0 (
         .qsys_serial_host_sdo   (MSE_SDO[6]),   // qsys_serial_host.sdo
         .qsys_serial_host_sdi   (MSE_SDI[6]),   //                 .sdi
@@ -126,7 +143,6 @@ module mse (
         .qsys_serial_host_srdy  (MSE_SRDY[6]),  //                 .srdy
         .qsys_serial_host_reset (!MSE_RESETN)  //                 .reset
    );
-
 
 	
 	

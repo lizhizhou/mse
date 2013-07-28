@@ -6,11 +6,19 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element $${FILENAME}
    {
+   }
+   element basic_SysID_0.SysID
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element basic_SysID_0
    {
@@ -40,10 +48,10 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="mse.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1373165545253" />
+ <parameter name="timeStamp" value="1374395536799" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
