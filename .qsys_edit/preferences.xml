@@ -14,8 +14,8 @@
    <frequency preferredWidth="248" />
   </columns>
  </clocktable>
- <window width="1100" height="770" x="480" y="216" />
+ <window width="1100" height="770" x="239" y="202" />
  <library
-   expandedCategories="Library,Project,Project/Lophilo/Basic,Project/Lophilo" />
+   expandedCategories="Project/Lophilo/Verification,Library,Project,Project/Lophilo" />
  <hdlexample language="VERILOG" />
 </preferences>

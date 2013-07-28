@@ -117,14 +117,17 @@ module mse (
 	assign port3[3] = 1'b0;                    //BE
 	assign port3[4] = step_motor_driver_3_AY;  //AY
 	assign port3[5] = step_motor_driver_3_BY;  //BY
-	// sht1x 
-	assign port4[6] = MSE_SDI[4];
-	assign port4[7] = MSE_SDO[4] ? MSE_SLE[4] : 1'bz;
-	assign MSE_SLE[4] = MSE_SDO[4] ? 1'bz : port4[7];
 	
-	assign port4[4] = MSE_SDI[5];
-	assign port4[5] = MSE_SDO[5] ? MSE_SLE[5] : 1'bz;
-	assign MSE_SLE[5] = MSE_SDO[5] ? 1'bz : port4[5];
+	
+	
+	// sht1x 
+	assign port5[6] = MSE_SDI[4];
+	assign port5[7] = MSE_SDO[4] ? MSE_SLE[4] : 1'bz;
+	assign MSE_SLE[4] = MSE_SDO[4] ? 1'bz : port5[7];
+	
+	assign port5[4] = MSE_SDI[5];
+	assign port5[5] = MSE_SDO[5] ? MSE_SLE[5] : 1'bz;
+	assign MSE_SLE[5] = MSE_SDO[5] ? 1'bz : port5[5];
 	
 //	.sht1x_sensor_0_sck(MSE_SDI[4]),
 //   .sht1x_sensor_0_sda(MSE_SLE[4]), 
@@ -132,6 +135,20 @@ module mse (
 //   .sht1x_sensor_1_sck(MSE_SDI[5]),
 //   .sht1x_sensor_1_sda(MSE_SLE[5]), 
 //   .sht1x_sensor_1_dir(MSE_SDO[5]),  
+
+	reg [15:0] temp;
+	reg led;
+	always @(posedge in_clk)
+	begin
+		temp <= temp + 16'd10;
+		if(temp < 16'd300)
+			led <= 1;
+		else
+			led <= 0;
+	end	
+	assign port5[3] = led;
+	assign LED = temp[3:0];
+	assign port5[2] = MSE_SCLK;
 	
 	assign MSE_SDI [6] = 1'bz;	
 	assign MSE_SLE [6] = 1'bz;

@@ -168,7 +168,12 @@ begin
 					h_wait <= 1;
 					state <= 4'd9;
 				end
+				else begin
+					h_wait <= 0;
+					state <= 4'd8;
+				end
 			end
+			
 			
 			4'd9: begin
 				if((!q_wait)||(timeout == 20'hFFFFF)) begin 

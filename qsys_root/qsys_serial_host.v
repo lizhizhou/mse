@@ -108,7 +108,7 @@ module qsys_serial_host(
 				bus_data_ready: begin
 					data_buffer[31:0] <= avm_M1_readdata;
 					avm_M1_read <= 1'd0;
-					avm_M1_write <= 1'b1; 
+					avm_M1_write <= 1'b0; 
 				end
 				endcase
 			end
