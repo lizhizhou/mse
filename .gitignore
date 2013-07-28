@@ -18,8 +18,14 @@ incremental_db/
 output/
 greybox_tmp/
 simulation/modelsim/
+mse/
+frontier/
 .DS_Store
-
+*.qws
+*.jdi
+*.qsf
+*.sopcinfo
+*.cmp
 
 # Compiled Dynamic libraries
 *.so

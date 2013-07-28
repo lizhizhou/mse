@@ -11,6 +11,7 @@ module sht1x_sensor(
 		output				avs_ctrl_waitrequest,
 		// sht1x interface
 	   output sck, // 100khz 
+		output dir,
 		inout  sda
 		
 		);
@@ -75,9 +76,10 @@ module sht1x_sensor(
 		assign sda_in = sda;
 		assign sda = dir_r ? sda_r : 1'bz;
 		assign sck = sck_r;
+		assign dir = dir_r;
 	
 		// the bus state machine of sh1x 
-		parameter Reset_0 = 16'd0;
+		parameter Reset_0 = 15'd0;
 		parameter Reset_1 = Reset_0+1; 
 		parameter Reset_2 = Reset_1+1;
 		parameter Reset_3 = Reset_2+1;
@@ -143,8 +145,8 @@ module sht1x_sensor(
 		parameter measure_update = check_sum+1;
 		parameter measure_end = measure_update+1;
 		
-		reg [15:0]state;
-		reg [15:0]next_state;
+		reg [14:0]state;
+		reg [14:0]next_state;
 		reg [15:0]time_out;
 		reg [7:0] command_reg;
 		always @ (posedge sck_t)
