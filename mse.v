@@ -152,15 +152,38 @@ module mse (
 	
 	assign MSE_SDI [6] = 1'bz;	
 	assign MSE_SLE [6] = 1'bz;
+	
 	qsys u0 (
         .qsys_serial_host_sdo   (MSE_SDO[6]),   // qsys_serial_host.sdo
         .qsys_serial_host_sdi   (MSE_SDI[6]),   //                 .sdi
-        .qsys_serial_host_clk   (MSE_SCLK),   //                 .clk
+        .qsys_serial_host_clk   (MSE_SCLK),     //                 .clk
         .qsys_serial_host_sle   (MSE_SLE[6]),   //                 .sle
         .qsys_serial_host_srdy  (MSE_SRDY[6]),  //                 .srdy
-        .qsys_serial_host_reset (!MSE_RESETN)  //                 .reset
+        .qsys_serial_host_reset (!MSE_RESETN),  //                 .reset
+	
+        .port0_P0               (port4[0]),               //            port0.P0
+        .port0_P1               (port4[1]),               //                 .P1
+        .port0_P2               (port4[2]),               //                 .P2
+        .port0_P3               (port4[3]),               //                 .P3
+        .port0_P4               (port4[4]),               //                 .P4
+        .port0_P5               (port4[5]),               //                 .P5
+        .port0_P6               (port4[6]),               //                 .P6
+        .port0_P7               (port4[7]),               //                 .P7
+        .port1_P0               (),               //            port1.P0
+        .port1_P1               (),               //                 .P1
+        .port1_P2               (),               //                 .P2
+        .port1_P3               (),               //                 .P3
+        .port1_P4               (),               //                 .P4
+        .port1_P5               (),               //                 .P5
+        .port1_P6               (),               //                 .P6
+        .port1_P7               (),                //       	
+		  
+		  .fan_motor_0_export      (port6[0]),      //          fan_motor_0.export
+        .fan_motor_1_export      (port6[1]),      //          fan_motor_1.export
+        .fan_motor_2_export      (port6[2]),      //          fan_motor_2.export
+		  .fan_motor_3_export      (port6[3]), 
+        .brush_motor_driver_0_HX (port6[4]),      //          brush_motor_driver_0.HX
+        .brush_motor_driver_0_HY (port6[5])       //      
    );
 
-	
-	
 endmodule

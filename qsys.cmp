@@ -1,11 +1,33 @@
 	component qsys is
 		port (
-			qsys_serial_host_sdo   : out std_logic;        -- sdo
-			qsys_serial_host_sdi   : in  std_logic := 'X'; -- sdi
-			qsys_serial_host_clk   : in  std_logic := 'X'; -- clk
-			qsys_serial_host_sle   : in  std_logic := 'X'; -- sle
-			qsys_serial_host_srdy  : out std_logic;        -- srdy
-			qsys_serial_host_reset : in  std_logic := 'X'  -- reset
+			qsys_serial_host_sdo    : out   std_logic;        -- sdo
+			qsys_serial_host_sdi    : in    std_logic := 'X'; -- sdi
+			qsys_serial_host_clk    : in    std_logic := 'X'; -- clk
+			qsys_serial_host_sle    : in    std_logic := 'X'; -- sle
+			qsys_serial_host_srdy   : out   std_logic;        -- srdy
+			qsys_serial_host_reset  : in    std_logic := 'X'; -- reset
+			port0_P0                : inout std_logic := 'X'; -- P0
+			port0_P1                : inout std_logic := 'X'; -- P1
+			port0_P2                : inout std_logic := 'X'; -- P2
+			port0_P3                : inout std_logic := 'X'; -- P3
+			port0_P4                : inout std_logic := 'X'; -- P4
+			port0_P5                : inout std_logic := 'X'; -- P5
+			port0_P6                : inout std_logic := 'X'; -- P6
+			port0_P7                : inout std_logic := 'X'; -- P7
+			port1_P0                : inout std_logic := 'X'; -- P0
+			port1_P1                : inout std_logic := 'X'; -- P1
+			port1_P2                : inout std_logic := 'X'; -- P2
+			port1_P3                : inout std_logic := 'X'; -- P3
+			port1_P4                : inout std_logic := 'X'; -- P4
+			port1_P5                : inout std_logic := 'X'; -- P5
+			port1_P6                : inout std_logic := 'X'; -- P6
+			port1_P7                : inout std_logic := 'X'; -- P7
+			fan_motor_0_export      : out   std_logic;        -- export
+			fan_motor_1_export      : out   std_logic;        -- export
+			fan_motor_2_export      : out   std_logic;        -- export
+			brush_motor_driver_0_HX : out   std_logic;        -- HX
+			brush_motor_driver_0_HY : out   std_logic;        -- HY
+			fan_motor_3_export      : out   std_logic         -- export
 		);
 	end component qsys;
 

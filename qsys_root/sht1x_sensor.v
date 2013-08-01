@@ -52,7 +52,7 @@ module sht1x_sensor(
 		reg [31:0] temp;
 		always @(posedge csi_MCLK_clk)
 		begin
-			temp <= temp + 32'd64585974/4/4;//for 133.33Mhz clk
+			temp <= temp + 32'd64585974/4/4/2;//for 133.33Mhz clk
 		end
 		assign sck_t = temp[31];
 		

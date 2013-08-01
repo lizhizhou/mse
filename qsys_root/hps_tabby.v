@@ -94,6 +94,16 @@ begin
 	end
 end
 
+
+parameter idle = 4'd0;
+parameter read_prepare  = idle + 1'd1;
+parameter read_data     = read_prepare + 1'd1;
+parameter read_finish   = read_data + 1'd1;
+parameter write_prepare = read_finish + 1'd1;
+parameter write_data    = write_prepare + 1'd1;
+parameter write_write  = write_data + 1'd1;
+parameter write_finish  = write_write + 1'd1;
+
 always@(posedge q_clock or posedge q_reset)
 begin
 	if(q_reset) begin
@@ -104,25 +114,25 @@ begin
 		q_btrans <= 0;
 		h_wait <= 0;
 		timeout <= 0;
-		state <= 4'd0;
+		state <= idle;
 	end
 	else begin
 		case(state)
-			5'd0: begin
+			idle: begin
 				timeout <= 0;
-				if((coe_M1_CSN != 4'b1111)&&(!coe_M1_RDN)) begin
+				if((coe_M1_CSN != 4'b1111)&&(!coe_M1_RDN)&&(!q_wait)) begin
 					q_btrans <= 0;
 					q_wr <= 0;
 					q_rd <= 0;
 					h_wait <= 1;
-					state <= 4'd3;
+					state <= read_prepare;
 				end
-				else if((coe_M1_CSN != 4'b1111)&&(!coe_M1_WRN)) begin	
+				else if((coe_M1_CSN != 4'b1111)&&(!coe_M1_WRN)&&(!q_wait)) begin	
 					q_btrans <= 0;
 					q_wr <= 0;
 					q_rd <= 0;
-					h_wait <= 0;
-					state <= 4'd8;
+					h_wait <= 1;
+					state <= write_prepare;
 				end
 				else begin
 					h_rdata <= 0;
@@ -131,77 +141,100 @@ begin
 					q_rd <= 0;
 					q_btrans <= 0;
 					h_wait <= 0;
-					state <= 4'd0;
+					state <= idle;
 				end
 			end
 			
 			// Read process.
-			4'd3: begin
+			read_prepare: begin
 				tmp_addr <= coe_M1_ADDR;
 				tmp_cs <= coe_M1_CSN;
 				if((!q_wait)||(timeout == 20'hFFFFF)) begin
 					q_btrans <= 1;
 					q_rd <= 1;
 					timeout <= 0;
-					state <= 4'd4;
+					state <= read_data;
 				end
-				else timeout <= timeout + 1;
+				else begin 
+					timeout <= timeout + 1;
+					state <= read_prepare;
+				end
 			end			
 			
-			4'd4: begin
+			read_data: begin
 				q_btrans <= 0;
 				q_rd <= 0;
-				if((q_rdvalid)||(timeout == 20'hFFFFF)) begin h_rdata <= q_rdata; h_wait <= q_wait; timeout <= 0; state <= 4'd5; end
-				else timeout <= timeout + 1;
+				if((q_rdvalid)||(timeout == 20'hFFFFF)) begin 
+					h_rdata <= q_rdata; 
+					h_wait <= q_wait; 
+					timeout <= 0; 
+					state <= read_finish; 
+				end
+				else begin 
+					timeout <= timeout + 1;
+					state <= read_data;
+				end
 			end
 			
-			4'd5: begin
+			read_finish: begin
 				h_wait <= q_wait; 
-				if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_RDN)||(timeout == 20'hFFFFF)) state <= 4'd0;
-				else timeout <= timeout + 1;
+				if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_RDN)||(timeout == 20'hFFFFF)) 
+					state <= idle;
+				else begin 
+					timeout <= timeout + 1;
+					state <= read_finish;
+				end
 			end
 			
 			// Write process.
-			4'd8: begin
+			write_prepare: begin
 				q_wdata <= coe_M1_DATA;
-				if(coe_M1_WRN) begin
+				if(coe_M1_WRN && (!q_wait)) begin
 					h_wait <= 1;
-					state <= 4'd9;
+					state <= write_data;
 				end
 				else begin
-					h_wait <= 0;
-					state <= 4'd8;
+					h_wait <= q_wait;
+					state <= write_prepare;
 				end
 			end
 			
-			
-			4'd9: begin
+			write_data: begin
 				if((!q_wait)||(timeout == 20'hFFFFF)) begin 
 					q_btrans <= 1;
 					q_wr <= 1;
 					timeout <= 0;
-					state <= 4'd10;
+					state <= write_write;
 				end
-				else timeout <= timeout + 1;
+				else begin 
+					timeout <= timeout + 1;
+					state <= write_data;
+				end
 			end
 			
-			4'd10: begin
+			write_write: begin
 				q_btrans <= 0;
 				q_wr <= 0;
 				if((!q_wait)||(timeout == 20'hFFFFF)) begin
 					timeout <= 0;
-					state <= 4'd11;
+					state <= write_finish;
 				end
-				else timeout <= timeout + 1;		
+				else begin 
+					timeout <= timeout + 1;
+					state <= write_write;
+				end		
 			end
 			
-			4'd11: begin
+			write_finish: begin
 				if((!q_wait)||(timeout == 20'hFFFFF)) begin
 					timeout <= 0;
 					h_wait <= 0;
-					state <= 4'd0;
+					state <= idle;
 				end
-				else timeout <= timeout + 1;
+				else begin 
+					timeout <= timeout + 1;
+					state <= write_finish;
+				end
 			end
 
 			default: begin
@@ -212,7 +245,7 @@ begin
 				q_rd <= 0;
 				q_btrans <= 0;
 				timeout <= 0;
-				state <= 4'd0;
+				state <= idle;
 			end
 			
 		endcase

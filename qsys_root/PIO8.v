@@ -4,7 +4,7 @@ input					csi_MCLK_clk,
 
 input		[31:0]	avs_gpio_writedata,
 output	[31:0]	avs_gpio_readdata,
-input		[4:0]		avs_gpio_address,
+input		[2:0]		avs_gpio_address,
 input		[3:0]		avs_gpio_byteenable,
 input					avs_gpio_write,
 input					avs_gpio_read,
