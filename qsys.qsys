@@ -52,19 +52,6 @@
          type = "int";
       }
    }
-   element fan_motor_driver_0.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "96";
-         type = "String";
-      }
-   }
    element fan_motor_driver_3.ctrl
    {
       datum _lockedAddress
@@ -78,7 +65,7 @@
          type = "String";
       }
    }
-   element fan_motor_driver_2.ctrl
+   element fan_motor_driver_1.ctrl
    {
       datum _lockedAddress
       {
@@ -87,7 +74,20 @@
       }
       datum baseAddress
       {
-         value = "256";
+         value = "128";
+         type = "String";
+      }
+   }
+   element fan_motor_driver_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "96";
          type = "String";
       }
    }
@@ -104,7 +104,7 @@
          type = "String";
       }
    }
-   element fan_motor_driver_1.ctrl
+   element fan_motor_driver_2.ctrl
    {
       datum _lockedAddress
       {
@@ -113,7 +113,7 @@
       }
       datum baseAddress
       {
-         value = "128";
+         value = "256";
          type = "String";
       }
    }
@@ -224,7 +224,7 @@
  <parameter name="projectName" value="mse.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1375603300394" />
+ <parameter name="timeStamp" value="1375667560485" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -266,10 +266,10 @@
    name="qsys_serial_host_0">
   <parameter name="initial_state" value="0" />
  </module>
- <module kind="basic_SysID" version="1.0" enabled="1" name="basic_SysID_0">
+ <module kind="basic_SysID" version="1.0" enabled="0" name="basic_SysID_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
- <module kind="test_RegRW32" version="1.0" enabled="1" name="test_RegRW32_0">
+ <module kind="test_RegRW32" version="1.0" enabled="0" name="test_RegRW32_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
  <module kind="PIO8" version="1.0" enabled="1" name="PIO8_0">
