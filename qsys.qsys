@@ -52,19 +52,6 @@
          type = "int";
       }
    }
-   element brush_motor_driver_0.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "320";
-         type = "String";
-      }
-   }
    element fan_motor_driver_0.ctrl
    {
       datum _lockedAddress
@@ -75,6 +62,19 @@
       datum baseAddress
       {
          value = "96";
+         type = "String";
+      }
+   }
+   element fan_motor_driver_3.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "288";
          type = "String";
       }
    }
@@ -91,6 +91,19 @@
          type = "String";
       }
    }
+   element brush_motor_driver_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "320";
+         type = "String";
+      }
+   }
    element fan_motor_driver_1.ctrl
    {
       datum _lockedAddress
@@ -101,19 +114,6 @@
       datum baseAddress
       {
          value = "128";
-         type = "String";
-      }
-   }
-   element fan_motor_driver_3.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "288";
          type = "String";
       }
    }
@@ -154,19 +154,6 @@
          type = "int";
       }
    }
-   element PIO8_1.gpio
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "64";
-         type = "String";
-      }
-   }
    element PIO8_0.gpio
    {
       datum _lockedAddress
@@ -177,6 +164,19 @@
       datum baseAddress
       {
          value = "32";
+         type = "String";
+      }
+   }
+   element PIO8_1.gpio
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "64";
          type = "String";
       }
    }
@@ -224,7 +224,7 @@
  <parameter name="projectName" value="mse.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1375367290193" />
+ <parameter name="timeStamp" value="1375603300394" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -235,28 +235,28 @@
  <interface name="port0" internal="PIO8_0.PIO" type="conduit" dir="end" />
  <interface name="port1" internal="PIO8_1.PIO" type="conduit" dir="end" />
  <interface
-   name="fan_motor_0"
+   name="led"
    internal="fan_motor_driver_0.fan_motor"
    type="conduit"
    dir="end" />
  <interface
-   name="fan_motor_1"
+   name="humidifier"
    internal="fan_motor_driver_1.fan_motor"
    type="conduit"
    dir="end" />
  <interface
-   name="fan_motor_2"
-   internal="fan_motor_driver_2.fan_motor"
-   type="conduit"
-   dir="end" />
- <interface
-   name="brush_motor_driver_0"
+   name="semi_cooler"
    internal="brush_motor_driver_0.brush_motor"
    type="conduit"
    dir="end" />
  <interface
-   name="fan_motor_3"
+   name="dryer"
    internal="fan_motor_driver_3.fan_motor"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="humidifier_fan"
+   internal="fan_motor_driver_2.fan_motor"
    type="conduit"
    dir="end" />
  <module

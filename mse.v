@@ -136,18 +136,18 @@ module mse (
 //   .sht1x_sensor_1_sda(MSE_SLE[5]), 
 //   .sht1x_sensor_1_dir(MSE_SDO[5]),  
 
-	reg [15:0] temp;
-	reg led;
-	always @(posedge in_clk)
-	begin
-		temp <= temp + 16'd10;
-		if(temp < 16'd300)
-			led <= 1;
-		else
-			led <= 0;
-	end	
-	assign port5[3] = led;
-	assign LED = temp[3:0];
+//	reg [15:0] temp;
+//	reg led;
+//	always @(posedge in_clk)
+//	begin
+//		temp <= temp + 16'd10;
+//		if(temp < 16'd300)
+//			led <= 1;
+//		else
+//			led <= 0;
+//	end	
+//	assign port5[3] = led;
+//	assign LED = temp[3:0];
 	assign port5[2] = MSE_SCLK;
 	
 	assign MSE_SDI [6] = 1'bz;	
@@ -178,12 +178,13 @@ module mse (
         .port1_P6               (),               //                 .P6
         .port1_P7               (),                //       	
 		  
-		  .fan_motor_0_export      (port6[0]),      //          fan_motor_0.export
-        .fan_motor_1_export      (port6[1]),      //          fan_motor_1.export
-        .fan_motor_2_export      (port6[2]),      //          fan_motor_2.export
-		  .fan_motor_3_export      (port6[3]), 
-        .brush_motor_driver_0_HX (port6[4]),      //          brush_motor_driver_0.HX
-        .brush_motor_driver_0_HY (port6[5])       //      
+	     .led_export             (port5[3]),             //              led.export
+        .humidifier_export      (port6[7]),      //       humidifier.export
+        .humidifier_fan_export  (port6[6]),   //   humidifier_fan.export
+		  .dryer_export           (port6[5]),           // 
+		  .semi_cooler_HX         (port7[7]),         //      semi_cooler.HX
+        .semi_cooler_HY         (port7[6])         //                 .HY
+
    );
 
 endmodule
