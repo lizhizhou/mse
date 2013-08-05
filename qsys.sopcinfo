@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="qsys" kind="qsys" version="1.0" fabric="QSYS">
  <!-- Format version 12.1sp1 243 (Future versions may contain additional information.) -->
- <!-- 2013.08.05.10:58:12 -->
+ <!-- 2013.08.05.22:49:15 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1375671491</value>
+  <value>1375714154</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -597,7 +597,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>PIO8_0</moduleName>
     <slaveName>gpio</slaveName>
     <name>PIO8_0.gpio</name>
-    <baseAddress>32</baseAddress>
+    <baseAddress>0</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -605,7 +605,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>PIO8_1</moduleName>
     <slaveName>gpio</slaveName>
     <name>PIO8_1.gpio</name>
-    <baseAddress>64</baseAddress>
+    <baseAddress>32</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -613,7 +613,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>fan_motor_driver_0</moduleName>
     <slaveName>ctrl</slaveName>
     <name>fan_motor_driver_0.ctrl</name>
-    <baseAddress>96</baseAddress>
+    <baseAddress>64</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -621,7 +621,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>fan_motor_driver_1</moduleName>
     <slaveName>ctrl</slaveName>
     <name>fan_motor_driver_1.ctrl</name>
-    <baseAddress>128</baseAddress>
+    <baseAddress>96</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -629,7 +629,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>fan_motor_driver_2</moduleName>
     <slaveName>ctrl</slaveName>
     <name>fan_motor_driver_2.ctrl</name>
-    <baseAddress>256</baseAddress>
+    <baseAddress>128</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -637,7 +637,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>brush_motor_driver_0</moduleName>
     <slaveName>ctrl</slaveName>
     <name>brush_motor_driver_0.ctrl</name>
-    <baseAddress>320</baseAddress>
+    <baseAddress>288</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -645,7 +645,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>fan_motor_driver_3</moduleName>
     <slaveName>ctrl</slaveName>
     <name>fan_motor_driver_3.ctrl</name>
-    <baseAddress>288</baseAddress>
+    <baseAddress>256</baseAddress>
     <span>32</span>
    </memoryBlock>
   </interface>
@@ -5255,7 +5255,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0020</value>
+   <value>0x0000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5352,7 +5352,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0040</value>
+   <value>0x0020</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5449,7 +5449,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0060</value>
+   <value>0x0040</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5600,7 +5600,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0080</value>
+   <value>0x0060</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5751,7 +5751,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0100</value>
+   <value>0x0080</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5902,7 +5902,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0140</value>
+   <value>0x0120</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -6053,7 +6053,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0120</value>
+   <value>0x0100</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -6135,11 +6135,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>PWMCLK</endConnectionPoint>
  </connection>
  <plugin>
-  <instanceCount>7</instanceCount>
-  <name>avalon_slave</name>
+  <instanceCount>12</instanceCount>
+  <name>reset_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Memory Mapped Slave</displayName>
+  <displayName>Reset Input</displayName>
   <version>12.1</version>
  </plugin>
  <plugin>
@@ -6151,27 +6151,11 @@ parameters are a RESULT of the module parameters. -->
   <version>12.1</version>
  </plugin>
  <plugin>
-  <instanceCount>12</instanceCount>
-  <name>clock</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Clock Connection</displayName>
-  <version>12.1</version>
- </plugin>
- <plugin>
-  <instanceCount>7</instanceCount>
-  <name>avalon</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Avalon Memory Mapped Connection</displayName>
-  <version>12.1</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>qsys_serial_host</name>
+  <instanceCount>4</instanceCount>
+  <name>fan_motor_driver</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>qsys_serial_host</displayName>
+  <displayName>fan_motor_driver</displayName>
   <version>1.0</version>
  </plugin>
  <plugin>
@@ -6183,35 +6167,19 @@ parameters are a RESULT of the module parameters. -->
   <version>1.0</version>
  </plugin>
  <plugin>
-  <instanceCount>12</instanceCount>
-  <name>reset_sink</name>
+  <instanceCount>7</instanceCount>
+  <name>avalon</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Reset Input</displayName>
+  <subtype>com.altera.entityinterfaces.IConnection</subtype>
+  <displayName>Avalon Memory Mapped Connection</displayName>
   <version>12.1</version>
- </plugin>
- <plugin>
-  <instanceCount>4</instanceCount>
-  <name>fan_motor_driver</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>fan_motor_driver</displayName>
-  <version>1.0</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
-  <name>avalon_master</name>
+  <name>reset_source</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Memory Mapped Master</displayName>
-  <version>12.1</version>
- </plugin>
- <plugin>
-  <instanceCount>12</instanceCount>
-  <name>clock_sink</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Clock Input</displayName>
+  <displayName>Reset Output</displayName>
   <version>12.1</version>
  </plugin>
  <plugin>
@@ -6223,11 +6191,19 @@ parameters are a RESULT of the module parameters. -->
   <version>12.1</version>
  </plugin>
  <plugin>
-  <instanceCount>1</instanceCount>
-  <name>reset_source</name>
+  <instanceCount>7</instanceCount>
+  <name>avalon_slave</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Reset Output</displayName>
+  <displayName>Avalon Memory Mapped Slave</displayName>
+  <version>12.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>12</instanceCount>
+  <name>clock</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IConnection</subtype>
+  <displayName>Clock Connection</displayName>
   <version>12.1</version>
  </plugin>
  <plugin>
@@ -6244,6 +6220,30 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>brush_motor_driver</displayName>
+  <version>1.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>12</instanceCount>
+  <name>clock_sink</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Clock Input</displayName>
+  <version>12.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>avalon_master</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Avalon Memory Mapped Master</displayName>
+  <version>12.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>qsys_serial_host</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>qsys_serial_host</displayName>
   <version>1.0</version>
  </plugin>
  <reportVersion>12.1sp1 243</reportVersion>

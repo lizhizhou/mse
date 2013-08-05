@@ -16,7 +16,7 @@
    {
       datum _sortIndex
       {
-         value = "3";
+         value = "1";
          type = "int";
       }
    }
@@ -24,23 +24,7 @@
    {
       datum _sortIndex
       {
-         value = "4";
-         type = "int";
-      }
-   }
-   element basic_SysID_0.SysID
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-   }
-   element basic_SysID_0
-   {
-      datum _sortIndex
-      {
-         value = "1";
+         value = "2";
          type = "int";
       }
    }
@@ -48,11 +32,37 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "7";
          type = "int";
       }
    }
-   element fan_motor_driver_3.ctrl
+   element fan_motor_driver_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "64";
+         type = "String";
+      }
+   }
+   element fan_motor_driver_2.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "128";
+         type = "String";
+      }
+   }
+   element brush_motor_driver_0.ctrl
    {
       datum _lockedAddress
       {
@@ -74,37 +84,11 @@
       }
       datum baseAddress
       {
-         value = "128";
-         type = "String";
-      }
-   }
-   element fan_motor_driver_0.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
          value = "96";
          type = "String";
       }
    }
-   element brush_motor_driver_0.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "320";
-         type = "String";
-      }
-   }
-   element fan_motor_driver_2.ctrl
+   element fan_motor_driver_3.ctrl
    {
       datum _lockedAddress
       {
@@ -121,7 +105,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "3";
          type = "int";
       }
       datum sopceditor_expanded
@@ -134,7 +118,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "4";
          type = "int";
       }
    }
@@ -142,7 +126,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "5";
          type = "int";
       }
    }
@@ -150,7 +134,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "6";
          type = "int";
       }
    }
@@ -163,7 +147,7 @@
       }
       datum baseAddress
       {
-         value = "32";
+         value = "0";
          type = "String";
       }
    }
@@ -176,7 +160,7 @@
       }
       datum baseAddress
       {
-         value = "64";
+         value = "32";
          type = "String";
       }
    }
@@ -185,27 +169,6 @@
       datum _sortIndex
       {
          value = "0";
-         type = "int";
-      }
-   }
-   element test_RegRW32_0.test
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "16";
-         type = "String";
-      }
-   }
-   element test_RegRW32_0
-   {
-      datum _sortIndex
-      {
-         value = "2";
          type = "int";
       }
    }
@@ -224,7 +187,7 @@
  <parameter name="projectName" value="mse.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1375667560485" />
+ <parameter name="timeStamp" value="1375711563107" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -265,12 +228,6 @@
    enabled="1"
    name="qsys_serial_host_0">
   <parameter name="initial_state" value="0" />
- </module>
- <module kind="basic_SysID" version="1.0" enabled="0" name="basic_SysID_0">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
- </module>
- <module kind="test_RegRW32" version="1.0" enabled="0" name="test_RegRW32_0">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
  <module kind="PIO8" version="1.0" enabled="1" name="PIO8_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
@@ -322,42 +279,6 @@
    kind="reset"
    version="12.1"
    start="qsys_serial_host_0.mrst"
-   end="basic_SysID_0.MRST" />
- <connection
-   kind="clock"
-   version="12.1"
-   start="qsys_serial_host_0.mclk"
-   end="basic_SysID_0.MCLK" />
- <connection
-   kind="avalon"
-   version="12.1"
-   start="qsys_serial_host_0.m1"
-   end="basic_SysID_0.SysID">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
- </connection>
- <connection
-   kind="reset"
-   version="12.1"
-   start="qsys_serial_host_0.mrst"
-   end="test_RegRW32_0.MRST" />
- <connection
-   kind="clock"
-   version="12.1"
-   start="qsys_serial_host_0.mclk"
-   end="test_RegRW32_0.MCLK" />
- <connection
-   kind="avalon"
-   version="12.1"
-   start="qsys_serial_host_0.m1"
-   end="test_RegRW32_0.test">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0010" />
- </connection>
- <connection
-   kind="reset"
-   version="12.1"
-   start="qsys_serial_host_0.mrst"
    end="PIO8_0.mrst" />
  <connection
    kind="clock"
@@ -370,7 +291,7 @@
    start="qsys_serial_host_0.m1"
    end="PIO8_0.gpio">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0020" />
+  <parameter name="baseAddress" value="0x0000" />
  </connection>
  <connection
    kind="reset"
@@ -388,7 +309,7 @@
    start="qsys_serial_host_0.m1"
    end="PIO8_1.gpio">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0040" />
+  <parameter name="baseAddress" value="0x0020" />
  </connection>
  <connection
    kind="reset"
@@ -406,7 +327,7 @@
    start="qsys_serial_host_0.m1"
    end="fan_motor_driver_0.ctrl">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0060" />
+  <parameter name="baseAddress" value="0x0040" />
  </connection>
  <connection
    kind="reset"
@@ -434,7 +355,7 @@
    start="qsys_serial_host_0.m1"
    end="fan_motor_driver_1.ctrl">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0080" />
+  <parameter name="baseAddress" value="0x0060" />
  </connection>
  <connection
    kind="reset"
@@ -462,7 +383,7 @@
    start="qsys_serial_host_0.m1"
    end="fan_motor_driver_2.ctrl">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0100" />
+  <parameter name="baseAddress" value="0x0080" />
  </connection>
  <connection
    kind="reset"
@@ -490,7 +411,7 @@
    start="qsys_serial_host_0.m1"
    end="brush_motor_driver_0.ctrl">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0140" />
+  <parameter name="baseAddress" value="0x0120" />
  </connection>
  <connection
    kind="reset"
@@ -518,7 +439,7 @@
    start="qsys_serial_host_0.m1"
    end="fan_motor_driver_3.ctrl">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0120" />
+  <parameter name="baseAddress" value="0x0100" />
  </connection>
  <connection
    kind="reset"
