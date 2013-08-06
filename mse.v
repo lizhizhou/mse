@@ -152,7 +152,7 @@ module mse (
 	
 	assign MSE_SDI [6] = 1'bz;	
 	assign MSE_SLE [6] = 1'bz;
-	
+
 	qsys u0 (
         .qsys_serial_host_sdo   (MSE_SDO[6]),   // qsys_serial_host.sdo
         .qsys_serial_host_sdi   (MSE_SDI[6]),   //                 .sdi
@@ -161,7 +161,9 @@ module mse (
         .qsys_serial_host_srdy  (MSE_SRDY[6]),  //                 .srdy
         .qsys_serial_host_reset (!MSE_RESETN),  //                 .reset
 	
-        .port0_P0               (port4[0]),               //            port0.P0
+        .port0_P0               (port6[7]),        //            semi_cooler_fan
+		  
+		  
         .port0_P1               (port4[1]),               //                 .P1
         .port0_P2               (port4[2]),               //                 .P2
         .port0_P3               (port4[3]),               //                 .P3
@@ -169,19 +171,19 @@ module mse (
         .port0_P5               (port4[5]),               //                 .P5
         .port0_P6               (port4[6]),               //                 .P6
         .port0_P7               (port4[7]),               //                 .P7
-        .port1_P0               (port8[0]),               //            port1.P0
-        .port1_P1               (port8[1]),               //                 .P1
-        .port1_P2               (port8[2]),               //                 .P2
-        .port1_P3               (port8[3]),               //                 .P3
-        .port1_P4               (port8[4]),               //                 .P4
-        .port1_P5               (port8[5]),               //                 .P5
-        .port1_P6               (port8[6]),               //                 .P6
-        .port1_P7               (port8[7]),                //       	
+//        .port1_P0               (port8[0]),               //            port1.P0
+//        .port1_P1               (port8[1]),               //                 .P1
+//        .port1_P2               (port8[2]),               //                 .P2
+//        .port1_P3               (port8[3]),               //                 .P3
+//        .port1_P4               (port8[4]),               //                 .P4
+//        .port1_P5               (port8[5]),               //                 .P5
+//        .port1_P6               (port8[6]),               //                 .P6
+//        .port1_P7               (port8[7]),                //       	
 		  
 	     .led_export             (port5[3]),             //              led.export
-        .humidifier_export      (port6[7]),      //       humidifier.export
-        .humidifier_fan_export  (port6[6]),   //   humidifier_fan.export
-		  .dryer_export           (port6[5]),           // 
+        .humidifier_export      (port6[6]),      //       humidifier.export
+        .humidifier_fan_export  (port6[5]),   //   humidifier_fan.export
+		  .dryer_export           (port6[4]),           // 
 		  .semi_cooler_HX         (port7[7]),         //      semi_cooler.HX
         .semi_cooler_HY         (port7[6])         //                 .HY
 

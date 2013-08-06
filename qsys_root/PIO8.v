@@ -44,13 +44,10 @@ begin
 	end
 	else begin
 		case(avs_gpio_address)
-			0: read_data <= 128;
+			0: read_data <= 8;
 			1: read_data <= 32'hEA680001;
-			2: read_data <= {24'b0000, io_out_en};
-			3: read_data <= {24'b0000, coe_P7, coe_P6, coe_P5, coe_P4, coe_P3, coe_P2, coe_P1, coe_P0};
-			4: read_data <= {7'b0, coe_P3, 7'b0, coe_P2, 7'b0, coe_P1, 7'b0, coe_P0};
-			5: read_data <= {7'b0, coe_P7, 7'b0, coe_P6, 7'b0, coe_P5, 7'b0, coe_P4};
-
+			2: read_data <= {24'b0000, coe_P7, coe_P6, coe_P5, coe_P4, coe_P3, coe_P2, coe_P1, coe_P0};
+			4: read_data <= {24'b0000, io_out_en};
 			default: read_data <= 0;
 		endcase
 	end
@@ -68,17 +65,8 @@ begin
 				2: begin 
 					if(avs_gpio_byteenable[0]) io_data[7:0] <= avs_gpio_writedata[7:0];
 				end
-				4: begin
-					if(avs_gpio_byteenable[3]) io_data[3] <= avs_gpio_writedata[24];
-					if(avs_gpio_byteenable[2]) io_data[2] <= avs_gpio_writedata[16];
-					if(avs_gpio_byteenable[1]) io_data[1] <= avs_gpio_writedata[8];
-					if(avs_gpio_byteenable[0]) io_data[0] <= avs_gpio_writedata[0];			
-				end
-				5: begin
-					if(avs_gpio_byteenable[3]) io_data[7] <= avs_gpio_writedata[24];
-					if(avs_gpio_byteenable[2]) io_data[6] <= avs_gpio_writedata[16];	
-					if(avs_gpio_byteenable[1]) io_data[5] <= avs_gpio_writedata[8];
-					if(avs_gpio_byteenable[0]) io_data[4] <= avs_gpio_writedata[0];			
+				4: begin 
+					if(avs_gpio_byteenable[0]) io_out_en[7:0] <= avs_gpio_writedata[7:0];
 				end
 				default: begin end
 			endcase
