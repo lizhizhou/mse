@@ -1,0 +1,179 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+# Date created = 10:05:46  June 12, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		mse_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM1270T144C5
+set_global_assignment -name TOP_LEVEL_ENTITY mse
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.1 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:05:46  JUNE 12, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION "12.1 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_44 -to port0[0]
+set_location_assignment PIN_37 -to port0[1]
+set_location_assignment PIN_43 -to port0[2]
+set_location_assignment PIN_38 -to port0[3]
+set_location_assignment PIN_42 -to port0[4]
+set_location_assignment PIN_39 -to port0[5]
+set_location_assignment PIN_41 -to port0[6]
+set_location_assignment PIN_40 -to port0[7]
+set_location_assignment PIN_55 -to port1[0]
+set_location_assignment PIN_61 -to port2[7]
+set_location_assignment PIN_60 -to port2[6]
+set_location_assignment PIN_62 -to port2[5]
+set_location_assignment PIN_59 -to port2[4]
+set_location_assignment PIN_63 -to port2[3]
+set_location_assignment PIN_58 -to port2[2]
+set_location_assignment PIN_66 -to port2[1]
+set_location_assignment PIN_57 -to port2[0]
+set_location_assignment PIN_70 -to port3[7]
+set_location_assignment PIN_71 -to port3[6]
+set_location_assignment PIN_69 -to port3[5]
+set_location_assignment PIN_72 -to port3[4]
+set_location_assignment PIN_68 -to port3[3]
+set_location_assignment PIN_81 -to port3[2]
+set_location_assignment PIN_67 -to port3[1]
+set_location_assignment PIN_91 -to port3[0]
+set_location_assignment PIN_45 -to port1[1]
+set_location_assignment PIN_53 -to port1[2]
+set_location_assignment PIN_48 -to port1[3]
+set_location_assignment PIN_52 -to port1[4]
+set_location_assignment PIN_49 -to port1[5]
+set_location_assignment PIN_51 -to port1[6]
+set_location_assignment PIN_50 -to port1[7]
+set_location_assignment PIN_123 -to port9[0]
+set_location_assignment PIN_125 -to port9[1]
+set_location_assignment PIN_124 -to port9[2]
+set_location_assignment PIN_127 -to port9[3]
+set_location_assignment PIN_132 -to port9[4]
+set_location_assignment PIN_129 -to port9[5]
+set_location_assignment PIN_131 -to port9[6]
+set_location_assignment PIN_130 -to port9[7]
+set_location_assignment PIN_122 -to port8[0]
+set_location_assignment PIN_113 -to port8[1]
+set_location_assignment PIN_121 -to port8[2]
+set_location_assignment PIN_114 -to port8[3]
+set_location_assignment PIN_120 -to port8[4]
+set_location_assignment PIN_117 -to port8[5]
+set_location_assignment PIN_119 -to port8[6]
+set_location_assignment PIN_118 -to port8[7]
+set_location_assignment PIN_112 -to port7[0]
+set_location_assignment PIN_105 -to port7[1]
+set_location_assignment PIN_111 -to port7[2]
+set_location_assignment PIN_106 -to port7[3]
+set_location_assignment PIN_110 -to port7[4]
+set_location_assignment PIN_107 -to port7[5]
+set_location_assignment PIN_109 -to port7[6]
+set_location_assignment PIN_108 -to port7[7]
+set_location_assignment PIN_104 -to port6[0]
+set_location_assignment PIN_95 -to port6[1]
+set_location_assignment PIN_103 -to port6[2]
+set_location_assignment PIN_96 -to port6[3]
+set_location_assignment PIN_102 -to port6[4]
+set_location_assignment PIN_97 -to port6[5]
+set_location_assignment PIN_101 -to port6[6]
+set_location_assignment PIN_98 -to port6[7]
+set_location_assignment PIN_94 -to port5[0]
+set_location_assignment PIN_84 -to port5[1]
+set_location_assignment PIN_93 -to port5[2]
+set_location_assignment PIN_85 -to port5[3]
+set_location_assignment PIN_89 -to port5[4]
+set_location_assignment PIN_86 -to port5[5]
+set_location_assignment PIN_88 -to port5[6]
+set_location_assignment PIN_87 -to port5[7]
+set_location_assignment PIN_80 -to port4[0]
+set_location_assignment PIN_73 -to port4[1]
+set_location_assignment PIN_79 -to port4[2]
+set_location_assignment PIN_74 -to port4[3]
+set_location_assignment PIN_78 -to port4[4]
+set_location_assignment PIN_75 -to port4[5]
+set_location_assignment PIN_77 -to port4[6]
+set_location_assignment PIN_76 -to port4[7]
+set_location_assignment PIN_133 -to LED[3]
+set_location_assignment PIN_134 -to LED[2]
+set_location_assignment PIN_137 -to LED[1]
+set_location_assignment PIN_138 -to LED[0]
+set_location_assignment PIN_21 -to MSE_RESETN
+set_location_assignment PIN_20 -to MSE_RSTOUT
+set_location_assignment PIN_22 -to MSE_SCLK
+set_location_assignment PIN_141 -to MSE_SDI[6]
+set_location_assignment PIN_1 -to MSE_SDI[5]
+set_location_assignment PIN_5 -to MSE_SDI[4]
+set_location_assignment PIN_11 -to MSE_SDI[3]
+set_location_assignment PIN_15 -to MSE_SDI[2]
+set_location_assignment PIN_27 -to MSE_SDI[1]
+set_location_assignment PIN_31 -to MSE_SDI[0]
+set_location_assignment PIN_142 -to MSE_SDO[6]
+set_location_assignment PIN_2 -to MSE_SDO[5]
+set_location_assignment PIN_6 -to MSE_SDO[4]
+set_location_assignment PIN_12 -to MSE_SDO[3]
+set_location_assignment PIN_16 -to MSE_SDO[2]
+set_location_assignment PIN_28 -to MSE_SDO[1]
+set_location_assignment PIN_32 -to MSE_SDO[0]
+set_location_assignment PIN_139 -to MSE_SLE[6]
+set_location_assignment PIN_143 -to MSE_SLE[5]
+set_location_assignment PIN_3 -to MSE_SLE[4]
+set_location_assignment PIN_7 -to MSE_SLE[3]
+set_location_assignment PIN_13 -to MSE_SLE[2]
+set_location_assignment PIN_23 -to MSE_SLE[1]
+set_location_assignment PIN_29 -to MSE_SLE[0]
+set_location_assignment PIN_140 -to MSE_SRDY[6]
+set_location_assignment PIN_144 -to MSE_SRDY[5]
+set_location_assignment PIN_4 -to MSE_SRDY[4]
+set_location_assignment PIN_8 -to MSE_SRDY[3]
+set_location_assignment PIN_14 -to MSE_SRDY[2]
+set_location_assignment PIN_24 -to MSE_SRDY[1]
+set_location_assignment PIN_30 -to MSE_SRDY[0]
+set_global_assignment -name QSYS_FILE qsys.qsys
+set_global_assignment -name VERILOG_FILE mse.v
+set_global_assignment -name VERILOG_FILE inter_connect.v
+set_global_assignment -name VERILOG_FILE qsys_root/mse_host.v
+set_global_assignment -name VERILOG_FILE port_io_interface.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+
+set_global_assignment -name QIP_FILE flash.qip

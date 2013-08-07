@@ -13,7 +13,6 @@
 *.smsg
 *.qws
 *.jdi
-*.qsf
 *.sopcinfo
 *.cmp
 .sopc_builder/
@@ -25,6 +24,7 @@ greybox_tmp/
 simulation/modelsim/
 mse/
 frontier/
+output_files/
 .DS_Store
 # Compiled Dynamic libraries
 *.so
