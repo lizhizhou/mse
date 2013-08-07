@@ -1,5 +1,5 @@
 module mse (
-	//MSE interface
+	// MSE interface
 	input  MSE_RESETN,	
 	output MSE_RSTOUT,	
 	input  MSE_SCLK,	
@@ -8,7 +8,7 @@ module mse (
 	inout [6:0] MSE_SLE,		
 	inout [6:0] MSE_SRDY,	
 		
-	// IO 
+	// IO interface 
 	inout  [7:0] port0,
 	inout  [7:0] port1,
 	inout  [7:0] port2,
@@ -23,10 +23,9 @@ module mse (
 	output [3:0] LED
 
 );
-	wire in_clk;
-	//for test only
-	flash_altufm_parallel_71o flash
-	( 
+//	wire in_clk;
+//	flash_altufm_parallel_71o flash
+//	( 
 //	.addr(),
 //	.data_valid(),
 //	.datain(),
@@ -35,9 +34,9 @@ module mse (
 //	.nerase(),
 //	.nread(),
 //	.nwrite(),
-	.osc(in_clk),
-	.oscena(1) 
-	);
+//	.osc(in_clk),
+//	.oscena(1) 
+//	);
 
 	assign MSE_SDI [3:0] = 4'bzzzz;	
 	assign MSE_SDO [3:0] = 4'bzzzz;
@@ -68,7 +67,7 @@ module mse (
 	wire step_motor_driver_0_AY;
 	wire step_motor_driver_0_BX;
 	wire step_motor_driver_0_BY;
-	// step motor
+	// microscope_x
 	assign port0[7] = 1'bz;                    //FAULT
 	assign port0[6] = 1'bz;                    //OTW
 	assign port0[5] = !step_motor_driver_0_AX;  //XA
@@ -82,7 +81,7 @@ module mse (
 	wire step_motor_driver_1_AY;
 	wire step_motor_driver_1_BX;
 	wire step_motor_driver_1_BY;
-
+	// microscope_y
 	assign port1[7] = 1'bz;                    //FAULT
 	assign port1[6] = 1'bz;                    //OTW
 	assign port1[5] = !step_motor_driver_1_AX;  //XA
@@ -96,7 +95,7 @@ module mse (
 	wire step_motor_driver_2_AY;
 	wire step_motor_driver_2_BX;
 	wire step_motor_driver_2_BY;
-
+	// microscope_z
 	assign port2[7] = 1'bz;                    //FAULT
 	assign port2[6] = 1'bz;                    //OTW
 	assign port2[5] = !step_motor_driver_2_AX;  //XA
@@ -110,7 +109,7 @@ module mse (
 	wire step_motor_driver_3_AY;
 	wire step_motor_driver_3_BX;
 	wire step_motor_driver_3_BY;
-	
+	// syringe
 	assign port3[0] = step_motor_driver_3_AX;  //AX
 	assign port3[1] = step_motor_driver_3_BX;  //BX
 	assign port3[2] = 1'b0;					       //AE	
@@ -118,41 +117,27 @@ module mse (
 	assign port3[4] = step_motor_driver_3_AY;  //AY
 	assign port3[5] = step_motor_driver_3_BY;  //BY
 	
-	
-	
-	// sht1x 
+	// sht1x_1
 	assign port5[6] = MSE_SDI[4];
 	assign port5[7] = MSE_SDO[4] ? MSE_SLE[4] : 1'bz;
 	assign MSE_SLE[4] = MSE_SDO[4] ? 1'bz : port5[7];
-	
+	// sht1x_2	
 	assign port5[4] = MSE_SDI[5];
 	assign port5[5] = MSE_SDO[5] ? MSE_SLE[5] : 1'bz;
 	assign MSE_SLE[5] = MSE_SDO[5] ? 1'bz : port5[5];
 	
-//	.sht1x_sensor_0_sck(MSE_SDI[4]),
-//   .sht1x_sensor_0_sda(MSE_SLE[4]), 
-//	.sht1x_sensor_0_dir(MSE_SDO[4]),      
-//   .sht1x_sensor_1_sck(MSE_SDI[5]),
-//   .sht1x_sensor_1_sda(MSE_SLE[5]), 
-//   .sht1x_sensor_1_dir(MSE_SDO[5]),  
-
-//	reg [15:0] temp;
-//	reg led;
-//	always @(posedge in_clk)
-//	begin
-//		temp <= temp + 16'd10;
-//		if(temp < 16'd300)
-//			led <= 1;
-//		else
-//			led <= 0;
-//	end	
-//	assign port5[3] = led;
-//	assign LED = temp[3:0];
-	assign port5[2] = MSE_SCLK;
+	// semi_cooler
+	wire pmwa;
+	wire pmwb;
+	assign port7[7] = 1'bz;                    //FAULT
+	assign port7[6] = 1'bz;                    //OTW
+	assign port7[5] = pmwa; //PWMA
+	assign port7[4] = 1'b1;					       //XAB	
+	assign port7[3] = pmwb; //PWMB
+	assign port7[1] = 1'b1;                    //XCD
 	
 	assign MSE_SDI [6] = 1'bz;	
 	assign MSE_SLE [6] = 1'bz;
-
 	qsys u0 (
         .qsys_serial_host_sdo   (MSE_SDO[6]),   // qsys_serial_host.sdo
         .qsys_serial_host_sdi   (MSE_SDI[6]),   //                 .sdi
@@ -161,32 +146,37 @@ module mse (
         .qsys_serial_host_srdy  (MSE_SRDY[6]),  //                 .srdy
         .qsys_serial_host_reset (!MSE_RESETN),  //                 .reset
 	
-        .port0_P0               (port6[7]),        //            semi_cooler_fan
+        .port0_P0               (port6[7]),      //      semi_cooler_fan
+	     .led_export             (port5[3]),      //      microsocp_led
+		  .semi_cooler_HX         (pmwa),          //      semi_cooler.HX
+        .semi_cooler_HY         (pmwb),          //                 .HY
 		  
-		  
-        .port0_P1               (port4[1]),               //                 .P1
-        .port0_P2               (port4[2]),               //                 .P2
-        .port0_P3               (port4[3]),               //                 .P3
-        .port0_P4               (port4[4]),               //                 .P4
-        .port0_P5               (port4[5]),               //                 .P5
-        .port0_P6               (port4[6]),               //                 .P6
-        .port0_P7               (port4[7]),               //                 .P7
-//        .port1_P0               (port8[0]),               //            port1.P0
-//        .port1_P1               (port8[1]),               //                 .P1
-//        .port1_P2               (port8[2]),               //                 .P2
-//        .port1_P3               (port8[3]),               //                 .P3
-//        .port1_P4               (port8[4]),               //                 .P4
-//        .port1_P5               (port8[5]),               //                 .P5
-//        .port1_P6               (port8[6]),               //                 .P6
-//        .port1_P7               (port8[7]),                //       	
-		  
-	     .led_export             (port5[3]),             //              led.export
-        .humidifier_export      (port6[6]),      //       humidifier.export
-        .humidifier_fan_export  (port6[5]),   //   humidifier_fan.export
-		  .dryer_export           (port6[4]),           // 
-		  .semi_cooler_HX         (port7[7]),         //      semi_cooler.HX
-        .semi_cooler_HY         (port7[6])         //                 .HY
+		  .humidifier_export      (port6[6]),      //       humidifier.export
+		  .port0_P1               (port6[5]),      //       humidifier_fan
+		  .dryer_export           (port6[4]),      //       dryer
 
+		  
+        .port0_P2               (port4[2]),      //                 x+
+        .port0_P3               (port4[3]),      //                 x-
+        .port0_P4               (port4[4]),      //                 xr
+        .port0_P5               (port4[5]),      //                 y+
+        .port0_P6               (port4[6]),      //                 y-
+        .port0_P7               (port4[7]),      //                 yr  
+        .port1_P0               (port8[0]),      //            	  z+
+        .port1_P1               (port8[1]),      //                 z-
+        .port1_P2               (port8[2]),      //                 zr
+		  
+        .port1_P3               (port8[3]),               //                 .P3
+        .port1_P4               (port8[4]),               //                 .P4
+        .port1_P5               (port8[5]),               //                 .P5
+        .port1_P6               (port8[6]),               //                 .P6
+        .port1_P7               (port8[7]),                //       	
+		  
+		  .syringe_A              (port9[0]),              //          syringe.A
+        .syringe_B              (port9[1]),              //                 .B
+        .syringe_Z              (port9[2])               //                 .Z
+	  
    );
+
 
 endmodule

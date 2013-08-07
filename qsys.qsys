@@ -48,47 +48,8 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "8";
          type = "int";
-      }
-   }
-   element fan_motor_driver_2.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "128";
-         type = "String";
-      }
-   }
-   element fan_motor_driver_3.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "256";
-         type = "String";
-      }
-   }
-   element fan_motor_driver_0.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "64";
-         type = "String";
       }
    }
    element fan_motor_driver_1.ctrl
@@ -113,7 +74,46 @@
       }
       datum baseAddress
       {
+         value = "256";
+         type = "String";
+      }
+   }
+   element fan_motor_driver_2.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "128";
+         type = "String";
+      }
+   }
+   element position_encoder_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
          value = "288";
+         type = "String";
+      }
+   }
+   element fan_motor_driver_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "64";
          type = "String";
       }
    }
@@ -146,12 +146,17 @@
          type = "int";
       }
    }
-   element fan_motor_driver_3
+   element PIO8_0.gpio
    {
-      datum _sortIndex
+      datum _lockedAddress
       {
-         value = "8";
-         type = "int";
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
       }
    }
    element PIO8_1.gpio
@@ -167,17 +172,12 @@
          type = "String";
       }
    }
-   element PIO8_0.gpio
+   element position_encoder_0
    {
-      datum _lockedAddress
+      datum _sortIndex
       {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "0";
-         type = "String";
+         value = "9";
+         type = "int";
       }
    }
    element qsys_serial_host_0
@@ -224,7 +224,7 @@
  <parameter name="projectName" value="mse.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1375787984005" />
+ <parameter name="timeStamp" value="1375883953376" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -233,7 +233,7 @@
    type="conduit"
    dir="end" />
  <interface name="port0" internal="PIO8_0.PIO" type="conduit" dir="end" />
- <interface name="port1" internal="PIO8_1.PIO" />
+ <interface name="port1" internal="PIO8_1.PIO" type="conduit" dir="end" />
  <interface
    name="led"
    internal="fan_motor_driver_0.fan_motor"
@@ -251,12 +251,12 @@
    dir="end" />
  <interface
    name="dryer"
-   internal="fan_motor_driver_3.fan_motor"
+   internal="fan_motor_driver_2.fan_motor"
    type="conduit"
    dir="end" />
  <interface
-   name="humidifier_fan"
-   internal="fan_motor_driver_2.fan_motor"
+   name="syringe"
+   internal="position_encoder_0.position_encoder"
    type="conduit"
    dir="end" />
  <module
@@ -269,7 +269,7 @@
  <module kind="PIO8" version="1.0" enabled="1" name="PIO8_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
- <module kind="PIO8" version="1.0" enabled="0" name="PIO8_1">
+ <module kind="PIO8" version="1.0" enabled="1" name="PIO8_1">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
  <module
@@ -289,14 +289,6 @@
   <parameter name="AUTO_PWMCLK_CLOCK_RATE" value="0" />
  </module>
  <module
-   kind="fan_motor_driver"
-   version="1.0"
-   enabled="1"
-   name="fan_motor_driver_2">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
-  <parameter name="AUTO_PWMCLK_CLOCK_RATE" value="0" />
- </module>
- <module
    kind="brush_motor_driver"
    version="1.0"
    enabled="1"
@@ -308,7 +300,7 @@
    kind="fan_motor_driver"
    version="1.0"
    enabled="1"
-   name="fan_motor_driver_3">
+   name="fan_motor_driver_2">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_PWMCLK_CLOCK_RATE" value="0" />
  </module>
@@ -316,6 +308,13 @@
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
  <module kind="test_RegRW32" version="1.0" enabled="0" name="test_RegRW32_0">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="position_encoder"
+   version="1.0"
+   enabled="1"
+   name="position_encoder_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
  <connection
@@ -414,6 +413,34 @@
    kind="reset"
    version="12.1"
    start="qsys_serial_host_0.mrst"
+   end="brush_motor_driver_0.MRST" />
+ <connection
+   kind="clock"
+   version="12.1"
+   start="qsys_serial_host_0.mclk"
+   end="brush_motor_driver_0.MCLK" />
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="qsys_serial_host_0.m1"
+   end="brush_motor_driver_0.ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0100" />
+ </connection>
+ <connection
+   kind="reset"
+   version="12.1"
+   start="qsys_serial_host_0.mrst"
+   end="brush_motor_driver_0.PWMRST" />
+ <connection
+   kind="clock"
+   version="12.1"
+   start="qsys_serial_host_0.mclk"
+   end="brush_motor_driver_0.PWMCLK" />
+ <connection
+   kind="reset"
+   version="12.1"
+   start="qsys_serial_host_0.mrst"
    end="fan_motor_driver_2.MRST" />
  <connection
    kind="clock"
@@ -438,62 +465,6 @@
    version="12.1"
    start="qsys_serial_host_0.mclk"
    end="fan_motor_driver_2.PWMCLK" />
- <connection
-   kind="reset"
-   version="12.1"
-   start="qsys_serial_host_0.mrst"
-   end="brush_motor_driver_0.MRST" />
- <connection
-   kind="clock"
-   version="12.1"
-   start="qsys_serial_host_0.mclk"
-   end="brush_motor_driver_0.MCLK" />
- <connection
-   kind="avalon"
-   version="12.1"
-   start="qsys_serial_host_0.m1"
-   end="brush_motor_driver_0.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0120" />
- </connection>
- <connection
-   kind="reset"
-   version="12.1"
-   start="qsys_serial_host_0.mrst"
-   end="brush_motor_driver_0.PWMRST" />
- <connection
-   kind="clock"
-   version="12.1"
-   start="qsys_serial_host_0.mclk"
-   end="brush_motor_driver_0.PWMCLK" />
- <connection
-   kind="reset"
-   version="12.1"
-   start="qsys_serial_host_0.mrst"
-   end="fan_motor_driver_3.MRST" />
- <connection
-   kind="clock"
-   version="12.1"
-   start="qsys_serial_host_0.mclk"
-   end="fan_motor_driver_3.MCLK" />
- <connection
-   kind="avalon"
-   version="12.1"
-   start="qsys_serial_host_0.m1"
-   end="fan_motor_driver_3.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0100" />
- </connection>
- <connection
-   kind="reset"
-   version="12.1"
-   start="qsys_serial_host_0.mrst"
-   end="fan_motor_driver_3.PWMRST" />
- <connection
-   kind="clock"
-   version="12.1"
-   start="qsys_serial_host_0.mclk"
-   end="fan_motor_driver_3.PWMCLK" />
  <connection
    kind="reset"
    version="12.1"
@@ -529,5 +500,23 @@
    end="test_RegRW32_0.test">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0010" />
+ </connection>
+ <connection
+   kind="reset"
+   version="12.1"
+   start="qsys_serial_host_0.mrst"
+   end="position_encoder_0.MRST" />
+ <connection
+   kind="clock"
+   version="12.1"
+   start="qsys_serial_host_0.mclk"
+   end="position_encoder_0.MCLK" />
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="qsys_serial_host_0.m1"
+   end="position_encoder_0.ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0120" />
  </connection>
 </system>

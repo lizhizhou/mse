@@ -11,16 +11,6 @@
 *.rpt
 *.summary
 *.smsg
-.sopc_builder/
-.qsys_edit/
-db/
-incremental_db/
-output/
-greybox_tmp/
-simulation/modelsim/
-mse/
-frontier/
-.DS_Store
 *.qws
 *.jdi
 *.qsf
