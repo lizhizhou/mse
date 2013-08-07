@@ -25,8 +25,8 @@ module mse (
 );
 	wire in_clk;
 	//for test only
-	flash_altufm_parallel_71o flash
-	( 
+//	flash_altufm_parallel_71o flash
+//	( 
 //	.addr(),
 //	.data_valid(),
 //	.datain(),
@@ -35,9 +35,9 @@ module mse (
 //	.nerase(),
 //	.nread(),
 //	.nwrite(),
-	.osc(in_clk),
-	.oscena(1) 
-	);
+//	.osc(in_clk),
+//	.oscena(1) 
+//	);
 
 	assign MSE_SDI [3:0] = 4'bzzzz;	
 	assign MSE_SDO [3:0] = 4'bzzzz;
@@ -183,7 +183,7 @@ module mse (
 	     .led_export             (port5[3]),             //              led.export
         .humidifier_export      (port6[6]),      //       humidifier.export
         .humidifier_fan_export  (port6[5]),   //   humidifier_fan.export
-		  .dryer_export           (port6[4]),           // 
+//		  .dryer_export           (port6[4]),           // 
 		  .semi_cooler_HX         (port7[7]),         //      semi_cooler.HX
         .semi_cooler_HY         (port7[6])         //                 .HY
 

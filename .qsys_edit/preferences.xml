@@ -9,12 +9,12 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="266" />
-   <clocksource preferredWidth="266" />
-   <frequency preferredWidth="248" />
+   <clockname preferredWidth="242" />
+   <clocksource preferredWidth="242" />
+   <frequency preferredWidth="226" />
   </columns>
  </clocktable>
- <window width="1100" height="770" x="239" y="90" />
+ <window width="1022" height="726" x="2" y="1" />
  <library
    expandedCategories="Project/Lophilo/Verification,Library,Project,Project/Lophilo" />
  <hdlexample language="VERILOG" />
