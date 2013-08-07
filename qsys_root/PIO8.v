@@ -44,8 +44,8 @@ begin
 	end
 	else begin
 		case(avs_gpio_address)
-			0: read_data <= 8;
-			1: read_data <= 32'hEA680001;
+//			0: read_data <= 8;
+//			1: read_data <= 32'hEA680001;
 			2: read_data <= {24'b0000, coe_P7, coe_P6, coe_P5, coe_P4, coe_P3, coe_P2, coe_P1, coe_P0};
 			4: read_data <= {24'b0000, io_out_en};
 			default: read_data <= 0;
