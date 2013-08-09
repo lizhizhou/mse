@@ -151,9 +151,9 @@ module mse (
 		  .semi_cooler_HX         (pmwa),          //      semi_cooler.HX
         .semi_cooler_HY         (pmwb),          //                 .HY
 		  
-		  .humidifier_export      (port6[6]),      //       humidifier.export
+		  .humidifier_export      (!port6[4]),      //       humidifier.export
 		  .port0_P1               (port6[5]),      //       humidifier_fan
-		  .dryer_export           (port6[4]),      //       dryer
+		  .dryer_export           (port6[6]),      //       dryer
 
 		  
         .port0_P2               (port4[2]),      //                 x+
