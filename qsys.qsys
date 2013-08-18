@@ -12,6 +12,14 @@
    element $${FILENAME}
    {
    }
+   element PIO16_0
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
    element PIO8_0
    {
       datum _sortIndex
@@ -52,32 +60,6 @@
          type = "int";
       }
    }
-   element fan_motor_driver_1.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "128";
-         type = "String";
-      }
-   }
-   element position_encoder_0.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "288";
-         type = "String";
-      }
-   }
    element brush_motor_driver_0.ctrl
    {
       datum _lockedAddress
@@ -112,6 +94,45 @@
          type = "String";
       }
    }
+   element position_encoder_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "288";
+         type = "String";
+      }
+   }
+   element fan_motor_driver_1.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "128";
+         type = "String";
+      }
+   }
+   element fan_motor_driver_3.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "512";
+         type = "String";
+      }
+   }
    element fan_motor_driver_0
    {
       datum _sortIndex
@@ -139,6 +160,22 @@
       {
          value = "7";
          type = "int";
+      }
+   }
+   element fan_motor_driver_3
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element PIO16_0.gpio
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
       }
    }
    element PIO8_0.gpio
@@ -219,7 +256,7 @@
  <parameter name="projectName" value="mse.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1375886605530" />
+ <parameter name="timeStamp" value="1376472359873" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -227,8 +264,8 @@
    internal="qsys_serial_host_0.conduit_end"
    type="conduit"
    dir="end" />
- <interface name="port0" internal="PIO8_0.PIO" type="conduit" dir="end" />
- <interface name="port1" internal="PIO8_1.PIO" type="conduit" dir="end" />
+ <interface name="port0" internal="PIO8_0.PIO" />
+ <interface name="port1" internal="PIO8_1.PIO" />
  <interface
    name="led"
    internal="fan_motor_driver_0.fan_motor"
@@ -254,6 +291,12 @@
    internal="position_encoder_0.position_encoder"
    type="conduit"
    dir="end" />
+ <interface name="port" internal="PIO16_0.PIO16" type="conduit" dir="end" />
+ <interface
+   name="humidifier_fan"
+   internal="fan_motor_driver_3.fan_motor"
+   type="conduit"
+   dir="end" />
  <module
    kind="qsys_serial_host"
    version="1.0"
@@ -261,10 +304,10 @@
    name="qsys_serial_host_0">
   <parameter name="initial_state" value="0" />
  </module>
- <module kind="PIO8" version="1.0" enabled="1" name="PIO8_0">
+ <module kind="PIO8" version="1.0" enabled="0" name="PIO8_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
- <module kind="PIO8" version="1.0" enabled="1" name="PIO8_1">
+ <module kind="PIO8" version="1.0" enabled="0" name="PIO8_1">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
  </module>
  <module
@@ -311,6 +354,17 @@
    enabled="1"
    name="position_encoder_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
+ </module>
+ <module kind="PIO16" version="1.0" enabled="1" name="PIO16_0">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="fan_motor_driver"
+   version="1.0"
+   enabled="1"
+   name="fan_motor_driver_3">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_PWMCLK_CLOCK_RATE" value="0" />
  </module>
  <connection
    kind="reset"
@@ -514,4 +568,50 @@
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0120" />
  </connection>
+ <connection
+   kind="reset"
+   version="12.1"
+   start="qsys_serial_host_0.mrst"
+   end="PIO16_0.mrst" />
+ <connection
+   kind="clock"
+   version="12.1"
+   start="qsys_serial_host_0.mclk"
+   end="PIO16_0.mclk" />
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="qsys_serial_host_0.m1"
+   end="PIO16_0.gpio">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="reset"
+   version="12.1"
+   start="qsys_serial_host_0.mrst"
+   end="fan_motor_driver_3.MRST" />
+ <connection
+   kind="clock"
+   version="12.1"
+   start="qsys_serial_host_0.mclk"
+   end="fan_motor_driver_3.MCLK" />
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="qsys_serial_host_0.m1"
+   end="fan_motor_driver_3.ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0200" />
+ </connection>
+ <connection
+   kind="reset"
+   version="12.1"
+   start="qsys_serial_host_0.mrst"
+   end="fan_motor_driver_3.PWMRST" />
+ <connection
+   kind="clock"
+   version="12.1"
+   start="qsys_serial_host_0.mclk"
+   end="fan_motor_driver_3.PWMCLK" />
 </system>

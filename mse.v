@@ -146,31 +146,31 @@ module mse (
         .qsys_serial_host_srdy  (MSE_SRDY[6]),  //                 .srdy
         .qsys_serial_host_reset (!MSE_RESETN),  //                 .reset
 	
-        .port0_P0               (port6[7]),      //      semi_cooler_fan
+        .port_P0               (port6[7]),      //      semi_cooler_fan
 	     .led_export             (port5[3]),      //      microsocp_led
 		  .semi_cooler_HX         (pmwa),          //      semi_cooler.HX
         .semi_cooler_HY         (pmwb),          //                 .HY
 		  
 		  .humidifier_export      (!port6[4]),      //       humidifier.export
-		  .port0_P1               (port6[5]),      //       humidifier_fan
+		  .humidifier_fan_export  (!port6[5]),      //       humidifier_fan
 		  .dryer_export           (port6[6]),      //       dryer
 
 		  
-        .port0_P2               (port4[2]),      //                 x+
-        .port0_P3               (port4[3]),      //                 x-
-        .port0_P4               (port4[4]),      //                 xr
-        .port0_P5               (port4[5]),      //                 y+
-        .port0_P6               (port4[6]),      //                 y-
-        .port0_P7               (port4[7]),      //                 yr  
-        .port1_P0               (port8[0]),      //            	  z+
-        .port1_P1               (port8[1]),      //                 z-
-        .port1_P2               (port8[2]),      //                 zr
+        .port_P2               (port4[2]),      //                 x+
+        .port_P3               (port4[3]),      //                 x-
+        .port_P4               (port4[4]),      //                 xr
+        .port_P5               (port4[5]),      //                 y+
+        .port_P6               (port4[6]),      //                 y-
+        .port_P7               (port4[7]),      //                 yr  
+        .port_P8               (port8[0]),      //            	   z+
+        .port_P9               (port8[1]),      //                 z-
+        .port_P10               (port8[2]),      //                 zr
 		  
-        .port1_P3               (port8[3]),               //                 .P3
-        .port1_P4               (port8[4]),               //                 .P4
-        .port1_P5               (port8[5]),               //                 .P5
-        .port1_P6               (port8[6]),               //                 .P6
-        .port1_P7               (port8[7]),                //       	
+        .port_P11               (port8[3]),               //                 .P3
+        .port_P12               (port8[4]),               //                 .P4
+        .port_P13               (port8[5]),               //                 .P5
+        .port_P14               (port8[6]),               //                 .P6
+        .port_P15               (port8[7]),                //       	
 		  
 		  .syringe_A              (port9[0]),              //          syringe.A
         .syringe_B              (port9[1]),              //                 .B
