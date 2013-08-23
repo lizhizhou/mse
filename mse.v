@@ -138,6 +138,14 @@ module mse (
 	
 	assign MSE_SDI [6] = 1'bz;	
 	assign MSE_SLE [6] = 1'bz;
+	
+	wire led, humidifier, humidifier_fan, dryer_export, dryer_fan;
+	assign port6[4] = !humidifier;
+	assign port6[5] = !humidifier_fan;
+	assign port6[6] = !dryer_export;
+	assign port5[3] = led;
+	assign port6[3] = !dryer_fan;
+	
 	qsys u0 (
         .qsys_serial_host_sdo   (MSE_SDO[6]),   // qsys_serial_host.sdo
         .qsys_serial_host_sdi   (MSE_SDI[6]),   //                 .sdi
@@ -145,38 +153,38 @@ module mse (
         .qsys_serial_host_sle   (MSE_SLE[6]),   //                 .sle
         .qsys_serial_host_srdy  (MSE_SRDY[6]),  //                 .srdy
         .qsys_serial_host_reset (!MSE_RESETN),  //                 .reset
-	
-        .port_P0               (port6[7]),      //      semi_cooler_fan
-	     .led_export             (port5[3]),      //      microsocp_led
-		  .semi_cooler_HX         (pmwa),          //      semi_cooler.HX
+
+		  .led_export             (led),      //       microsocp_led 
+		 
+        .port_P0                (port6[7]),       //      semi_cooler_fan_bump
+
+		  .semi_cooler_HX         (pmwa),          //       semi_cooler.HX
         .semi_cooler_HY         (pmwb),          //                 .HY
 		  
-		  .humidifier_export      (!port6[4]),      //       humidifier.export
-		  .humidifier_fan_export  (!port6[5]),      //       humidifier_fan
-		  .dryer_export           (port6[6]),      //       dryer
+		  .humidifier_export      (humidifier),     //       humidifier.export
+		  .port_P10               (humidifier_fan),       //     humidifier_fan
+		  .dryer_export           (dryer_export),      //      dryer
+		  .port_P11               (dryer_fan),       //     humidifier_fan
+		  		  
+	  
+		  .syringe_A              (port6[2]),      //          syringe.A
+        .syringe_B              (1'b1),          //                 .B
+        .syringe_Z              (1'b1),          //                 .Z
+		  
+        .port_P1               (port4[0]),      //                 x+
+        .port_P2               (port4[1]),      //                 x-
+        .port_P3               (port4[6]),      //                 xr
+        .port_P4               (port4[2]),      //                 y+
+        .port_P5               (port4[3]),      //                 y-
+        .port_P6               (port4[7]),      //                 yr  
+        .port_P7               (port4[4]),      //            	    z+
+        .port_P8               (port4[5]),      //                 z-
+        .port_P9               (port6[0])       //                 zr
+		  
 
-		  
-        .port_P2               (port4[2]),      //                 x+
-        .port_P3               (port4[3]),      //                 x-
-        .port_P4               (port4[4]),      //                 xr
-        .port_P5               (port4[5]),      //                 y+
-        .port_P6               (port4[6]),      //                 y-
-        .port_P7               (port4[7]),      //                 yr  
-        .port_P8               (port8[0]),      //            	   z+
-        .port_P9               (port8[1]),      //                 z-
-        .port_P10               (port8[2]),      //                 zr
-		  
-        .port_P11               (port8[3]),               //                 .P3
-        .port_P12               (port8[4]),               //                 .P4
-        .port_P13               (port8[5]),               //                 .P5
-        .port_P14               (port8[6]),               //                 .P6
-        .port_P15               (port8[7]),                //       	
-		  
-		  .syringe_A              (port9[0]),              //          syringe.A
-        .syringe_B              (port9[1]),              //                 .B
-        .syringe_Z              (port9[2])               //                 .Z
-
+		    
    );
 
-
+	
+	
 endmodule
